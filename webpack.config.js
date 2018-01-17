@@ -1,5 +1,4 @@
 const path = require('path');
-
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 /**
@@ -41,6 +40,16 @@ module.exports = {
                 test: /\.svelte$/,
                 exclude: /node_modules/,
                 use: 'svelte-loader'
+            },
+
+            {
+                enforce: 'pre',
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'eslint-loader',
+                options: {
+                    configFile: path.join(__dirname, '.eslintrc.json')
+                }
             }
         ]
     },
