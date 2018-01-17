@@ -11,7 +11,7 @@ module.exports = function (config) {
         files: [
             // The files required to test, including tests
             // The files must be built first if they use import statements.
-            'build/**/*.spec.js'
+            'dist/**/*.spec.bundle.js'
         ],
 
         preprocessors: {},

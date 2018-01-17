@@ -12,7 +12,14 @@ module.exports = {
         extensions: ['.js', '.svelte', '.scss']
     },
 
-    entry: {},
+    entry: {
+        'index': [
+            './src/index.js',
+            './src/index.scss'
+        ],
+
+        'index.spec': './src/index.spec.js'
+    },
 
     output: {
         path: path.join(__dirname, '/dist'),

@@ -9,7 +9,8 @@
 
     "scripts": {
         "build": "webpack",
-        "dev": "webpack --watch"
+        "dev": "webpack --watch",
+        "test": "karma start"
     },
 
     "dependencies": {
