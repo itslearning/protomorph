@@ -1,0 +1,48 @@
+{
+    "name": "@plumpnation/protomorph",
+    "private": true,
+    "description": "Shared build config for frontend applications",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Gavin King <gavin.king@itslearning.com>",
+    "license": "MIT",
+
+    "scripts": {
+        "build": "webpack",
+        "dev": "webpack --watch"
+    },
+
+    "dependencies": {
+        "chai": "^4.1.2",
+        "clean-webpack-plugin": "^0.1.17",
+        "copy-webpack-plugin": "^4.3.1",
+        "css-loader": "^0.28.8",
+        "dirty-chai": "^2.0.1",
+        "eslint": "^4.8.0",
+        "eslint-config-standard": "^11.0.0-beta.0",
+        "eslint-plugin-html": "^4.0.1",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-json": "^1.2.0",
+        "eslint-plugin-node": "^5.2.0",
+        "eslint-plugin-promise": "^3.6.0",
+        "eslint-plugin-standard": "^3.0.1",
+        "extract-text-webpack-plugin": "^3.0.2",
+        "karma": "^2.0.0",
+        "karma-chai": "^0.1.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-dirty-chai": "^2.0.0",
+        "karma-edge-launcher": "^0.4.2",
+        "karma-firefox-launcher": "^1.0.1",
+        "karma-ie-launcher": "^1.0.0",
+        "karma-mocha": "^1.3.0",
+        "karma-mocha-reporter": "^2.2.4",
+        "mocha": "^4.1.0",
+        "node-sass": "^4.7.2",
+        "sass-lint": "^1.12.1",
+        "sass-loader": "^6.0.6",
+        "svelte": "^1.40.2",
+        "svelte-loader": "^2.1.0",
+        "webpack": "^3.6.0",
+        "webpack-clean": "^1.0.0"
+    }
+}
