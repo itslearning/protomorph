@@ -1,7 +1,41 @@
-Protomorph
-==========
+Protomorph: shared build
+========================
 
-Contains the standard build for working on itslearning frontend applications.
+Contains a standard build for working on frontend applications based on webpack
+and various linters.
+
+```shell
+mkdir my-frontend-app
+cd my-frontend-app
+yarn init
+```
+
+Add this repo into the devDependencies in your package.json.
+
+```json
+...
+"@plumpnation/protomorph": "git://github.com/plumpNation/protomorph.git#TAG_NAME"
+...
+```
+
+```shell
+yarn install
+```
+
+You need to create a `webpack.config.js` and require the protomorph webpack configuration. It shouldn't require much.
+
+```javascript
+const baseConfig = require('@plumpnation/protomorph/webpack.config');
+
+// You can override the protomorph webpack config here
+const config = Object.assign({}, baseConfig, {
+    entry: {
+        'index': './src/index.js'
+    }
+});
+
+module.exports = config;
+```
 
 
 ## Webpack for js and sass
@@ -16,10 +50,15 @@ Available plugins:
 - copy-webpack-plugin
 
 ## Karma test runner
-    - support for axe tests
 
-## ESLint
+## Linting
 For js, sass and html coding standards.
 
-Could contain:
-Cypress configs
+- eslint
+
+Todo:
+- sass-lint
+- html-lint
+- babel or buble support
+- typescript support
+- axe for unit tests
