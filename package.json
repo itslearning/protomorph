@@ -2,7 +2,7 @@
     "name": "@plumpnation/protomorph",
     "private": true,
     "description": "Shared build config for frontend applications",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "main": "index.js",
     "author": "Gavin King <gavin.king@itslearning.com>",
     "license": "MIT",
