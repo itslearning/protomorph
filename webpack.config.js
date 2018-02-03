@@ -1,9 +1,17 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const SassLintPlugin = require('sasslint-webpack-plugin');
 
-/**
- * This will extract the styles from the bundle.js file.
- */
+// const thisDir = __filename__dir;
+
+const sassLinter = new SassLintPlugin({
+    configFile: path.join(__dirname, '.sass-lint.yml'),
+    glob: '!(node_modules/)**/*.scss',
+    failOnError: true,
+    ignorePlugins: ['extract-text-webpack-plugin']
+});
+
+// This will extract the styles from the bundle.js file.
 const extractSass = new ExtractTextPlugin({filename: '[name].bundle.css'});
 
 module.exports = {
@@ -30,7 +38,10 @@ module.exports = {
             { // sass / scss loader for webpack
                 test: /\.scss$/,
                 use: extractSass.extract([{
-                    loader: 'css-loader' // translates CSS into CommonJS
+                    loader: 'css-loader', // translates CSS into CommonJS
+                    options: {
+                        url: false
+                    }
                 }, {
                     loader: 'sass-loader' // compiles Sass to CSS
                 }])
@@ -55,6 +66,7 @@ module.exports = {
     },
 
     plugins: [
-        extractSass
+        extractSass,
+        sassLinter
     ]
 };

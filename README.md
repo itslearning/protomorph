@@ -55,9 +55,12 @@ Available plugins:
 For js, sass and html coding standards.
 
 - eslint
+- sass-lint
+
+For sass linting in the IDE, you will need to configure your workspace settings
+to use the .sass-lint.yml file in this project.
 
 Todo:
-- sass-lint
 - html-lint
 - babel or buble support
 - typescript support
