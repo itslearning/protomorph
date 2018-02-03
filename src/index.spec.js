@@ -1,4 +1,4 @@
-import {expect} from '../lib/SpecHelper';
+import {expect} from '../lib/spec-helper';
 
 describe('dummy suite', () => {
     describe('methodName()', () => {
