@@ -14,7 +14,7 @@ Add this repo into the devDependencies in your package.json.
 
 ```json
 ...
-"@plumpnation/protomorph": "git://github.com/plumpNation/protomorph.git#TAG_NAME"
+"@itslearning/protomorph": "git://github.com/itslearning/protomorph.git#TAG_NAME"
 ...
 ```
 
@@ -25,7 +25,7 @@ yarn install
 You need to create a `webpack.config.js` and require the protomorph webpack configuration. It shouldn't require much.
 
 ```javascript
-const baseConfig = require('@plumpnation/protomorph/webpack.config');
+const baseConfig = require('@itslearning/protomorph/webpack.config');
 
 // You can override the protomorph webpack config here
 const config = Object.assign({}, baseConfig, {

@@ -2,7 +2,7 @@
  * This file will not work out of the box with karma.
  *
  * @example
- * const baseConfig = require('@plumpnation/protomorph/karma.conf');
+ * const baseConfig = require('@itslearning/protomorph/karma.conf');
  * const overrides = {...your overrides};
  * const overridenConfig = Object.assign({}, baseConfig, overrides);
  *
