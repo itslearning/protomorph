@@ -48,6 +48,14 @@ module.exports = {
             },
 
             {
+                test: /\.(js|svelte)$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            },
+
+            {
                 test: /\.svelte$/,
                 exclude: /node_modules/,
                 use: 'svelte-loader'
