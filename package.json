@@ -22,14 +22,14 @@
         "dirty-chai": "^2.0.1",
         "eslint": "^4.8.0",
         "eslint-config-standard": "^11.0.0-beta.0",
-        "eslint-loader": "^1.9.0",
+        "eslint-loader": "^2.0.0",
         "eslint-plugin-html": "^4.0.1",
         "eslint-plugin-import": "^2.7.0",
         "eslint-plugin-json": "^1.2.0",
-        "eslint-plugin-node": "^5.2.0",
+        "eslint-plugin-node": "^6.0.1",
         "eslint-plugin-promise": "^3.6.0",
         "eslint-plugin-standard": "^3.0.1",
-        "extract-text-webpack-plugin": "^3.0.2",
+        "extract-text-webpack-plugin": "^v4.0.0-alpha.0",
         "karma": "^2.0.0",
         "karma-chai": "^0.1.0",
         "karma-chrome-launcher": "^2.2.0",
@@ -46,7 +46,10 @@
         "sasslint-webpack-plugin": "^1.0.4",
         "svelte": "^1.40.2",
         "svelte-loader": "^2.1.0",
-        "webpack": "^3.6.0",
+        "webpack": "^4.0.1",
         "webpack-clean": "^1.0.0"
+    },
+    "devDependencies": {
+        "webpack-cli": "^2.0.10"
     }
 }

@@ -16,6 +16,8 @@ const sassLinter = new SassLintPlugin({
 const extractSass = new ExtractTextPlugin({filename: '[name].bundle.css'});
 
 module.exports = {
+    mode: process.env.NODE_ENV || 'development',
+
     resolve: {
         extensions: ['.js', '.svelte', '.scss']
     },
