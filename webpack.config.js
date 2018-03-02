@@ -1,6 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SassLintPlugin = require('sasslint-webpack-plugin');
+const babelOptions = require('./.babelrc.json');
 
 // const thisDir = __filename__dir;
 
@@ -51,7 +52,8 @@ module.exports = {
                 test: /\.(js|svelte)$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
-                    loader: 'babel-loader'
+                    loader: 'babel-loader',
+                    options: babelOptions
                 }
             },
 
