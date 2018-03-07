@@ -5,8 +5,8 @@
     "author": "Gavin King <gavin.king@itslearning.com>",
     "license": "MIT",
     "scripts": {
-        "build": "webpack",
-        "dev": "webpack --watch",
+        "build": "webpack-cli",
+        "dev": "webpack-cli --watch",
         "test": "karma start"
     },
     "dependencies": {
@@ -47,9 +47,7 @@
         "svelte": "^1.40.2",
         "svelte-loader": "^2.1.0",
         "webpack": "^4.0.1",
-        "webpack-clean": "^1.0.0"
-    },
-    "devDependencies": {
+        "webpack-clean": "^1.0.0",
         "webpack-cli": "^2.0.10"
     }
 }
