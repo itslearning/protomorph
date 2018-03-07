@@ -62,7 +62,7 @@ module.exports = {
             {
                 test: /\.svelte$/,
                 exclude: /node_modules/,
-                use: 'svelte-loader'
+                use: {loader: 'svelte-loader', options: {store: true}}
             },
 
             {
