@@ -1,6 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SassLintPlugin = require('sasslint-webpack-plugin');
+const babelOptions = require('./.babelrc.json');
 
 // const thisDir = __filename__dir;
 
@@ -15,6 +16,8 @@ const sassLinter = new SassLintPlugin({
 const extractSass = new ExtractTextPlugin({filename: '[name].bundle.css'});
 
 module.exports = {
+    mode: process.env.NODE_ENV || 'development',
+
     resolve: {
         extensions: ['.js', '.svelte', '.scss']
     },
@@ -45,6 +48,15 @@ module.exports = {
                 }, {
                     loader: 'sass-loader' // compiles Sass to CSS
                 }])
+            },
+
+            {
+                test: /\.(js|svelte)$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: babelOptions
+                }
             },
 
             {

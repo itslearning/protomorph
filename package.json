@@ -1,7 +1,7 @@
 {
     "name": "@itslearning/protomorph",
     "description": "Shared build config for frontend applications",
-    "version": "2.3.0",
+    "version": "3.0.0",
     "author": "Gavin King <gavin.king@itslearning.com>",
     "license": "MIT",
     "scripts": {
@@ -10,7 +10,11 @@
         "test": "karma start"
     },
     "dependencies": {
+        "@babel/core": "^7.0.0-beta.40",
+        "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.40",
+        "@babel/preset-env": "^7.0.0-beta.40",
         "axe-core": "^2.6.1",
+        "babel-loader": "8.0.0-beta.0",
         "chai": "^4.1.2",
         "clean-webpack-plugin": "^0.1.17",
         "copy-webpack-plugin": "^4.3.1",
@@ -18,14 +22,14 @@
         "dirty-chai": "^2.0.1",
         "eslint": "^4.8.0",
         "eslint-config-standard": "^11.0.0-beta.0",
-        "eslint-loader": "^1.9.0",
+        "eslint-loader": "^2.0.0",
         "eslint-plugin-html": "^4.0.1",
         "eslint-plugin-import": "^2.7.0",
         "eslint-plugin-json": "^1.2.0",
-        "eslint-plugin-node": "^5.2.0",
+        "eslint-plugin-node": "^6.0.1",
         "eslint-plugin-promise": "^3.6.0",
         "eslint-plugin-standard": "^3.0.1",
-        "extract-text-webpack-plugin": "^3.0.2",
+        "extract-text-webpack-plugin": "^v4.0.0-alpha.0",
         "karma": "^2.0.0",
         "karma-chai": "^0.1.0",
         "karma-chrome-launcher": "^2.2.0",
@@ -42,7 +46,10 @@
         "sasslint-webpack-plugin": "^1.0.4",
         "svelte": "^1.40.2",
         "svelte-loader": "^2.1.0",
-        "webpack": "^3.6.0",
+        "webpack": "^4.0.1",
         "webpack-clean": "^1.0.0"
+    },
+    "devDependencies": {
+        "webpack-cli": "^2.0.10"
     }
 }
