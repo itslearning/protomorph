@@ -15,6 +15,7 @@ module.exports = {
 
     frameworks: [
         'mocha',
+        'chai-dom',
         'chai',
         'dirty-chai'
     ],

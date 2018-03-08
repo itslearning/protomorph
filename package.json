@@ -7,7 +7,7 @@
     "scripts": {
         "build": "webpack-cli",
         "dev": "webpack-cli --watch",
-        "test": "karma start"
+        "test": "yarn build && karma start"
     },
     "dependencies": {
         "@babel/core": "^7.0.0-beta.40",
@@ -32,6 +32,7 @@
         "extract-text-webpack-plugin": "^v4.0.0-alpha.0",
         "karma": "^2.0.0",
         "karma-chai": "^0.1.0",
+        "karma-chai-dom": "^1.1.0",
         "karma-chrome-launcher": "^2.2.0",
         "karma-dirty-chai": "^2.0.0",
         "karma-edge-launcher": "^0.4.2",
