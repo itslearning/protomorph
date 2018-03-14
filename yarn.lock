@@ -7900,9 +7900,9 @@ svelte-loader@^2.1.0:
     loader-utils "^1.1.0"
     tmp "0.0.31"
 
-svelte@^1.40.2:
-  version "1.51.1"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-1.51.1.tgz#b24155038990158e7b463e48c39109da20ff9812"
+svelte@^1.57.3:
+  version "1.57.3"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-1.57.3.tgz#a5c95bdfda7321b1dd41cfbd2aa1faf53d7ffea1"
 
 svgo@^0.7.0:
   version "0.7.2"
