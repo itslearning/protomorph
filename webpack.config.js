@@ -38,7 +38,7 @@ module.exports = {
 
     module: {
         rules: [
-            { // sass / scss loader for webpack
+            {
                 test: /\.scss$/,
                 use: extractSass.extract([{
                     loader: 'css-loader', // translates CSS into CommonJS
@@ -55,12 +55,17 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: babelOptions
-                }
+                },
+                // If you need to transpile any npm modules, you will need
+                // to create your own exclude value
+                // @see https://github.com/babel/babel-loader/issues/171
+                exclude: /node_modules\/(?!@itslearning)/
             },
 
             {
                 test: /\.svelte$/,
-                use: {loader: 'svelte-loader', options: {store: true}}
+                use: {loader: 'svelte-loader', options: {store: true}},
+                exclude: /node_modules\/(?!@itslearning)/
             },
 
             {
