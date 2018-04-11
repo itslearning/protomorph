@@ -52,7 +52,6 @@ module.exports = {
 
             {
                 test: /\.(js|svelte)$/,
-                exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: 'babel-loader',
                     options: babelOptions
@@ -61,7 +60,6 @@ module.exports = {
 
             {
                 test: /\.svelte$/,
-                exclude: /node_modules/,
                 use: {loader: 'svelte-loader', options: {store: true}}
             },
 
