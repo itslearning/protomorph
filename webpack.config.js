@@ -1,9 +1,16 @@
+const del = require('del');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SassLintPlugin = require('sasslint-webpack-plugin');
 const babelOptions = require('./.babelrc.json');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const WebpackOnBuildPlugin = require('on-build-webpack');
 
 // const thisDir = __filename__dir;
+
+const outputDir = path.join(process.cwd(), '/dist');
+
+const cleanDistBeforeBuild = new CleanWebpackPlugin('dist');
 
 const sassLinter = new SassLintPlugin({
     configFile: path.join(__dirname, '.sass-lint.yml'),
@@ -14,6 +21,18 @@ const sassLinter = new SassLintPlugin({
 
 // This will extract the styles from the bundle.js file.
 const extractSass = new ExtractTextPlugin({filename: '[name].bundle.css'});
+
+// The js files webpack created for themes are no longer required
+// after the text extract plugin removed all useful CSS from them.
+const cleanUpThemeJsFiles = new WebpackOnBuildPlugin(() => {
+    const tmpThemeBundles = path.resolve(outputDir, '**/*.thm.bundle.js');
+    const tmpThemeBundleSourceMaps = path.resolve(outputDir, '**/*.thm.bundle.js.map');
+
+    del.sync([
+        tmpThemeBundles,
+        tmpThemeBundleSourceMaps
+    ]);
+});
 
 module.exports = {
     mode: process.env.NODE_ENV || 'development',
@@ -34,7 +53,7 @@ module.exports = {
     },
 
     output: {
-        path: path.join(process.cwd(), '/dist'),
+        path: outputDir,
         filename: '[name].bundle.js'
     },
 
@@ -87,7 +106,9 @@ module.exports = {
     },
 
     plugins: [
+        cleanDistBeforeBuild,
+        sassLinter,
         extractSass,
-        sassLinter
+        cleanUpThemeJsFiles
     ]
 };

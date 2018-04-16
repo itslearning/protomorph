@@ -2,7 +2,7 @@ Protomorph: shared build
 ========================
 
 Contains a standard build for working on frontend applications based on webpack
-and various linters.
+using ts, js and scss. Also contains configuration for js, scss and html linters.
 
 ```shell
 mkdir my-frontend-app
@@ -37,7 +37,6 @@ const config = Object.assign({}, baseConfig, {
 module.exports = config;
 ```
 
-
 ## Webpack for js and sass
 
 Please read the webpack.config.js.
@@ -48,20 +47,27 @@ Available plugins:
 - extract-text-webpack-plugin
 - clean-webpack-plugin
 - copy-webpack-plugin
+- on-build-webpack
+
+## Order of build
+
+- Removes existing dist folder
+- Builds js, ts and scss
+- Removes unnecessary intermediate files created by webpack during build
 
 ## Karma test runner
 
 ## Linting
-For js, sass and html coding standards.
+For js, sass and html coding standards, provided are configs for:
 
-- eslint
-- sass-lint
+- eslint (.eslintrc.json)
+- sass-lint (.sass-lint.yml)
+- htmlhint (.htmlhintrc)
 
 For sass linting in the IDE, you will need to configure your workspace settings
-to use the .sass-lint.yml file in this project.
+to use the lint files in this project.
 
-Todo:
-- html-lint
-- babel or buble support
-- typescript support
-- axe for unit tests
+You may find copying the linting files into your root folder easier to use.
+
+TODO:
+- Automate html linting (maybe https://www.npmjs.com/package/htmllint-loader)
