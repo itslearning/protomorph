@@ -6,11 +6,14 @@ const babelOptions = require('./.babelrc.json');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WebpackOnBuildPlugin = require('on-build-webpack');
 
-// const thisDir = __filename__dir;
-
 const outputDir = path.join(process.cwd(), '/dist');
 
-const cleanDistBeforeBuild = new CleanWebpackPlugin('dist');
+// We set the root to be the current running webpack directory, so
+// if you are including this in your project, we aware, this will
+// delete your dist folder before building another.
+const cleanDistBeforeBuild = new CleanWebpackPlugin('dist', {
+    root: process.cwd()
+});
 
 const sassLinter = new SassLintPlugin({
     configFile: path.join(__dirname, '.sass-lint.yml'),
