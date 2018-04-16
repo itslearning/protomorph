@@ -19,8 +19,10 @@ module.exports = {
     mode: process.env.NODE_ENV || 'development',
 
     resolve: {
-        extensions: ['.js', '.svelte', '.scss']
+        extensions: ['.ts', '.js', '.svelte', '.scss']
     },
+
+    devtool: 'source-map',
 
     entry: {
         'index': [
@@ -63,9 +65,13 @@ module.exports = {
             },
 
             {
+                test: /\.ts$/,
+                loader: 'ts-loader'
+            },
+
+            {
                 test: /\.svelte$/,
-                use: {loader: 'svelte-loader', options: {store: true}},
-                exclude: new RegExp('node_modules\\' + path.sep + '(?!@itslearning)')
+                use: {loader: 'svelte-loader', options: {store: true}}
             },
 
             {

@@ -15,6 +15,7 @@
         "@babel/preset-env": "^7.0.0-beta.40",
         "axe-core": "^3.0.1",
         "babel-loader": "8.0.0-beta.0",
+        "babel-polyfill": "^6.26.0",
         "chai": "^4.1.2",
         "clean-webpack-plugin": "^0.1.17",
         "copy-webpack-plugin": "^4.3.1",
@@ -47,6 +48,8 @@
         "sasslint-webpack-plugin": "^1.0.4",
         "svelte": "^1.57.3",
         "svelte-loader": "^2.1.0",
+        "ts-loader": "^4.2.0",
+        "typescript": "^2.8.1",
         "webpack": "^4.0.1",
         "webpack-clean": "^1.0.0",
         "webpack-cli": "^2.0.10"
