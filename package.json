@@ -1,7 +1,7 @@
 {
     "name": "@itslearning/protomorph",
     "description": "Shared build config for frontend applications",
-    "version": "6.3.1",
+    "version": "7.0.0",
     "author": "Gavin King <gavin.king@itslearning.com>",
     "license": "MIT",
     "scripts": {
