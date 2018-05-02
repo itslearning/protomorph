@@ -2,7 +2,7 @@
     <h1>I am a header</h1>
 
     {#if message}
-    <p>{message}</p>
+    <p ref:message>{message}</p>
     {/if}
 </section>
 
