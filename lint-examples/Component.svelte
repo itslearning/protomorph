@@ -1,5 +1,9 @@
 <section>
     <h1>I am a header</h1>
+
+    {#if message}
+    <p>{message}</p>
+    {/if}
 </section>
 
 <script>
@@ -9,7 +13,7 @@
     export default {
         data() {
             return {
-                foo: 'bar'
+                message: 'Hear me roar!'
             };
         },
 

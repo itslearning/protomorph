@@ -3,10 +3,10 @@ import Component from '../lint-examples/Component';
 console.log('Hello world!');
 
 const data = {
-    foo: 'bar'
+    message: 'I am the law!'
 };
 
-const target = document.querySelector('not-important');
+const target = document.querySelector('main');
 const component = new Component({target, data: {...data}});
 
 console.log(component);
