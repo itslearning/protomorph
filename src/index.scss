@@ -1,6 +1,9 @@
-// This component has two children, Child1 and Child2 in the components folder.
-// This is a demonstration that by simply including this one component, we not
-// only get the expected dependencies that are imported in those child scss files,
-// but we only import the "lib/shared-dependency" once, even though it is used
-// in both Child1 and Child2.
-@import "components/Parent";
+// This view has one parent and two children, Child1 and Child2 in the components folder.
+// This is a demonstration that by simply including this one component in the js, we pull
+// into the build all the style dependencies, but only include any shared dependencies once.
+
+// NOTE: I am not importing the components scss files in here.
+// The only code we need here are tweaks for the view.
+body {
+    background: beige;
+}
