@@ -1,12 +1,11 @@
-import Component from '../lint-examples/Component';
+import Parent from './components/Parent';
 
 console.log('Hello world!');
 
 const data = {
-    message: 'I am the law!'
+    message: 'I am the parent!'
 };
 
 const target = document.querySelector('main');
-const component = new Component({target, data: {...data}});
 
-console.log(component);
+new Parent({target, data}); // eslint-disable-line
