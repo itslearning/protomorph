@@ -1,6 +1,11 @@
+@import "../lib/import-once";
+@import "../lib/shared-dependency";
+
 @import "Child1";
 @import "Child2";
 
-.parent {
-    color: yellowgreen;
+@include exports("parent") {
+    .parent {
+        color: yellowgreen;
+    }
 }

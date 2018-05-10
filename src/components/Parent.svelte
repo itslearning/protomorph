@@ -4,8 +4,6 @@
 <Child2 />
 
 <script>
-    import './_Parent.scss';
-
     import Child1 from './Child1';
     import Child2 from './Child2';
 

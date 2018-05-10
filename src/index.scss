@@ -2,8 +2,11 @@
 // This is a demonstration that by simply including this one component in the js, we pull
 // into the build all the style dependencies, but only include any shared dependencies once.
 
-// NOTE: I am not importing the components scss files in here.
-// The only code we need here are tweaks for the view.
+// We'll import the shared-dependency here too just for fun.
+@import "lib/shared-dependency";
+
+@import "components/Parent";
+
 body {
     background: beige;
 }

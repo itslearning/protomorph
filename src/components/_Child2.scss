@@ -1,5 +1,8 @@
-@import "../lib/_shared-dependency.scss";
+@import "../lib/import-once";
+@import "../lib/shared-dependency";
 
-.child2 {
-    color: blue;
+@include exports("child-two") {
+    .child-2 {
+        color: blue;
+    }
 }

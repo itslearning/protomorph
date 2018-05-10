@@ -86,10 +86,7 @@ module.exports = {
                         url: false
                     }
                 }, {
-                    loader: 'sass-loader', // compiles Sass to CSS
-                    options: {
-                        importer: importOnce
-                    }
+                    loader: 'sass-loader' // compiles Sass to CSS
                 }]
             },
 
