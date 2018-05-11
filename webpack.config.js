@@ -1,8 +1,6 @@
 const del = require('del');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const importOnce = require('node-sass-import-once');
 const SassLintPlugin = require('sasslint-webpack-plugin');
 const babelOptions = require('./.babelrc.json');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -116,7 +114,6 @@ module.exports = {
         cleanDistBeforeBuild,
         sassLinter,
         extractCss,
-        // new OptimizeCSSAssetsPlugin(), // if you optimise, you lose the css source map
         cleanUpThemeJsFiles
     ]
 };
