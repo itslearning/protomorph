@@ -83,7 +83,7 @@ module.exports = {
                 // If you need to transpile any npm modules, you will need
                 // to create your own exclude value
                 // @see https://github.com/babel/babel-loader/issues/171
-                exclude: new RegExp('node_modules\\' + path.sep + '(?!@itslearning)')
+                exclude: new RegExp('node_modules\\' + path.sep + '(?![@itslearning|svelte])')
             },
 
             {
