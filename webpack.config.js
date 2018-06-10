@@ -1,6 +1,6 @@
 const del = require('del');
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SassLintPlugin = require('sasslint-webpack-plugin');
 const babelOptions = require('./.babelrc.json');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -23,7 +23,7 @@ const sassLinter = new SassLintPlugin({
 });
 
 // This will extract the styles from the bundle.js file.
-const extractSass = new ExtractTextPlugin({filename: '[name].bundle.css'});
+const extractCss = new MiniCssExtractPlugin({filename: '[name].bundle.css'});
 
 // The js files webpack created for themes are no longer required
 // after the text extract plugin removed all useful CSS from them.
@@ -63,18 +63,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.scss$/,
-                use: extractSass.extract([{
-                    loader: 'css-loader', // translates CSS into CommonJS
-                    options: {
-                        url: false
-                    }
-                }, {
-                    loader: 'sass-loader' // compiles Sass to CSS
-                }])
-            },
-
-            {
                 test: /\.(js|svelte)$/,
                 use: {
                     loader: 'babel-loader',
@@ -84,6 +72,20 @@ module.exports = {
                 // to create your own exclude value
                 // @see https://github.com/babel/babel-loader/issues/171
                 exclude: new RegExp('node_modules\\' + path.sep + '(?![@itslearning|svelte])')
+            },
+
+            {
+                test: /\.scss$/,
+                use: [{
+                    loader: MiniCssExtractPlugin.loader
+                }, {
+                    loader: 'css-loader', // translates CSS into CommonJS
+                    options: {
+                        url: false
+                    }
+                }, {
+                    loader: 'sass-loader' // compiles Sass to CSS
+                }]
             },
 
             {
@@ -111,7 +113,7 @@ module.exports = {
     plugins: [
         cleanDistBeforeBuild,
         sassLinter,
-        extractSass,
+        extractCss,
         cleanUpThemeJsFiles
     ]
 };

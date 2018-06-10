@@ -1,5 +1,12 @@
-$red: red;
+// This view has one parent and two children, Child1 and Child2 in the components folder.
+// This is a demonstration that by simply including this one component in the js, we pull
+// into the build all the style dependencies, but only include any shared dependencies once.
 
-.your-view-element {
-    color: $red;
+// We'll import the shared-dependency here too just for fun.
+@import "lib/shared-dependency";
+
+@import "components/Parent";
+
+body {
+    background: beige;
 }

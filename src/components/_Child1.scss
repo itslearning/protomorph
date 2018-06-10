@@ -1,0 +1,8 @@
+@import "../lib/import-once";
+@import "../lib/shared-dependency";
+
+@include exports("child-one") {
+    .child-1 {
+        color: red;
+    }
+}

@@ -1,0 +1,8 @@
+// These styles should only appear once in the final built index.bundle.css
+@import "import-once";
+
+@include exports("shared-dependency") {
+    .should-only-appear-once {
+        padding: 100rem;
+    }
+}
