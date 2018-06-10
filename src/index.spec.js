@@ -33,9 +33,9 @@ describe('dummy suite', () => {
 
     function testV2Template() {
         const target = document.createElement('main');
-        const data = {message: 'boom boom wa wa'};
+        const data = { message: 'boom boom wa wa' };
 
-        const component = new Component({target, data});
+        const component = new Component({ target, data });
 
         expect(component.refs.message.textContent).to.equal('boom boom wa wa');
     }
