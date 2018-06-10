@@ -1,0 +1,8 @@
+@import "../lib/shared-dependency";
+
+@import "Child1";
+@import "Child2";
+
+.your-view-element {
+    color: yellowgreen;
+}

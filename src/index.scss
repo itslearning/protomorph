@@ -1,5 +1,9 @@
-$red: red;
+// This view has a parent component and two children.
+// This is a demonstration that by simply including the parent component scss, we not
+// only get the expected dependencies that are imported in those child scss files,
+// but we only import the "lib/shared-dependency" only once, even though it is used
+// in this file, Parent, Child1 and Child2.
 
-.your-view-element {
-    color: $red;
-}
+@import "lib/shared-dependency";
+
+@import "components/Parent";
