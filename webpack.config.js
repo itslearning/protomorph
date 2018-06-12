@@ -25,7 +25,7 @@ const sassLinter = new SassLintPlugin({
 });
 
 // This will extract the styles from the bundle.js file.
-const extractCss = new MiniCssExtractPlugin({filename: '[name].bundle.css'});
+const extractCss = new MiniCssExtractPlugin({ filename: '[name].bundle.css' });
 
 // The js files webpack created for themes are no longer required
 // after the text extract plugin removed all useful CSS from them.
@@ -85,6 +85,14 @@ module.exports = {
                     options: {
                         url: false
                     }
+                },
+                {
+                    loader: 'postcss-loader', // run post css functions, like autoprefixer
+                    options: {
+                        config: {
+                            path: './postcss.config.js'
+                        }
+                    }
                 }, {
                     loader: 'sass-loader', // compiles Sass to CSS
                     options: {
@@ -100,7 +108,7 @@ module.exports = {
 
             {
                 test: /\.svelte$/,
-                use: {loader: 'svelte-loader', options: {store: true}}
+                use: { loader: 'svelte-loader', options: { store: true } }
             },
 
             {
