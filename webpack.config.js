@@ -90,7 +90,7 @@ module.exports = {
                     loader: 'postcss-loader', // run post css functions, like autoprefixer
                     options: {
                         config: {
-                            path: './postcss.config.js'
+                            path: path.join(__dirname, '/postcss.config.js')
                         }
                     }
                 }, {
