@@ -2,7 +2,7 @@ const del = require('del');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const importOnce = require('node-sass-import-once');
+const magicSassImporter = require('node-sass-magic-importer');
 const SassLintPlugin = require('sasslint-webpack-plugin');
 const babelOptions = require('./.babelrc.json');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -96,7 +96,7 @@ module.exports = {
                 }, {
                     loader: 'sass-loader', // compiles Sass to CSS
                     options: {
-                        importer: importOnce
+                        importer: magicSassImporter()
                     }
                 }]
             },
