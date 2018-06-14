@@ -2,7 +2,7 @@ const del = require('del');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const importOnce = require('node-sass-import-once');
+const magicSassImporter = require('node-sass-magic-importer');
 const SassLintPlugin = require('sasslint-webpack-plugin');
 const babelOptions = require('./.babelrc.json');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -25,7 +25,7 @@ const sassLinter = new SassLintPlugin({
 });
 
 // This will extract the styles from the bundle.js file.
-const extractCss = new MiniCssExtractPlugin({filename: '[name].bundle.css'});
+const extractCss = new MiniCssExtractPlugin({ filename: '[name].bundle.css' });
 
 // The js files webpack created for themes are no longer required
 // after the text extract plugin removed all useful CSS from them.
@@ -85,10 +85,18 @@ module.exports = {
                     options: {
                         url: false
                     }
+                },
+                {
+                    loader: 'postcss-loader', // run post css functions, like autoprefixer
+                    options: {
+                        config: {
+                            path: path.join(__dirname, '/postcss.config.js')
+                        }
+                    }
                 }, {
                     loader: 'sass-loader', // compiles Sass to CSS
                     options: {
-                        importer: importOnce
+                        importer: magicSassImporter()
                     }
                 }]
             },
@@ -100,7 +108,7 @@ module.exports = {
 
             {
                 test: /\.svelte$/,
-                use: {loader: 'svelte-loader', options: {store: true}}
+                use: { loader: 'svelte-loader', options: { store: true } }
             },
 
             {
