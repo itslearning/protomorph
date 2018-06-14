@@ -10,7 +10,8 @@
         "test": "yarn build && karma start"
     },
     "browserslist": [
-        "last 4 versions"
+        "last 2 versions",
+        "not dead"
     ],
     "dependencies": {
         "@babel/core": "7.0.0-beta.46",
