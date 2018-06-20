@@ -11,7 +11,7 @@ const WebpackOnBuildPlugin = require('on-build-webpack');
 const outputDir = path.join(process.cwd(), '/dist');
 
 // We set the root to be the current running webpack directory, so
-// if you are including this in your project, we aware, this will
+// if you are including this in your project, be aware, this will
 // delete your dist folder before building another.
 const cleanDistBeforeBuild = new CleanWebpackPlugin('dist', {
     root: process.cwd()
