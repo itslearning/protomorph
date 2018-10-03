@@ -8486,6 +8486,11 @@ require-main-filename@^1.0.1:
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
   integrity sha1-l/cXtp1IeE9fUmpsWqj/3aBVpNE=
 
+require-relative@^0.8.7:
+  version "0.8.7"
+  resolved "https://registry.yarnpkg.com/require-relative/-/require-relative-0.8.7.tgz#7999539fc9e047a37928fa196f8e1563dabd36de"
+  integrity sha1-eZlTn8ngR6N5KPoZb44VY9q9Nt4=
+
 require-uncached@^1.0.2, require-uncached@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/require-uncached/-/require-uncached-1.0.3.tgz#4e0d56d6c9662fd31e43011c4b95aa49955421d3"
@@ -9325,23 +9330,24 @@ supports-color@^5.3.0, supports-color@^5.4.0:
   dependencies:
     has-flag "^3.0.0"
 
-svelte-dev-helper@^1.1.7:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/svelte-dev-helper/-/svelte-dev-helper-1.1.7.tgz#b7d887c7be5abf7e2436f9467560061b1e2a935f"
-  integrity sha1-t9iHx75av34kNvlGdWAGGx4qk18=
+svelte-dev-helper@^1.1.9:
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/svelte-dev-helper/-/svelte-dev-helper-1.1.9.tgz#7d187db5c6cdbbd64d75a32f91b8998bde3273c3"
+  integrity sha1-fRh9tcbNu9ZNdaMvkbiZi94yc8M=
 
-svelte-loader@2.9.1:
-  version "2.9.1"
-  resolved "https://registry.yarnpkg.com/svelte-loader/-/svelte-loader-2.9.1.tgz#e493c51ac6c2fe53867b1512abf46eb991ca3205"
-  integrity sha512-6rC/E4+efIfbM3MS+WjDV7BM7LY7yvcPMasojbn+zqiGYQ3GjNu3UN32OfvySHm/aQ9NwXIeiuIRjHQXMXCBGQ==
+svelte-loader@2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/svelte-loader/-/svelte-loader-2.11.0.tgz#f97b30763a67a12186838f6282553060f1726240"
+  integrity sha512-+Q24lBhQ8KGB9flHNXjKqq9TJEIcT3VJlzsxhijqrJ9feK9bUG3TLDlosceoAXvOsjxuaHKN1ZveUbbX7J7zUQ==
   dependencies:
     loader-utils "^1.1.0"
-    svelte-dev-helper "^1.1.7"
+    require-relative "^0.8.7"
+    svelte-dev-helper "^1.1.9"
 
-svelte@2.8.1:
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-2.8.1.tgz#190e256dcd621276cc1aa996428d9f667b2c879a"
-  integrity sha512-xLukMmBQDA+joU8x5jxsnv0qF7sbOst2L3lbfnRyqPqUJ4rlpVkZk4Pktbp0gMU5n7FlHYSDhpCQCMPqP8xW8w==
+svelte@2.13.5:
+  version "2.13.5"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-2.13.5.tgz#23478480ed0f7d4da4816022d84a86512d503358"
+  integrity sha512-Mg4+vRwAT1IMR4FAH3cOmMaVVrJ35xUI1qsTW+WoJvRpeBDx7aLZUbgBXnctxdfEJQ4BuP2MCuhYKy8917Au1A==
 
 svgo@^0.7.0:
   version "0.7.2"
