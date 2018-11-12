@@ -104,6 +104,7 @@ function initConfiguration(options) {
                         options: {
                             emitCss: true,
                             store: true,
+                            hydratable: true,
                             preprocess: {
                                 style: AwesomeSvelteHelpers.svelteSassPreprocessor(options.sassPreprocessorOptions)
                             }
