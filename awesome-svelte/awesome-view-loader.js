@@ -15,7 +15,7 @@ const __defaultViewSettings = {
     storeFactory: 'new Store()',
     extraImports: {},
     extraStyles: ['skins\\itsl-inuit.min.css'],
-    polyfills: ['Fetch', 'Promise', 'ObjectAssign'],
+    polyfills: ['Fetch', 'Promise', 'ObjectAssign', 'ArrayFrom'],
 
     layout: '~/Views/Shared/_SvelteLayout.cshtml',
     id: null
