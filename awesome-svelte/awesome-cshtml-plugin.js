@@ -141,7 +141,7 @@ function buildViewModel(options, configuration, compilation) {
         return null;
     }
 
-    const propertyTemplate = `{{comment}}\t\tpublic {{type}} {{name}} { get; set; }\n\n`;
+    const propertyTemplate = `{{comment}}        public {{type}} {{name}} { get; set; }\n\n`;
 
     let propertiesContent = '';
 
@@ -151,7 +151,7 @@ function buildViewModel(options, configuration, compilation) {
             {
                 'type': getPropertyType(property),
                 'name': property.name,
-                'comment': property.description ? `\t\t/// <summary>\n\t\t/// ${property.description}\n\t\t/// </summary>\n` : ''
+                'comment': property.description ? `        /// <summary>\n        /// ${property.description}\n        /// </summary>\n` : ''
             }
         );
     });
@@ -178,7 +178,7 @@ namespace {{namespace}} {
             'className': `${configuration.location.page}ViewModel`,
             'namespace': buildOutputFileName(options.modelNamespace, configuration),
             'properties': propertiesContent.trim(),
-            'comment': componentDoc.description ? `\n\t/// <summary>\n\t/// ${componentDoc.description}\n\t/// </summary>` : ''
+            'comment': componentDoc.description ? `\n    /// <summary>\n    /// ${componentDoc.description}\n    /// </summary>` : ''
         }
     );
 }
