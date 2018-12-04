@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SassLintPlugin = require('sasslint-webpack-plugin');
 const babelOptions = require('./.babelrc.json');
 const AwesomeCshtmlPlugin = require('./awesome-svelte/awesome-cshtml-plugin');
+const PrometheusSvelteLoaderExtension = require('./itslearning-svelte/prometheus-loader');
 
 const AwesomeSvelteHelpers = require('./awesome-svelte/helpers');
 
@@ -14,6 +15,43 @@ const sassLinter = new SassLintPlugin({
     failOnError: true,
     ignorePlugins: ['extract-text-webpack-plugin']
 });
+
+const defaultOptions = {
+    allowedContextItems : [
+        'CurrentUserFirstName',
+        'CurrentUserName',
+        'CurrentUserPictureUrl',
+        'CdnPath'
+    ],
+    cshtmlPluginOptions : {
+        filename: '../../Web/Areas/[area]/Views/Shared/[page].cshtml',
+        modelFilename: '../../Web/Areas/[area]/Models/[page]ViewModel.cs',
+        modelNamespace: 'Itsolutions.Itslearning.Web.Areas.[area].Models',
+        templateFilename: path.join(__dirname, '/itslearning-svelte/view.template.cshtml'),
+        vsprojFilename: '../../Itsolutions.Itslearning.Web.csproj',
+        staticFolderPath: '../../../StaticContent'
+    },
+    cssExtractPluginOptions: { 
+        filename: '[name]/[name].bundle.min.css' 
+    },
+    viewLoaderOptions: {
+        scriptTemplateFilename: path.join(__dirname, '/itslearning-svelte/view.template.js'),
+        styleTemplateFilename: path.join(__dirname, '/itslearning-svelte/view.template.sass')
+    },
+    sassPreprocessorOptions: {
+        additionalImports: [
+            './src/Styles/common'
+        ]
+    },
+    awesomeSvelteLoaderExtensions: [
+        {
+            instance: PrometheusSvelteLoaderExtension,
+            options: {
+                templateFilename: path.join(__dirname, '/itslearning-svelte/prometheus.modern.sass')
+            }
+        }
+    ]
+};
 
 /**
  * @typedef {Object} ConfigurationOptions
@@ -27,9 +65,11 @@ const sassLinter = new SassLintPlugin({
 
 /**
  * Creates default configuration for webpack using provided options.
- * @param {ConfigurationOptions} options Options for the configuration.
+ * @param {ConfigurationOptions} consumerOptions Options for the configuration.
  */
-function initConfiguration(options) {
+function initConfiguration(consumerOptions) {
+    const options = Object.assign({}, defaultOptions, consumerOptions);
+    
     return {
         optimization: {
             minimize: true,

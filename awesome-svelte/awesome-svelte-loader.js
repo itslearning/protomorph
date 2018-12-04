@@ -225,7 +225,7 @@ module.exports = function (source) {
         }
 
         const entryModule = BuildUtils.findEntryModule(this._module);
-        const entryPointName = BuildUtils.extractEntryPointNameFromFile(entryModule.rawRequest);
+        const entryPointName = BuildUtils.extractEntryPointNameFromFile(entryModule.rawRequest, path.basename(this.rootContext));
 
         const filename = path.relative(this.rootContext, this.resource);
         const compilation = this._compilation;

@@ -73,7 +73,7 @@ module.exports = function (source, map) {
             virtualModuleInstances.set(this._compiler, new VirtualModules(this._compiler));
         }
 
-        const entrypointName = BuildUtils.extractEntryPointNameFromFile(`./${path.relative(this.rootContext, this.resource)}`);
+        const entrypointName = BuildUtils.extractEntryPointNameFromFile(`./${path.relative(this.rootContext, this.resource)}`, path.basename(this.rootContext));
 
         const entryPointSpecificSettings = {
             instancesSelector: `document.querySelectorAll('[data-c-svelte-${entrypointName}]')`,

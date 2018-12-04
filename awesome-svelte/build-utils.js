@@ -7,8 +7,8 @@ const path = require('path');
  * @param {string} fileName The file path of the entry point view.json file.
  * @return {string} The entry point name.
  */
-function extractEntryPointNameFromFile(fileName) {
-    const regex = /[/\\]([^/]+)[/\\]([^/]+)[/\\]view\.json$/gi;
+function extractEntryPointNameFromFile(fileName, areaName) {
+    const regex = /[/\\]src[/\\]([^/]+)[/\\]view\.json$/gi;
 
     const match = regex.exec(fileName);
 
@@ -16,7 +16,7 @@ function extractEntryPointNameFromFile(fileName) {
         throw new Error(`Can't parse entrypoint name from file ${fileName}`);
     }
 
-    return `${match[1]}_${match[2]}`;
+    return `${areaName}_${match[1]}`;
 }
 
 /**
@@ -116,21 +116,35 @@ function replaceTemplatePlaceholders(source, placeholders) {
 }
 
 function getBasePatternToEntryPoints(startupConfiguration) {
-    return `./${startupConfiguration.build.area}/${startupConfiguration.build.page}/`;
+    return `./src/${startupConfiguration.build.page}/`;
 }
 
-function buildScriptsEntryPoints(startupConfiguration) {
+function buildScriptsEntryPoints(startupConfiguration, areaName) {
     const scriptFiles = glob.sync('./' + path.join(getBasePatternToEntryPoints(startupConfiguration), 'view.json'));
 
     const entry = {};
 
     scriptFiles.forEach(scriptFilePath => {
-        const entryName = extractEntryPointNameFromFile(scriptFilePath);
+        const entryName = extractEntryPointNameFromFile(scriptFilePath, areaName);
 
         entry[entryName] = scriptFilePath;
     });
 
     return entry;
+}
+
+function buildScriptsEntryPointsForSrcFolderInArea(areaName) {
+    const buildConfig = readStartupConfiguration(areaName);
+
+    // TODO Implement validation of build config parameters
+    printStartupConfiguration(buildConfig);
+
+    const entryPoints = buildScriptsEntryPoints(buildConfig, areaName);
+
+    // TODO Validate that at least one entry point found
+    printEntryPoints(entryPoints);
+
+    return entryPoints;
 }
 
 /**
@@ -172,6 +186,34 @@ function extractAssetsOfType(compilation, pathSegment, typeRegexp, staticPath) {
         .map(value => path.relative(path.resolve(staticPath), value));
 }
 
+function readStartupConfiguration(area) {
+    const pageArgumentPrefix = '--env.page=';
+
+    const startupConfiguration = {};
+
+    // Read working area and page
+    startupConfiguration.build = {
+        area: area,
+        page: '*'
+    };
+
+    const pageArgIndex = process.argv.findIndex(arg => arg.startsWith(pageArgumentPrefix));
+
+    if (pageArgIndex >= 0) {
+        startupConfiguration.build.page = process.argv[pageArgIndex].substr(pageArgumentPrefix.length);
+    }
+
+    return startupConfiguration;
+}
+
+function printStartupConfiguration(startupConfiguration) {
+    console.log(startupConfiguration);
+}
+
+function printEntryPoints(entryPoints) {
+    console.log(entryPoints);
+}
+
 module.exports = {
     extractEntryPointNameFromFile,
     parseEntryPointName,
@@ -182,6 +224,7 @@ module.exports = {
     replaceTemplatePlaceholders,
     getBasePatternToEntryPoints,
     buildScriptsEntryPoints,
+    buildScriptsEntryPointsForSrcFolderInArea,
     joinAndSortStrings,
     joinStrings,
     extractAssetsOfType

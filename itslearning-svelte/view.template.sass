@@ -1,0 +1,28 @@
+$statics-url: "../../";
+$graphics-url: $statics-url + "Common/semiotic/";
+
+{{additionalImports}}
+
+a {
+    &:active, &:focus, &:hover, &:link, &:visited {
+        text-decoration: none;
+    }
+}
+
+body {
+    font: normal 16px / 1.5em 'Open Sans',Helvetica,Arial,sans-serif;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url($statics-url + "fonts/OpenSans/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url($statics-url + "fonts/OpenSans/OpenSans-Regular-webfont.woff") format("woff"), url($statics-url + "fonts/OpenSans/OpenSans-Regular-webfont.ttf") format("truetype"), url($statics-url + "fonts/OpenSans/OpenSans-Regular-webfont.svg#OpenSansRegular") format("svg");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url($statics-url + "fonts/OpenSans/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url($statics-url + "fonts/OpenSans/OpenSans-Bold-webfont.woff") format("woff"), url($statics-url + "fonts/OpenSans/OpenSans-Bold-webfont.ttf") format("truetype"), url($statics-url + "fonts/OpenSans/OpenSans-Bold-webfont.svg#OpenSansBold") format("svg");
+}

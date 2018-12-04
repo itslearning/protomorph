@@ -1,0 +1,32 @@
+@using Itsolutions.Itslearning.Web.Mvc.Extensions
+{{modelName}}
+
+@{
+    Layout = ViewData.ContainsKey("IsControl") ? null : "{{view.layout}}";
+}
+
+<div {{view.id}}
+    data-c-svelte-{{entryname}} 
+    data-svelte-component-data="@SerializeClientSettings(Model).ToString()">
+</div>
+
+@{
+    ClientLogicHelper.RegisterClientLogic(Html, 
+        "{{entryname}}",
+        new string[] {
+{{styleEntries}}
+        },
+        new string[] {
+{{scriptEntries}}
+        },
+        new string[] {
+{{polyfillEntries}}
+        },
+        new string[] {
+{{localizationEntries}}
+        }, 
+        new string[] {
+{{contextEntries}}
+        }
+    );
+}
