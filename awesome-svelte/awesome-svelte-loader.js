@@ -147,7 +147,7 @@ function preprocessSvelteMarkup(content, options, context) {
         return match.replace(languageTermRegex, handleLanguageTerm).replace(contextRegex, handleContext);
     });
 
-    if (localContextItems.length > 0 || localLanguageTerms.length > 0) {
+    if (localContextItems.length > 0 || localLanguageTerms.filter(i => !i.isDebug).length > 0) {
         helpersToInjection.push('window');
     }
 

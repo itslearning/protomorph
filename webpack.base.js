@@ -40,7 +40,7 @@ const defaultOptions = {
     },
     sassPreprocessorOptions: {
         additionalImports: [
-            './src/Styles/common'
+            '@itslearning/protomorph/itslearning-svelte/common'
         ]
     },
     awesomeSvelteLoaderExtensions: [

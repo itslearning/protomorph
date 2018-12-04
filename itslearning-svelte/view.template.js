@@ -1,6 +1,6 @@
 import App from '{{entryname}}';
 {{additionalImports}}
-import { Initialize } from '../Utils/Core.js';
+import { Initialize } from '@itslearning/protomorph/itslearning-svelte/Core';
 
 Initialize();
 const elementTargets = {{instancesSelector}};

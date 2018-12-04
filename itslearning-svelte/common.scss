@@ -1,0 +1,5 @@
+$statics-url: "../../";
+$graphics-url: $statics-url + "Common/semiotic/";
+
+@import "~@itslearning/prometheus/themes/_defaults/_tools";
+@import "~@itslearning/prometheus/themes/modern/theme";
