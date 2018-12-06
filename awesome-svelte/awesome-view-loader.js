@@ -14,6 +14,7 @@ const __defaultViewSettings = {
     useStore: false,
     storeFactory: 'new Store()',
     extraImports: {},
+    extraScripts: [],
     extraStyles: ['skins\\itsl-inuit.min.css'],
     polyfills: ['Fetch', 'Promise', 'ObjectAssign', 'ArrayFrom'],
 

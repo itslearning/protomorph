@@ -30,7 +30,7 @@ function buildCshtmlViewPage(options, configuration, compilation, localization, 
         {
             'entryname': configuration.location.name,
             'styleEntries': BuildUtils.joinStrings(configuration.view.extraStyles.concat(stylesAssets)),
-            'scriptEntries': BuildUtils.joinStrings(scriptAssets),
+            'scriptEntries': BuildUtils.joinStrings(configuration.view.extraScripts.concat(scriptAssets)),
             'polyfillEntries': BuildUtils.joinAndSortStrings(configuration.view.polyfills),
             'localizationEntries': BuildUtils.joinAndSortStrings(localization),
             'contextEntries': BuildUtils.joinAndSortStrings(context),
