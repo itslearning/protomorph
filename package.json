@@ -1,7 +1,7 @@
 {
     "name": "@itslearning/protomorph",
     "description": "Shared build config for frontend applications",
-    "version": "8.6.0",
+    "version": "8.7.0",
     "author": "Gavin King <gavin.king@itslearning.com>",
     "license": "MIT",
     "scripts": {
@@ -58,7 +58,7 @@
         "sass-lint": "1.12.1",
         "sass-loader": "7.0.1",
         "sasslint-webpack-plugin": "1.0.4",
-        "svelte": "2.13.5",
+        "svelte": "2.15.3",
         "svelte-loader": "2.11.0",
         "ts-loader": "4.2.0",
         "typescript": "2.8.3",
