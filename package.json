@@ -1,7 +1,7 @@
 {
     "name": "@itslearning/protomorph",
     "description": "Shared build config for frontend applications",
-    "version": "8.7.0",
+    "version": "8.7.1",
     "author": "Gavin King <gavin.king@itslearning.com>",
     "license": "MIT",
     "scripts": {
@@ -64,6 +64,6 @@
         "typescript": "2.8.3",
         "webpack": "4.6.0",
         "webpack-clean": "1.2.1",
-        "webpack-cli": "2.1.2"
+        "webpack-cli": "2.1.5"
     }
 }
