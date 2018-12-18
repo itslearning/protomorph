@@ -115,12 +115,17 @@ function replaceTemplatePlaceholders(source, placeholders) {
     return result;
 }
 
-function getBasePatternToEntryPoints(startupConfiguration) {
-    return `./src/${startupConfiguration.build.page}/`;
+function getBasePatternToEntryPoints(buildItem) {
+    return `./src/${buildItem.page}/`;
 }
 
 function buildScriptsEntryPoints(startupConfiguration, areaName) {
-    const scriptFiles = glob.sync('./' + path.join(getBasePatternToEntryPoints(startupConfiguration), 'view.json'));
+    const scriptFiles = [];
+    startupConfiguration.build.forEach(buildItem => {
+        scriptFiles.push(
+            ...glob.sync('./' + path.join(getBasePatternToEntryPoints(buildItem), 'view.json'))
+        );
+    });
 
     const entry = {};
 
@@ -192,15 +197,34 @@ function readStartupConfiguration(area) {
     const startupConfiguration = {};
 
     // Read working area and page
-    startupConfiguration.build = {
-        area: area,
-        page: '*'
-    };
+    startupConfiguration.build = [];
 
     const pageArgIndex = process.argv.findIndex(arg => arg.startsWith(pageArgumentPrefix));
 
     if (pageArgIndex >= 0) {
-        startupConfiguration.build.page = process.argv[pageArgIndex].substr(pageArgumentPrefix.length);
+        const pageArgument = process.argv[pageArgIndex].substr(pageArgumentPrefix.length);
+        if (pageArgument && pageArgument.indexOf(',') >= 0) {
+            startupConfiguration.build = [];
+
+            const pages = pageArgument.split(',');
+            startupConfiguration.build.push(...pages.map(page => {
+                return {
+                    area: area,
+                    page: page
+                };
+            }));
+        } else {
+            startupConfiguration.build = [{
+                area: area,
+                page: pageArgument
+            }];
+        }
+        
+    } else {
+        startupConfiguration.build = [{
+            area: area,
+            page: '*'
+        }];
     }
 
     return startupConfiguration;
