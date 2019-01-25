@@ -1,11 +1,11 @@
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
-import babel from 'rollup-plugin-babel';
-import { eslint } from 'rollup-plugin-eslint';
-import scss from 'rollup-plugin-scss';
-import svelte from 'rollup-plugin-svelte';
-import { uglify } from 'rollup-plugin-uglify';
+const  babel = require('rollup-plugin-babel');
+const  { eslint } = require('rollup-plugin-eslint');
+const  scss = require('rollup-plugin-scss');
+const  svelte = require('rollup-plugin-svelte');
+const  { uglify } = require('rollup-plugin-uglify');
 
 /**
  * Returns a Rollup Configuration Object for Svelte files
@@ -67,7 +67,7 @@ const Sass = (src, dest) => ({
  * @param {Array<string>} config.files The files to be processed.
  * @returns {object} A Rollup Configuration Object
  */
-export const ItslRollup = ({ destination, files }) =>
+const ItslRollup = ({ destination, files }) =>
     files.map(file => {
         const { ext, name } = path.parse(file);
 
@@ -80,3 +80,5 @@ export const ItslRollup = ({ destination, files }) =>
             ? Sass(file, `${destination}${name}.css`)
             : false;
     });
+
+module.exports = ItslRollup;
