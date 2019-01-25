@@ -73,6 +73,6 @@
         "typescript": "2.8.3",
         "webpack-clean": "1.2.3",
         "webpack-cli": "3.1.2",
-        "webpack": "4.27.1",
+        "webpack": "4.27.1"
     }
 }
