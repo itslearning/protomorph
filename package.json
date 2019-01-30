@@ -58,7 +58,7 @@
         "sass-lint": "1.12.1",
         "sass-loader": "7.0.1",
         "sasslint-webpack-plugin": "1.0.4",
-        "svelte": "2.15.3",
+        "svelte": "2.16.0",
         "svelte-loader": "2.11.0",
         "ts-loader": "4.2.0",
         "typescript": "2.8.3",
