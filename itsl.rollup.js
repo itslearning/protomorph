@@ -3,10 +3,11 @@ const path = require('path');
 
 const  babel = require('rollup-plugin-babel');
 const  { eslint } = require('rollup-plugin-eslint');
+const resolve = require('rollup-plugin-node-resolve');
 const  scss = require('rollup-plugin-scss');
 const  svelte = require('rollup-plugin-svelte');
 const  { uglify } = require('rollup-plugin-uglify');
-
+const tildeImporter = require('node-sass-tilde-importer');
 /**
  * Returns a Rollup Configuration Object for Svelte files
  * @param {string} src The source file
@@ -21,6 +22,9 @@ const Svelte = (src, dest) => ({
     },
     treeshake: true,
     plugins: [
+        resolve({
+            extensions: ['.svelte']
+        }),
         eslint(),
         svelte(),
         babel({
@@ -46,6 +50,7 @@ const Sass = (src, dest) => ({
     },
     plugins: [
         scss({
+            importer: tildeImporter,
             output: `${dest}.temp`,
             outputStyle: 'compact'
         }),
