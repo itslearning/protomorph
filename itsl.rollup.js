@@ -23,7 +23,7 @@ const Svelte = (src, dest) => ({
     treeshake: true,
     plugins: [
         resolve({
-            extensions: ['.svelte']
+            extensions: ['.svelte', '.js']
         }),
         eslint(),
         svelte(),
@@ -44,11 +44,17 @@ const Svelte = (src, dest) => ({
  */
 const Sass = (src, dest) => ({
     input: src,
+    // Required for Rollup, just ignore
     output: {
         file: dest,
-        format: 'iife'
+        format: 'esm'
     },
+    // Script will ALWAYS render an empty file at first
+    onwarn: (warning) => warning.code === 'EMPTY_BUNDLE' ? false : warning,
     plugins: [
+        resolve({
+            extensions: ['.scss']
+        }),
         scss({
             importer: tildeImporter,
             output: `${dest}.temp`,
