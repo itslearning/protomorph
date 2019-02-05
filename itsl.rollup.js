@@ -49,7 +49,6 @@ const Sass = (src, dest) => ({
             output: `${dest}.temp`,
             outputStyle: 'compact'
         }),
-        svelte(),
         {
             name: 'Itslearning Rollup Sass Plugin',
             /**
@@ -57,7 +56,7 @@ const Sass = (src, dest) => ({
              */
             writeBundle: () => fs.renameSync(`${dest}.temp`, dest)
         }
-    ],
+    ]
 });
 
 /**
@@ -69,16 +68,20 @@ const Sass = (src, dest) => ({
  */
 const ItslRollup = ({ destination, files }) =>
     files.map(file => {
-        const { ext, name } = path.parse(file);
+        const inFile = Array.isArray(file) ? file[0] : file;
+        const outFile = Array.isArray(file) ? file[1] || inFile : file;
+
+        const { ext } = path.parse(inFile);
+        const { name } = path.parse(outFile || inFile);
 
         if (ext !== '.js' && ext !== '.scss') {
             throw(`Unknown format ${ext}`);
         }
         return ext === '.js'
-            ? Svelte(file, `${destination}${name}.js`)
+            ? Svelte(inFile, `${destination}${name}.js`)
             : ext === '.scss'
-            ? Sass(file, `${destination}${name}.css`)
+            ? Sass(inFile, `${destination}${name}.css`)
             : false;
     });
 
-module.exports = ItslRollup;
+    module.exports = ItslRollup;
