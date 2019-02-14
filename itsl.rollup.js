@@ -7,7 +7,7 @@ const resolve = require('rollup-plugin-node-resolve');
 const  scss = require('rollup-plugin-scss');
 const  svelte = require('rollup-plugin-svelte');
 const  { uglify } = require('rollup-plugin-uglify');
-const tildeImporter = require('node-sass-tilde-importer');
+
 /**
  * Returns a Rollup Configuration Object for Svelte files
  * @param {string} src The source file
@@ -52,11 +52,10 @@ const Sass = (src, dest) => ({
     // Script will ALWAYS render an empty file at first
     onwarn: (warning) => warning.code === 'EMPTY_BUNDLE' ? false : warning,
     plugins: [
-        resolve({
-            extensions: ['.scss']
-        }),
         scss({
-            importer: tildeImporter,
+            importer(path) {
+                return { file: path.replace(/^~/, 'node_modules/') };
+            },
             output: `${dest}.temp`,
             outputStyle: 'compact'
         }),
@@ -77,7 +76,7 @@ const Sass = (src, dest) => ({
  * @param {Array<string>} config.files The files to be processed.
  * @returns {object} A Rollup Configuration Object
  */
-const ItslRollup = ({ destination, files }) =>
+export const ItslRollup = ({ destination, files }) =>
     files.map(file => {
         const inFile = Array.isArray(file) ? file[0] : file;
         const outFile = Array.isArray(file) ? file[1] || inFile : file;
@@ -94,5 +93,3 @@ const ItslRollup = ({ destination, files }) =>
             ? Sass(inFile, `${destination}${name}.css`)
             : false;
     });
-
-    module.exports = ItslRollup;
