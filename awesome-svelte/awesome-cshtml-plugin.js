@@ -28,7 +28,7 @@ function buildCshtmlViewPage(options, configuration, compilation, localization, 
     return BuildUtils.replaceTemplatePlaceholders(
         template.toString(),
         {
-            'entryname': configuration.location.name,
+            'entryname': configuration.location.name.replace(/\./g, '_'),
             'styleEntries': BuildUtils.joinStrings(configuration.view.extraStyles.concat(stylesAssets)),
             'scriptEntries': BuildUtils.joinStrings(configuration.view.extraScripts.concat(scriptAssets)),
             'polyfillEntries': BuildUtils.joinAndSortStrings(configuration.view.polyfills),

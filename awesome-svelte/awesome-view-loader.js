@@ -77,7 +77,7 @@ module.exports = function (source, map) {
         const entrypointName = BuildUtils.extractEntryPointNameFromFile(`./${path.relative(this.rootContext, this.resource)}`, path.basename(this.rootContext));
 
         const entryPointSpecificSettings = {
-            instancesSelector: `document.querySelectorAll('[data-c-svelte-${entrypointName}]')`,
+            instancesSelector: `document.querySelectorAll('[data-c-svelte-${entrypointName.replace(/\./g, '_')}]')`,
         };
 
         const viewSettings = Object.assign({}, __defaultViewSettings, entryPointSpecificSettings, JSON.parse(source));
