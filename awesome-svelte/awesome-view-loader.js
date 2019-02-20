@@ -6,7 +6,9 @@ const fs = require('fs');
 
 const __defaultLoaderOptions = {
     scriptTemplateFilename: './view.template.js',
-    styleTemplateFilename: './view.template.sass'
+    styleTemplateFilename: './view.template.sass',
+    scriptTemplatePlaceholdersCreator: null,
+    viewSettingsEditor: null
 };
 
 const __defaultViewSettings = {
@@ -19,7 +21,9 @@ const __defaultViewSettings = {
     polyfills: ['Fetch', 'Promise', 'ObjectAssign', 'ArrayFrom'],
 
     layout: '~/Views/Shared/_SvelteLayout.cshtml',
-    id: null
+    id: null,
+    enableNavigation: false,
+    mainMenuItem: null
 };
 
 function getMainFileContent(options, viewSettings, compilation, entrypointName) {
@@ -27,14 +31,20 @@ function getMainFileContent(options, viewSettings, compilation, entrypointName) 
         return fs.readFileSync(options.scriptTemplateFilename);
     });
 
+    let placeholders = {
+        'entryname': viewSettings.entry,
+        'instancesSelector': viewSettings.instancesSelector,
+        'storeInitialization': viewSettings.useStore ? viewSettings.storeFactory : 'null',
+        'additionalImports': viewSettings.useStore ? 'import { Store } from \'svelte/store.js\';' : ''
+    };
+
+    if (options.scriptTemplatePlaceholdersCreator) {
+        options.scriptTemplatePlaceholdersCreator(placeholders, viewSettings, entrypointName);
+    }
+
     return BuildUtils.replaceTemplatePlaceholders(
         template.toString(),
-        {
-            'entryname': viewSettings.entry,
-            'instancesSelector': viewSettings.instancesSelector,
-            'storeInitialization': viewSettings.useStore ? viewSettings.storeFactory : 'null',
-            'additionalImports': viewSettings.useStore ? 'import { Store } from \'svelte/store.js\';' : ''
-        }
+        placeholders
     );
 }
 
@@ -80,7 +90,18 @@ module.exports = function (source, map) {
             instancesSelector: `document.querySelectorAll('[data-c-svelte-${entrypointName.replace(/\./g, '_')}]')`,
         };
 
-        const viewSettings = Object.assign({}, __defaultViewSettings, entryPointSpecificSettings, JSON.parse(source));
+        const sanitizedDefaultViewSettings = {
+            extraImports: Object.assign({}, __defaultViewSettings.extraImports),
+            extraScripts: new Array(...__defaultViewSettings.extraScripts),
+            extraStyles: new Array(...__defaultViewSettings.extraStyles),
+            polyfills: new Array(...__defaultViewSettings.polyfills)
+        };
+
+        const viewSettings = Object.assign({}, __defaultViewSettings, sanitizedDefaultViewSettings, entryPointSpecificSettings, JSON.parse(source));
+        viewSettings
+        if (options.viewSettingsEditor) {
+            options.viewSettingsEditor(viewSettings);
+        }
 
         if (!this._compilation._viewSettings) {
             this._compilation._viewSettings = new Map();

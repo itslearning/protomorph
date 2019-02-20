@@ -16,6 +16,6 @@ if (!elementTargets || !elementTargets.length) {
             target: elementTarget,
             store: {{storeInitialization}},
             data: dataForTarget
-        });
+        });{{navigationInitialization}}
     }
 }

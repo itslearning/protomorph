@@ -6,6 +6,7 @@ const SassLintPlugin = require('sasslint-webpack-plugin');
 const babelOptions = require('./.babelrc.json');
 const AwesomeCshtmlPlugin = require('./awesome-svelte/awesome-cshtml-plugin');
 const PrometheusSvelteLoaderExtension = require('./itslearning-svelte/prometheus-loader');
+const navigationUtils = require('./itslearning-svelte/navigationUtils')
 
 const AwesomeSvelteHelpers = require('./awesome-svelte/helpers');
 
@@ -29,14 +30,17 @@ const defaultOptions = {
         modelNamespace: 'Itsolutions.Itslearning.Web.Areas.[area].Models',
         templateFilename: path.join(__dirname, '/itslearning-svelte/view.template.cshtml'),
         vsprojFilename: '../../Itsolutions.Itslearning.Web.csproj',
-        staticFolderPath: '../../../StaticContent'
+        staticFolderPath: '../../../StaticContent',
+        modelCreator: navigationUtils.navigationModelCreator
     },
     cssExtractPluginOptions: { 
         filename: '[name]/[name].bundle.min.css' 
     },
     viewLoaderOptions: {
         scriptTemplateFilename: path.join(__dirname, '/itslearning-svelte/view.template.js'),
-        styleTemplateFilename: path.join(__dirname, '/itslearning-svelte/view.template.sass')
+        styleTemplateFilename: path.join(__dirname, '/itslearning-svelte/view.template.sass'),
+        scriptTemplatePlaceholdersCreator: navigationUtils.navigationPlaceholdersCreator,
+        viewSettingsEditor: navigationUtils.navigationViewSettingsEditor
     },
     sassPreprocessorOptions: {
         additionalImports: [

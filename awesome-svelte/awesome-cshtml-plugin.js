@@ -10,7 +10,8 @@ const __defaultPluginConfiguration = {
     modelFilename: './output/[area]/[page].cs',
     modelNamespace: 'CodeGenNamespace',
     vsprojFilename: null,
-    staticFolderPath: './'
+    staticFolderPath: './',
+    modelCreator: null
 };
 
 function AwesomeCshtmlPlugin(options) {
@@ -136,6 +137,10 @@ function getPropertyType(property) {
 function buildViewModel(options, configuration, compilation) {
     const componentDoc = BuildUtils.getCompilationEntrypointData(compilation, configuration.location.name, '_entryPointComponentDoc');
     const dataProperties = componentDoc.data.filter(property => property.visibility === 'public');
+
+    if (options.modelCreator) {
+        options.modelCreator(dataProperties, configuration.view);
+    }
 
     if (dataProperties.length === 0) {
         return null;
