@@ -16,7 +16,7 @@ function navigationViewSettingsEditor(viewSettings) {
 
 function navigationPlaceholdersCreator(placeholders, viewSettings, entrypointName) {
     if (viewSettings.enableNavigation) {
-        placeholders.additionalImports = placeholders.additionalImports ? '\n' : '' + 'import bindToNavigationParamsWithinFrame from \'@itslearning/atlas/navigation/navigationBinderWithinIframe\';'
+        placeholders.additionalImports = placeholders.additionalImports ? '\n' : '' + 'import { bindToNavigationParamsWithinFrame } from \'@itslearning/atlas/navigation/navigationBinderWithinIframe\';'
         const menuItem = viewSettings.mainMenuItem || BuildUtils.parseEntryPointName(entrypointName).area.toLowerCase();
         placeholders.navigationInitialization = `\n\n        bindToNavigationParamsWithinFrame(app, \'${navigationUrlParameter}\', \'${navigationDefaultsParameter}\', \'${menuItem}\');`;
     } else {
