@@ -4,7 +4,7 @@
     "version": "9.0.0",
     "author": "Gavin King <gavin.king@itslearning.com>",
     "license": "MIT",
-    "scripts": {        
+    "scripts": {
         "rdev": "rollup -c -w",
         "rbuild": "rollup -c",
         "build": "webpack-cli",
