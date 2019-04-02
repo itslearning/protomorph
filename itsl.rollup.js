@@ -76,7 +76,7 @@ const Sass = (src, dest) => ({
  * @param {Array<string>} config.files The files to be processed.
  * @returns {object} A Rollup Configuration Object
  */
-export const ItslRollup = ({ destination, files }) =>
+const ItslRollup = ({ destination, files }) =>
     files.map(file => {
         const inFile = Array.isArray(file) ? file[0] : file;
         const outFile = Array.isArray(file) ? file[1] || inFile : file;
@@ -93,3 +93,7 @@ export const ItslRollup = ({ destination, files }) =>
             ? Sass(inFile, `${destination}${name}.css`)
             : false;
     });
+
+module.exports = {
+    ItslRollup
+};
