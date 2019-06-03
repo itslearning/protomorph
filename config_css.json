@@ -1,0 +1,6 @@
+{
+	"options": {
+        "generate_report": false,
+        "verbose": true
+	}
+}

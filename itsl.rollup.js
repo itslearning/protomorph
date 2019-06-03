@@ -7,7 +7,7 @@ const resolve = require('rollup-plugin-node-resolve');
 const  scss = require('rollup-plugin-scss');
 const  svelte = require('rollup-plugin-svelte');
 const  { uglify } = require('rollup-plugin-uglify');
-
+const purgeCss = require('css-purge');
 /**
  * Returns a Rollup Configuration Object for Svelte files
  * @param {string} src The source file
@@ -42,7 +42,7 @@ const Svelte = (src, dest) => ({
  * @param {string} dest The destination file
  * @returns {object} A Rollup Configuration Object
  */
-const Sass = (src, dest) => ({
+const Sass = (src, dest, options) => ({
     input: src,
     // Required for Rollup, just ignore
     output: {
@@ -63,8 +63,15 @@ const Sass = (src, dest) => ({
             name: 'Itslearning Rollup Sass Plugin',
             /**
              * Renames the .temp file to .css overwriting the default javascript output
+             * If configured, runs css-purge to clean the css file
              */
             writeBundle: () => fs.renameSync(`${dest}.temp`, dest)
+
+            if (options && options.purgeCss) {
+                purgeCss.purgeCSSFiles({
+                    css: dest
+                }, 'config_css.json');
+            }
         }
     ]
 });
@@ -76,7 +83,7 @@ const Sass = (src, dest) => ({
  * @param {Array<string>} config.files The files to be processed.
  * @returns {object} A Rollup Configuration Object
  */
-const ItslRollup = ({ destination, files }) =>
+const ItslRollup = ({ destination, files, options = { }}) =>
     files.map(file => {
         const inFile = Array.isArray(file) ? file[0] : file;
         const outFile = Array.isArray(file) ? file[1] || inFile : file;
@@ -90,7 +97,7 @@ const ItslRollup = ({ destination, files }) =>
         return ext === '.js'
             ? Svelte(inFile, `${destination}${name}.js`)
             : ext === '.scss'
-            ? Sass(inFile, `${destination}${name}.css`)
+            ? Sass(inFile, `${destination}${name}.css`, options)
             : false;
     });
 
