@@ -6,5 +6,8 @@ export default ItslRollup({
         ['./src/index.js', 'index.bundle.js'],
         ['./src/theme.aaa.scss', 'aaa.bundle.css'],
         ['./src/theme.modern.scss', 'modern.bundle.css']
-    ]
+    ],
+    options: {        
+        purgeCss: false
+    }
 });
