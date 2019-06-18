@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v9.2.2] - 18.06.2019
+
+- Updated cssloader to v3.0.0
+
 ## [v9.2.0] - 06.06.2019
 
 ### Changed
