@@ -65,7 +65,7 @@
         "rollup-plugin-svelte": "^5.0.1",
         "rollup-plugin-uglify": "^6.0.1",
         "rollup": "^1.1.2",
-        "sass-lint": "1.12.1",
+        "sass-lint": "1.13.0",
         "sass-loader": "7.0.1",
         "sasslint-webpack-plugin": "1.0.4",
         "svelte-loader": "2.11.0",
