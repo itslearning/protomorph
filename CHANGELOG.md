@@ -8,11 +8,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v9.3.1] - 21.06.2019
+
+### Fixed
+
+- Fixed changelog
+
 ## [v9.3.0] - 21.06.2019
+
+### Changed
 
 - Updated sass-lint to v1.13.0
 
 ## [v9.2.2] - 18.06.2019
+
+### Changed
 
 - Updated cssloader to v3.0.0
 
