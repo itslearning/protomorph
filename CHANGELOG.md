@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v9.4.0] - 08.08.2019
+
+### Changed
+
+- Updated lodash to v4.17.14
+
 ## [v9.3.1] - 21.06.2019
 
 ### Fixed
