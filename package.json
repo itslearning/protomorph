@@ -78,6 +78,7 @@
     },
     "resolutions": {
         "js-yaml": "^3.13.1",
+        "lodash": "4.17.14",
         "node-sass": "4.11.0"
     }
 }
