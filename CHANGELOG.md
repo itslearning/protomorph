@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v9.6.0] - 09.08.2019
+
+### Changed
+
+- Updated lodash.mergewith to v4.6.2
+
 ## [v9.5.0] - 09.08.2019
 
 ### Changed
