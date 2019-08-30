@@ -1,8 +1,8 @@
 {
     "name": "@itslearning/protomorph",
     "description": "Shared build config for frontend applications",
-    "version": "9.6.1",
-    "author": "Gavin King <gavin.king@itslearning.com>",
+    "version": "9.7.0",
+    "author": "Itslearning AS",
     "license": "MIT",
     "scripts": {
         "rdev": "rollup -c -w",
