@@ -8,6 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v9.8.0] - 30.08.2019
+
+### Changed
+
+- Updated mixin-deep to v1.3.2
+- Updated set-value to v2.0.1
+
 ## [v9.7.0] - 30.08.2019
 
 ### Added
