@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v9.7.0] - 30.08.2019
+
+### Added
+
+- Plugin support for itsl.rollup.js
+
 ## [v9.6.1] - 27.08.2019
 
 ### Changed

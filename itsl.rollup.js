@@ -1,12 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 
-const  babel = require('rollup-plugin-babel');
-const  { eslint } = require('rollup-plugin-eslint');
+const babel = require('rollup-plugin-babel');
+const { eslint } = require('rollup-plugin-eslint');
 const resolve = require('rollup-plugin-node-resolve');
-const  scss = require('rollup-plugin-scss');
-const  svelte = require('rollup-plugin-svelte');
-const  { uglify } = require('rollup-plugin-uglify');
+const scss = require('rollup-plugin-scss');
+const svelte = require('rollup-plugin-svelte');
+const { uglify } = require('rollup-plugin-uglify');
 
 /**
  * Returns a Rollup Configuration Object for Svelte files
@@ -14,7 +14,7 @@ const  { uglify } = require('rollup-plugin-uglify');
  * @param {string} dest The destination file
  * @returns {object} A Rollup Configuration Object
  */
-const Svelte = (src, dest) => ({
+const Svelte = (src, dest, scriptPlugins = []) => ({
     input: src,
     output: {
         file: dest,
@@ -32,7 +32,8 @@ const Svelte = (src, dest) => ({
             presets: [['@babel/env', { modules: false }]],
             extensions: ['.js', '.svelte']
         }),
-        uglify()
+        uglify(),
+        ...scriptPlugins
     ],
 });
 
@@ -42,7 +43,7 @@ const Svelte = (src, dest) => ({
  * @param {string} dest The destination file
  * @returns {object} A Rollup Configuration Object
  */
-const Sass = (src, dest) => ({
+const Sass = (src, dest, stylePlugins = []) => ({
     input: src,
     // Required for Rollup, just ignore
     output: {
@@ -60,12 +61,13 @@ const Sass = (src, dest) => ({
             outputStyle: 'compact'
         }),
         {
-            name: 'Itslearning Rollup Sass Plugin',
+            name: 'Rollup Sass Cleaner Plugin',
             /**
              * Renames the .temp file to .css overwriting the default javascript output
              */
             writeBundle: () => fs.renameSync(`${dest}.temp`, dest)
-        }
+        },
+        ...stylePlugins
     ]
 });
 
@@ -76,7 +78,7 @@ const Sass = (src, dest) => ({
  * @param {Array<string>} config.files The files to be processed.
  * @returns {object} A Rollup Configuration Object
  */
-const ItslRollup = ({ destination, files }) =>
+const ItslRollup = ({ destination, files, plugins = {} }) =>
     files.map(file => {
         const inFile = Array.isArray(file) ? file[0] : file;
         const outFile = Array.isArray(file) ? file[1] || inFile : file;
@@ -88,9 +90,9 @@ const ItslRollup = ({ destination, files }) =>
             throw(`Unknown format ${ext}`);
         }
         return ext === '.js'
-            ? Svelte(inFile, `${destination}${name}.js`)
+            ? Svelte(inFile, `${destination}${name}.js`, plugins.script)
             : ext === '.scss'
-            ? Sass(inFile, `${destination}${name}.css`)
+            ? Sass(inFile, `${destination}${name}.css`, plugins.style)
             : false;
     });
 
