@@ -26,7 +26,7 @@ const Svelte = (src, dest, scriptPlugins = [], svelteOptionsFactory) => ({
             extensions: ['.svelte', '.js']
         }),
         eslint(),
-        svelte(svelteOptionsFactory && typeof options.css === 'function'
+        svelte(svelteOptionsFactory && typeof svelteOptionsFactory === 'function'
             ? svelteOptionsFactory(src, dest) 
             : {}),
         babel({
