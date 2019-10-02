@@ -97,5 +97,7 @@ const ItslRollup = ({ destination, files, plugins = {} }) =>
     });
 
 module.exports = {
-    ItslRollup
+    ItslRollup,
+    Svelte,
+    Sass
 };
