@@ -8,68 +8,78 @@ const scss = require('rollup-plugin-scss');
 const commonjs = require('rollup-plugin-commonjs');
 const svelte = require('rollup-plugin-svelte');
 const { terser } = require('rollup-plugin-terser');
-/**
- * Returns a Rollup Configuration Object for Svelte files
- * @param {string} src The source file
- * @param {string} dest The destination file
- * @returns {object} A Rollup Configuration Object
- */
-const SvelteLegacy = (src, dest, scriptPlugins = []) => ({
-    input: src,
-    output: {
-        file: dest,
-        format: 'iife',
-        name: 'bundle',
-    },
-    treeshake: true,
-    plugins: [
-        resolve({ extensions: ['.svelte', '.js'] }),
-        // eslint(),
-        svelte(),
-        babel({
-            exclude: [/\/core-js\//],
-            babelrc: false,
-            externalHelpers: false,
-            presets: [
-                [
-                    '@babel/preset-env',
-                    {
-                        useBuiltIns: 'entry',
-                        corejs: 3,
-                        targets: [ 'last 2 versions', 'not dead', 'ie 11' ],
-                        modules: false,
-                    }
-                ],
-            ],
-            extensions: ['.js', '.svelte']
-        }),
-        commonjs(),
-        terser(),
-        ...scriptPlugins
-    ],
-});
 
 /**
  * Returns a Rollup Configuration Object for Svelte files as modules without polyfills or es5 compatibility
  * @param {string} src The source file
  * @param {string} dest The destination file
+ * @param {boolean} legacy Include polyfills and support for older browsers
  * @returns {object} A Rollup Configuration Object
  */
-const SvelteModule = (src, dest, scriptPlugins = []) => ({
+const Svelte = (src, dest, legacy, scriptPlugins = []) => ({
     input: src,
     output: {
         file: dest,
-        format: 'esm'
+        format: legacy ? 'iife' : 'esm',
+        sourcemap: !legacy,
     },
     treeshake: true,
     plugins: [
-        resolve({ extensions: ['.svelte', '.js'] }),
-        // eslint(),
-        svelte(),
-        commonjs(),
+        legacy && prepareES5(src),
+        // @ts-ignore
+        resolve({ extensions: [ '.js', '.mjs', '.html', '.svelte', '.json' ] }),
+        svelte({ extensions: ['.html', '.svelte'] }),
+        legacy && babelPreset,
+        // @ts-ignore
+        commonjs({
+            extensions: ['.js', '.mjs', '.html', '.svelte'],
+            namedExports: { 'chai': ['assert', 'expect'] },
+        }),
         terser(),
         ...scriptPlugins
     ],
+});
+
+function prepareES5(src) {
+    const srcFile = path.resolve(src);
+
+    return {
+        name: 'Prepare bundle for ES5',
+        transform: (code, id) => {
+            if (srcFile !== id) {
+                return code;
+            } else {
+                return `
+                import 'core-js/stable';
+                import 'regenerator-runtime/runtime';
+                import 'whatwg-fetch';
+                import '@webcomponents/webcomponentsjs/webcomponents-bundle.js';
+
+                Promise.resolve(); // dummy call to trigger polyfill of Promise
+                ${code}
+                `;
+            }
+        }
+    };
+}
+
+const babelPreset = babel({
+    exclude: [/\/core-js\//, '**/node_modules/@babel/runtime/**'],
+    babelrc: false,
+    externalHelpers: false,
+    runtimeHelpers: true,
+    presets: [
+        [
+            '@babel/preset-env',
+            {
+                useBuiltIns: 'entry',
+                corejs: 3,
+                targets: [ 'last 2 versions', 'not dead', 'ie 11' ],
+                modules: false,
+            }
+        ],
+    ],
+    extensions: [ '.js', '.mjs', '.html', '.svelte' ]
 });
 
 /**
@@ -129,14 +139,8 @@ const ItslRollup = ({ destination, files, plugins = {} }) => {
         }
 
         if (inPath.ext === '.js') {
-            const es5File = `${inPath.dir}/${inPath.name}.es5${inPath.ext}`;
-
-            if (fs.existsSync(es5File)) {
-                configs.push(SvelteModule(inFile, `${destination}${name}.js`, plugins.script));
-                configs.push(SvelteLegacy(es5File, `${destination}${name}.es5.js`, plugins.script));
-            } else {
-                configs.push(SvelteLegacy(inFile, `${destination}${name}.js`, plugins.script));
-            }
+            configs.push(Svelte(inFile, `${destination}${name}.js`, false, plugins.script));
+            configs.push(Svelte(inFile, `${destination}${name}.es5.js`, true, plugins.script));
         } else if (inPath.ext === '.scss') {
             configs.push(Sass(inFile, `${destination}${name}.css`, plugins.style));
         }
@@ -146,5 +150,7 @@ const ItslRollup = ({ destination, files, plugins = {} }) => {
 };
 
 module.exports = {
-    ItslRollup
+    ItslRollup,
+    Svelte,
+    Sass,
 };
