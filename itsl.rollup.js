@@ -13,23 +13,25 @@ const { terser } = require('rollup-plugin-terser');
  * Returns a Rollup Configuration Object for Svelte files as modules without polyfills or es5 compatibility
  * @param {string} src The source file
  * @param {string} dest The destination file
- * @param {boolean} legacy Include polyfills and support for older browsers
+ * @param {object} options
+ * @param {boolean} options.legacy Include polyfills and support for older browsers
  * @returns {object} A Rollup Configuration Object
  */
-const Svelte = (src, dest, legacy, scriptPlugins = []) => ({
+const Svelte = (src, dest, options = { legacy: false }, scriptPlugins = []) => ({
     input: src,
     output: {
         file: dest,
-        format: legacy ? 'iife' : 'esm',
-        sourcemap: !legacy,
+        format: options.legacy ? 'iife' : 'esm',
+        sourcemap: !options.legacy,
     },
     treeshake: true,
     plugins: [
-        legacy && prepareES5(src),
+        options.legacy && prepareES5(src),
+        !options.legacy && eslint(),
         // @ts-ignore
         resolve({ extensions: [ '.js', '.mjs', '.html', '.svelte', '.json' ] }),
         svelte({ extensions: ['.html', '.svelte'] }),
-        legacy && babelPreset,
+        options.legacy && babelPreset,
         // @ts-ignore
         commonjs({
             extensions: ['.js', '.mjs', '.html', '.svelte'],
@@ -139,8 +141,8 @@ const ItslRollup = ({ destination, files, plugins = {} }) => {
         }
 
         if (inPath.ext === '.js') {
-            configs.push(Svelte(inFile, `${destination}${name}.js`, false, plugins.script));
-            configs.push(Svelte(inFile, `${destination}${name}.es5.js`, true, plugins.script));
+            configs.push(Svelte(inFile, `${destination}${name}.js`, { legacy: false }, plugins.script));
+            configs.push(Svelte(inFile, `${destination}${name}.es5.js`, { legacy: true }, plugins.script));
         } else if (inPath.ext === '.scss') {
             configs.push(Sass(inFile, `${destination}${name}.css`, plugins.style));
         }
