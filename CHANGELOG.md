@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v9.9.1] - 02.10.2019
+
+### Fixed
+
+- Fixed errors in changelog
+
+## [v9.9.0] - 02.10.2019
+
+### Changed
+
+- export sass/svelte from itsl.rollup
+
 ## [v9.8.0] - 30.08.2019
 
 ### Changed
