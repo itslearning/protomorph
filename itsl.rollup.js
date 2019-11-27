@@ -26,7 +26,7 @@ const Svelte = (src, dest, options = { legacy: false }, scriptPlugins = []) => (
     },
     treeshake: true,
     plugins: [
-        options.legacy && prepareES5(src),
+        options.legacy && prepareES5(src, options),
         !options.legacy && eslint(),
         // @ts-ignore
         resolve({ extensions: [ '.js', '.mjs', '.html', '.svelte', '.json' ] }),
@@ -42,7 +42,7 @@ const Svelte = (src, dest, options = { legacy: false }, scriptPlugins = []) => (
     ],
 });
 
-function prepareES5(src) {
+function prepareES5(src, options) {
     const srcFile = path.resolve(src);
 
     return {
@@ -52,14 +52,17 @@ function prepareES5(src) {
                 return code;
             } else {
                 return `
-                import 'core-js/stable';
-                import 'regenerator-runtime/runtime';
-                import 'whatwg-fetch';
-                import '@webcomponents/webcomponentsjs/webcomponents-bundle.js';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+import 'whatwg-fetch';
+${options.webcomponents
+        ? "import '@webcomponents/webcomponentsjs/webcomponents-bundle.js';"
+        : ''
+}
 
-                Promise.resolve(); // dummy call to trigger polyfill of Promise
-                ${code}
-                `;
+Promise.resolve(); // dummy call to trigger polyfill of Promise
+${code}
+`;
             }
         }
     };
