@@ -13,6 +13,9 @@ const defaultOptions = {
     legacy: false,
     webComponents: false,
     plugins: [],
+    eslint: {
+        configFile: 'node_modules/@itslearning/protomorph/.eslintrc.json',
+    },
 };
 
 /**
@@ -23,6 +26,7 @@ const defaultOptions = {
  * @param {boolean} [options.legacy] Include polyfills and support for older browsers
  * @param {boolean} [options.webComponents] Include polyfills for webComponents
  * @param {any[]} [options.plugins] Array of plugins to run in addition to the defaults
+ * @param {object} [options.eslint] Eslint options, defaults to using protomorph eslintrc file
  * @returns {object} A Rollup Configuration Object
  */
 const Svelte = (src, dest, options = defaultOptions) => ({
@@ -35,7 +39,7 @@ const Svelte = (src, dest, options = defaultOptions) => ({
     treeshake: true,
     plugins: [
         options.legacy && prepareES5(src, options),
-        !options.legacy && eslint(),
+        !options.legacy && eslint(options.eslint || defaultOptions.eslint),
         // @ts-ignore
         resolve({ extensions: [ '.js', '.mjs', '.html', '.svelte', '.json' ] }),
         svelte({ extensions: ['.html', '.svelte'] }),
@@ -46,7 +50,7 @@ const Svelte = (src, dest, options = defaultOptions) => ({
             namedExports: { 'chai': ['assert', 'expect'] },
         }),
         terser(),
-        ...options.plugins || []
+        ...options.plugins || defaultOptions.plugins
     ],
 });
 

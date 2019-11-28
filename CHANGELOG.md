@@ -25,6 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgraded eslint to 6.4.0
 - Upgraded rollup to 1.21.4
 - Upgraded all rollup plugin versions
+- Set eslint default lint file to protomorph/.eslintrc.json
+- Added eslint options support to svelte options parameter
 
 ## [v9.9.1] - 02.10.2019
 
