@@ -9,15 +9,23 @@ const commonjs = require('rollup-plugin-commonjs');
 const svelte = require('rollup-plugin-svelte');
 const { terser } = require('rollup-plugin-terser');
 
+const defaultOptions = {
+    legacy: false,
+    webComponents: false,
+    plugins: [],
+};
+
 /**
- * Returns a Rollup Configuration Object for Svelte files as modules without polyfills or es5 compatibility
+ * Returns a Rollup Configuration Object for Svelte files with optional polyfills and es5 compatibility
  * @param {string} src The source file
  * @param {string} dest The destination file
  * @param {object} options
- * @param {boolean} options.legacy Include polyfills and support for older browsers
+ * @param {boolean} [options.legacy] Include polyfills and support for older browsers
+ * @param {boolean} [options.webComponents] Include polyfills for webComponents
+ * @param {any[]} [options.plugins] Array of plugins to run in addition to the defaults
  * @returns {object} A Rollup Configuration Object
  */
-const Svelte = (src, dest, options = { legacy: false }, scriptPlugins = []) => ({
+const Svelte = (src, dest, options = defaultOptions) => ({
     input: src,
     output: {
         file: dest,
@@ -38,7 +46,7 @@ const Svelte = (src, dest, options = { legacy: false }, scriptPlugins = []) => (
             namedExports: { 'chai': ['assert', 'expect'] },
         }),
         terser(),
-        ...scriptPlugins
+        ...options.plugins || []
     ],
 });
 
@@ -55,7 +63,7 @@ function prepareES5(src, options) {
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import 'whatwg-fetch';
-${options.webcomponents
+${options.webComponents
         ? "import '@webcomponents/webcomponentsjs/webcomponents-bundle.js';"
         : ''
 }
@@ -86,13 +94,19 @@ const babelPreset = babel({
     extensions: [ '.js', '.mjs', '.html', '.svelte' ]
 });
 
+const sassOptions = {
+    plugins: [],
+};
+
 /**
  * Returns a Rollup Configuration Object for Scss files
  * @param {string} src The source file
  * @param {string} dest The destination file
+ * @param {object} options
+ * @param {any[]} options.plugins Array of plugins to run in addition to the defaults
  * @returns {object} A Rollup Configuration Object
  */
-const Sass = (src, dest, stylePlugins = []) => ({
+const Sass = (src, dest, options = sassOptions) => ({
     input: src,
     // Required for Rollup, just ignore
     output: {
@@ -106,7 +120,7 @@ const Sass = (src, dest, stylePlugins = []) => ({
             importer(path) {
                 return {
                     file: path.replace(/^~/, 'node_modules/')
-                        .replace('@itslearning/', 'node_modules/@itslearning/')
+                        .replace(/^@itslearning\//, 'node_modules/@itslearning/')
                 };
             },
             output: `${dest}.temp`,
@@ -119,7 +133,7 @@ const Sass = (src, dest, stylePlugins = []) => ({
              */
             writeBundle: () => fs.renameSync(`${dest}.temp`, dest)
         },
-        ...stylePlugins
+        ...options.plugins || []
     ]
 });
 
@@ -146,8 +160,8 @@ const ItslRollup = ({ destination, files, plugins = {} }) => {
         }
 
         if (inPath.ext === '.js') {
-            configs.push(Svelte(inFile, `${destination}${name}.js`, { legacy: false }, plugins.script));
-            configs.push(Svelte(inFile, `${destination}${name}.es5.js`, { legacy: true }, plugins.script));
+            configs.push(Svelte(inFile, `${destination}${name}.js`, { legacy: false, plugins: plugins.script }));
+            configs.push(Svelte(inFile, `${destination}${name}.es5.js`, { legacy: true, plugins: plugins.script }));
         } else if (inPath.ext === '.scss') {
             configs.push(Sass(inFile, `${destination}${name}.css`, plugins.style));
         }
