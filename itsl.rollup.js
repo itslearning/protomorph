@@ -61,8 +61,7 @@ ${options.webcomponents
 }
 
 Promise.resolve(); // dummy call to trigger polyfill of Promise
-${code}
-`;
+${code}`;
             }
         }
     };
@@ -100,12 +99,15 @@ const Sass = (src, dest, stylePlugins = []) => ({
         file: dest,
         format: 'esm'
     },
-    // Script will ALWAYS render an empty file at first
-    onwarn: (warning) => warning.code === 'EMPTY_BUNDLE' ? false : warning,
+    // Script will ALWAYS render an empty file at first, ignore EMPTY_BUNDLE
+    onwarn: (warning, onwarn) => warning.code === 'EMPTY_BUNDLE' || onwarn(warning),
     plugins: [
         scss({
             importer(path) {
-                return { file: path.replace(/^~/, 'node_modules/') };
+                return {
+                    file: path.replace(/^~/, 'node_modules/')
+                        .replace('@itslearning/', 'node_modules/@itslearning/')
+                };
             },
             output: `${dest}.temp`,
             outputStyle: 'compact'
