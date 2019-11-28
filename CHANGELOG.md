@@ -8,6 +8,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Replaced itsl.rollup.js Sass parameter stylePlugins with options object
+  containing plugins array
+- Replaced itsl.rollup.js Svelte parameter scriptPlugins with options object
+  containing plugins array
+- Made itsl.rollup.js Svelte method return a module without es5 support by
+  default
+- Added support for itsl.rollup.js Svelte legacy builds with es5 support and
+  automatic polyfilling with the `legacy` option
+- Upgraded @babel/core to 7.6.0
+- Upgraded @babel/plugin-proposal-object-rest-spread to 7.5.5
+- Upgraded @babel/preset-env to 7.6.0
+- Replaced rollup-plugin-uglify with rollup-plugin-terser
+- Upgraded eslint to 6.4.0
+- Upgraded rollup to 1.21.4
+- Upgraded all rollup plugin versions
+
 ## [v9.9.1] - 02.10.2019
 
 ### Fixed
