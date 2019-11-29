@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v10.0.0] - 29.11.2019
+
 ### Changed
 
 - Updated Axe-Core to v3.4.0
