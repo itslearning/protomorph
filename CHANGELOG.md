@@ -8,8 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
 ### Changed
 
+- Updated Axe-Core to v3.4.0
 - Replaced itsl.rollup.js Sass parameter stylePlugins with options object
   containing plugins array
 - Replaced itsl.rollup.js Svelte parameter scriptPlugins with options object
