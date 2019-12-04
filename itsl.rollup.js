@@ -128,7 +128,7 @@ const Sass = (src, dest, options = sassOptions) => ({
                 };
             },
             output: `${dest}.temp`,
-            outputStyle: 'compact'
+            outputStyle: 'compressed'
         }),
         {
             name: 'Rollup Sass Cleaner Plugin',
