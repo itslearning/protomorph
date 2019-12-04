@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Set SCSS output to `compressed`
+- Update rollup.config.js to reflect latest changes
+
 ## [v10.0.0] - 29.11.2019
 
 ### Changed
