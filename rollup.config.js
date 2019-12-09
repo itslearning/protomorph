@@ -9,7 +9,7 @@ export default [
     */
     Svelte('./src/index.js', destination + 'index.bundle.js'),
     Svelte('./src/index.js', destination + 'index.bundle.es5.js', { legacy: true }),
-    /* Sass command takes an optional thrid arguments (options) with fields:
+    /* Sass command takes an optional third arguments (options) with fields:
         plugins: extra plugins to run after default ones
     */
     Sass('./src/theme.aaa.scss', destination + 'aaa.bundle.css'),
