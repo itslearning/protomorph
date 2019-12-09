@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Internal changes: Update to Webpack v4.41.1
+- Internal changes: Update to copy-webpack-plugin v5.0.5
 
 ## [v10.0.0] - 29.11.2019
 
