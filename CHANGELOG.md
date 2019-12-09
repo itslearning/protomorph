@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Internal changes: Update to Webpack v4.41.1
 - Internal changes: Update to copy-webpack-plugin v5.0.5
+- Internal changes: Resolves serialize-javascript to v2.1.1
 
 ## [v10.0.0] - 29.11.2019
 
