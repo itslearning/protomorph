@@ -7,11 +7,11 @@ export default [
         legacy (default false): compiles to es5
         plugins: extra plugins to run after default ones
     */
-    Svelte('./src/index.js', dest + 'index.bundle.js'),
-    Svelte('./src/index.js', dest + 'index.bundle.es5.js', { legacy: true }),
+    Svelte('./src/index.js', destination + 'index.bundle.js'),
+    Svelte('./src/index.js', destination + 'index.bundle.es5.js', { legacy: true }),
     /* Sass command takes an optional thrid arguments (options) with fields:
         plugins: extra plugins to run after default ones
     */
-    Sass('./src/theme.aaa.scss', dest + 'aaa.bundle.css'),
-    Sass('./src/theme.modern.scss', dest + 'modern.bundle.css'),
+    Sass('./src/theme.aaa.scss', destination + 'aaa.bundle.css'),
+    Sass('./src/theme.modern.scss', destination + 'modern.bundle.css'),
 ];
