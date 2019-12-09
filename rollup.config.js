@@ -1,20 +1,17 @@
 import ItslRollup from '@itslearning/protomorph/itsl.rollup';
 
-export default ItslRollup({
-    destination: './build/',
-    files: [
-        ['./src/index.js', 'index.bundle.js'],
-        ['./src/theme.aaa.scss', 'aaa.bundle.css'],
-        ['./src/theme.modern.scss', 'modern.bundle.css']
-    ],
-    plugins: {
-        script: [
-            // Add any extra rollup-plugin for the javascript bundling.
-            // Note that these will run after the default ones.
-        ],
-        style: [
-            // Add any extra rollup-plugin for the styles bundling.
-            // Note that these will run after the default ones.
-        ]
-    }
-});
+const destination = './build/';
+
+export default [
+    /* Svelte command takes an optional third argument (options) with fields:
+        legacy (default false): compiles to es5
+        plugins: extra plugins to run after default ones
+    */
+    Svelte('./src/index.js', destination + 'index.bundle.js'),
+    Svelte('./src/index.js', destination + 'index.bundle.es5.js', { legacy: true }),
+    /* Sass command takes an optional third arguments (options) with fields:
+        plugins: extra plugins to run after default ones
+    */
+    Sass('./src/theme.aaa.scss', destination + 'aaa.bundle.css'),
+    Sass('./src/theme.modern.scss', destination + 'modern.bundle.css'),
+];
