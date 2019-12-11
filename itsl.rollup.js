@@ -64,7 +64,7 @@ function prepareES5(src, options) {
                 return code;
             } else {
                 return `
-import 'core-js/stable';
+import '@itslearning/protomorph/node_modules/core-js/stable';
 import 'regenerator-runtime/runtime';
 import 'whatwg-fetch';
 ${options.webComponents
