@@ -33,7 +33,7 @@ const Svelte = (src, dest, options = defaultOptions) => ({
     input: src,
     output: {
         file: dest,
-        format: options.legacy ? 'iife' : 'esm',
+        format: 'iife',
         sourcemap: !options.legacy,
     },
     treeshake: true,
@@ -43,7 +43,7 @@ const Svelte = (src, dest, options = defaultOptions) => ({
         // @ts-ignore
         resolve({ extensions: [ '.js', '.mjs', '.html', '.svelte', '.json' ] }),
         svelte({ extensions: ['.html', '.svelte'] }),
-        options.legacy && babelPreset,
+        options.legacy ? babelPresetIE11 : babelPresetEdge,
         // @ts-ignore
         commonjs({
             extensions: ['.js', '.mjs', '.html', '.svelte'],
@@ -79,11 +79,9 @@ ${code}`;
     };
 }
 
-const babelPreset = babel({
+const babelPresetIE11 = babel({
     exclude: [/\/core-js\//, '**/node_modules/@babel/runtime/**'],
     babelrc: false,
-    externalHelpers: false,
-    runtimeHelpers: true,
     presets: [
         [
             '@babel/preset-env',
@@ -91,6 +89,23 @@ const babelPreset = babel({
                 useBuiltIns: 'entry',
                 corejs: 3,
                 targets: [ 'last 2 versions', 'not dead', 'ie 11' ],
+                modules: false,
+            }
+        ],
+    ],
+    extensions: [ '.js', '.mjs', '.html', '.svelte' ]
+});
+
+const babelPresetEdge = babel({
+    exclude: [/\/core-js\//, '**/node_modules/@babel/runtime/**'],
+    babelrc: false,
+    presets: [
+        [
+            '@babel/preset-env',
+            {
+                useBuiltIns: 'entry',
+                corejs: 3,
+                targets: { esmodules: true },
                 modules: false,
             }
         ],
