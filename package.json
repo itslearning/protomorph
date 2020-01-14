@@ -12,9 +12,9 @@
         "test": "yarn build && karma start"
     },
     "dependencies": {
-        "@babel/core": "7.6.0",
-        "@babel/plugin-proposal-object-rest-spread": "7.5.5",
-        "@babel/preset-env": "7.6.0",
+        "@babel/core": "7.8.3",
+        "@babel/plugin-proposal-object-rest-spread": "7.8.3",
+        "@babel/preset-env": "7.8.3",
         "whatwg-fetch": "^3.0.0",
         "core-js": "3.6.4",
         "regenerator-runtime": "^0.13.3",
