@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Internal changes: Update to autoprefixer v9.7.3
+
 ## [v10.2.1] - 13.01.2020
 
 ## Fixed
