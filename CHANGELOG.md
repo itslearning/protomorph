@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Internal changes: Update to autoprefixer v9.7.3
 - Internal changes: Update to core-js v3.6.4
 - Internal changes: Update to babel v7.8.3
+- Internal changes: Update to axe-core v3.4.1
 
 ## [v10.2.1] - 13.01.2020
 
