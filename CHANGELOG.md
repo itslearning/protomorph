@@ -8,6 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v10.3.0] - 23.01.2020
+
+### Changed
+
+- Internal changes: Update to autoprefixer v9.7.3
+- Internal changes: Update to core-js v3.6.4
+- Internal changes: Update to babel v7.8.3
+- Internal changes: Update to axe-core v3.4.1
+- Internal changes: Update to eslint v6.8.0
+- Internal changes: Update rollup and rollup plugins
+
 ## [v10.2.1] - 13.01.2020
 
 ## Fixed
