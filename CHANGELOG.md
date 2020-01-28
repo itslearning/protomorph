@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Internal changes: Update to node-sass v4.13.1
+
 ## [v10.3.0] - 23.01.2020
 
 ### Changed
