@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v10.4.0] - 29.01.2020
+
 ### Changed
 
 - Internal changes: Update to sass-lint v1.3.1
