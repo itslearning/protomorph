@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Internal changes: Update to fsevents v1.2.11
 - Internal changes: Update to @rollup/plugin-node-resolve v7.0.0
 - Internal changes: Update to @rollup/plugin-commonjs v11.0.1
 - Internal changes: Update to karma v4.4.1
