@@ -65,7 +65,7 @@
         "rollup-plugin-svelte": "5.1.1",
         "rollup-plugin-terser": "5.2.0",
         "rollup": "1.29.0",
-        "sass-lint": "1.13.0",
+        "sass-lint": "1.13.1",
         "sass-loader": "7.0.1",
         "sasslint-webpack-plugin": "1.0.4",
         "svelte-loader": "2.11.0",
@@ -73,7 +73,7 @@
         "ts-loader": "4.2.0",
         "typescript": "2.8.3",
         "webpack-clean": "1.2.3",
-        "webpack-cli": "3.1.2",
+        "webpack-cli": "3.3.10",
         "webpack": "4.41.1"
     },
     "resolutions": {
