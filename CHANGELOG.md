@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Internal changes: Removed sasslint-webpack-plugin
 - Internal changes: Update to sass-lint v1.3.1
 - Internal changes: Update to webpack-cli v3.3.10
 - Internal changes: Update to fsevents v1.2.11
