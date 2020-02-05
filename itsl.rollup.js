@@ -33,7 +33,7 @@ const Svelte = (src, dest, options = defaultOptions) => ({
     input: src,
     output: {
         file: dest,
-        format: 'iife',
+        format: options.legacy ? 'iife' : 'esm',
         sourcemap: !options.legacy,
     },
     treeshake: true,
