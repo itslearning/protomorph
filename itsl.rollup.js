@@ -3,9 +3,9 @@ const path = require('path');
 
 const babel = require('rollup-plugin-babel');
 const { eslint } = require('rollup-plugin-eslint');
-const resolve = require('rollup-plugin-node-resolve');
+const resolve = require('@rollup/plugin-node-resolve');
 const scss = require('rollup-plugin-scss');
-const commonjs = require('rollup-plugin-commonjs');
+const commonjs = require('@rollup/plugin-commonjs');
 const svelte = require('rollup-plugin-svelte');
 const { terser } = require('rollup-plugin-terser');
 
@@ -64,7 +64,7 @@ function prepareES5(src, options) {
                 return code;
             } else {
                 return `
-import 'core-js/stable';
+import '@itslearning/protomorph/node_modules/core-js/stable';
 import 'regenerator-runtime/runtime';
 import 'whatwg-fetch';
 ${options.webComponents

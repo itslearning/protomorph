@@ -12,6 +12,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fixed rollup module bundle for edge support
 
+## [v10.4.0] - 29.01.2020
+
+### Changed
+
+- Internal changes: Update to sass-lint v1.3.1
+- Internal changes: Update to webpack-cli v3.3.10
+- Internal changes: Update to fsevents v1.2.11
+- Internal changes: Update to @rollup/plugin-node-resolve v7.0.0
+- Internal changes: Update to @rollup/plugin-commonjs v11.0.1
+- Internal changes: Update to karma v4.4.1
+- Internal changes: Update to node-sass v4.13.1
+
+## [v10.3.0] - 23.01.2020
+
+### Changed
+
+- Internal changes: Update to autoprefixer v9.7.3
+- Internal changes: Update to core-js v3.6.4
+- Internal changes: Update to babel v7.8.3
+- Internal changes: Update to axe-core v3.4.1
+- Internal changes: Update to eslint v6.8.0
+- Internal changes: Update rollup and rollup plugins
+
+## [v10.2.1] - 13.01.2020
+
+## Fixed
+
+- Fixed core-js import
+
 ## [v10.2.0] - 09.12.2019
 
 ### Changed
