@@ -6,6 +6,7 @@ const { eslint } = require('rollup-plugin-eslint');
 const resolve = require('@rollup/plugin-node-resolve');
 const scss = require('rollup-plugin-scss');
 const commonjs = require('@rollup/plugin-commonjs');
+const postcss = require('rollup-plugin-postcss');
 const svelte = require('rollup-plugin-svelte');
 const { terser } = require('rollup-plugin-terser');
 
@@ -130,6 +131,7 @@ const Sass = (src, dest, options = sassOptions) => ({
             output: `${dest}.temp`,
             outputStyle: 'compressed'
         }),
+        postcss(),
         {
             name: 'Rollup Sass Cleaner Plugin',
             /**
