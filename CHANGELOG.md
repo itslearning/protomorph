@@ -8,7 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## Changed
+## [v10.4.1] - 17.02.2020
+
+## Fixed
 
 - Fixed rollup module bundle for edge support
 
