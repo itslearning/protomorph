@@ -8,9 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Downgraded core-js to v3.6.1 to fix IE11 compatibility issue
+
 ## [v10.4.1] - 17.02.2020
 
-## Fixed
+### Fixed
 
 - Fixed rollup module bundle for edge support
 
