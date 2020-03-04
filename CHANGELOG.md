@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v10.4.2] - 04.03.2020
+
 ### Fixed
 
 - Downgraded core-js to v3.6.1 to fix IE11 compatibility issue
