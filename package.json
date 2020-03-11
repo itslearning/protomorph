@@ -61,7 +61,7 @@
         "@rollup/plugin-commonjs": "11.0.1",
         "rollup-plugin-babel": "4.3.3",
         "rollup-plugin-eslint": "7.0.0",
-        "rollup-plugin-scss": "2.1.0",
+        "rollup-plugin-scss": "https://github.com/riri/rollup-plugin-scss",
         "rollup-plugin-svelte": "5.1.1",
         "rollup-plugin-terser": "5.2.0",
         "rollup": "1.29.0",
