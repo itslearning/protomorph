@@ -137,7 +137,7 @@ const Sass = (src, dest, options = sassOptions) => ({
     onwarn: (warning, onwarn) => warning.code === 'EMPTY_BUNDLE' || onwarn(warning),
     plugins: [
         scss({
-            runtime: sass,
+            compiler: sass,
             importer(path) {
                 return {
                     file: path.replace(/^~/, 'node_modules/')
