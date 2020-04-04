@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Internal changes: Update to @rollup/plugin-node-resolve v7.1.1
 - Internal changes: Update to @rollup/plugin-commonjs v11.0.2
+- Internal changes: Update to babel-loader v8.1.0
+- Internal changes: Update to postcss-loader v3.0.0
 - Internal changes: Update to rollup-plugin-babel 4.4.0
 - Internal changes: Update to rollup-plugin-svelte v5.2.1
 - Internal changes: Update to rollup-plugin-terser v5.3.0
@@ -21,6 +23,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Internal changes: Update to svelte v2.16.1
 - Internal changes: Update to webpack v4.42.1
 - Internal changes: Resolve acorn to acorn v7.1.1
+- Internal changes: Resolve minimist to minimist v0.2.1
+- Internal changes: Resolve mkdirp to mkdirp v0.5.5
 
 ## [v10.4.2] - 04.03.2020
 
