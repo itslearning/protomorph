@@ -8,6 +8,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v10.5.0] - 04.04.2020
+
+### Changed
+
+- Internal changes: Update to @rollup/plugin-node-resolve v7.1.1
+- Internal changes: Update to @rollup/plugin-commonjs v11.0.2
+- Internal changes: Update to rollup-plugin-babel 4.4.0
+- Internal changes: Update to rollup-plugin-svelte v5.2.1
+- Internal changes: Update to rollup-plugin-terser v5.3.0
+- Internal changes: Update to rollup v1.32.1
+- Internal changes: Update to svelte v2.16.1
+- Internal changes: Update to webpack v4.42.1
+- Internal changes: Resolve acorn to acorn v7.1.1
+
 ## [v10.4.2] - 04.03.2020
 
 ### Fixed
