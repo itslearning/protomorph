@@ -82,6 +82,7 @@
         "eslint-utils": "1.4.2",
         "js-yaml": "^3.13.1",
         "lodash": "4.17.15",
+        "kind-of": "^6.0.3",
         "lodash.mergewith": "4.6.2",
         "lodash.template": "4.5.0",
         "minimist": "0.2.1",

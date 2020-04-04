@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Internal changes: Update to svelte v2.16.1
 - Internal changes: Update to webpack v4.42.1
 - Internal changes: Resolve acorn to acorn v7.1.1
+- Internal changes: Resolve kind-of to kind-of v6.0.3
 - Internal changes: Resolve minimist to minimist v0.2.1
 - Internal changes: Resolve mkdirp to mkdirp v0.5.5
 
