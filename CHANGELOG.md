@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Internal changes: Update to @babel/core v7.9.5
+- Internal changes: Update to @babel/core v7.9.0
 - Internal changes: Update to @babel/plugin-proposal-object-rest-spread v7.9.5
 - Internal changes: Update to @babel/preset-env v7.9.5
 
