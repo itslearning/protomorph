@@ -8,6 +8,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [v10.6.0] - 16.04.2020
+
+### Changed
+
+- Internal changes: Update to @babel/core v7.9.5
+- Internal changes: Update to @babel/plugin-proposal-object-rest-spread v7.9.5
+- Internal changes: Update to @babel/preset-env v7.9.5
+
 ## [v10.5.0] - 04.04.2020
 
 ### Changed
