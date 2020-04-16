@@ -8,6 +8,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v10.7.0] - 16.04.2020
+
+- Internal changes: Update to rollup-plugin-scss v2.4.0
+
+### Changed
+
+## [v10.6.0] - 16.04.2020
+
+### Changed
+
+- Internal changes: Update to @babel/core v7.9.0
+- Internal changes: Update to @babel/plugin-proposal-object-rest-spread v7.9.5
+- Internal changes: Update to @babel/preset-env v7.9.5
+
+## [v10.5.0] - 04.04.2020
+
+### Changed
+
+- Internal changes: Update to @rollup/plugin-node-resolve v7.1.1
+- Internal changes: Update to @rollup/plugin-commonjs v11.0.2
+- Internal changes: Update to babel-loader v8.1.0
+- Internal changes: Update to postcss-loader v3.0.0
+- Internal changes: Update to rollup-plugin-babel 4.4.0
+- Internal changes: Update to rollup-plugin-svelte v5.2.1
+- Internal changes: Update to rollup-plugin-terser v5.3.0
+- Internal changes: Update to rollup v1.32.1
+- Internal changes: Update to svelte v2.16.1
+- Internal changes: Update to webpack v4.42.1
+- Internal changes: Resolve acorn to acorn v7.1.1
+- Internal changes: Resolve kind-of to kind-of v6.0.3
+- Internal changes: Resolve minimist to minimist v0.2.1
+- Internal changes: Resolve mkdirp to mkdirp v0.5.5
+
 ## [v10.4.2] - 04.03.2020
 
 ### Fixed
