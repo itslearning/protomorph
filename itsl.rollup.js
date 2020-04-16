@@ -4,6 +4,7 @@ const path = require('path');
 const babel = require('rollup-plugin-babel');
 const { eslint } = require('rollup-plugin-eslint');
 const resolve = require('@rollup/plugin-node-resolve');
+const sass = require('sass');
 const scss = require('rollup-plugin-scss');
 const commonjs = require('@rollup/plugin-commonjs');
 const svelte = require('rollup-plugin-svelte');
@@ -136,6 +137,7 @@ const Sass = (src, dest, options = sassOptions) => ({
     onwarn: (warning, onwarn) => warning.code === 'EMPTY_BUNDLE' || onwarn(warning),
     plugins: [
         scss({
+            compiler: sass,
             importer(path) {
                 return {
                     file: path.replace(/^~/, 'node_modules/')
@@ -143,7 +145,7 @@ const Sass = (src, dest, options = sassOptions) => ({
                 };
             },
             output: `${dest}.temp`,
-            outputStyle: 'compressed'
+            outputStyle: 'compressed',
         }),
         {
             name: 'Rollup Sass Cleaner Plugin',

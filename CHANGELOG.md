@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v10.8.0] - 16.04.2020
+
+### Changed
+
+- We now use the sass compiler instead of node-sass
+
 ## [v10.7.0] - 16.04.2020
 
 - Internal changes: Update to rollup-plugin-scss v2.4.0
