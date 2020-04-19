@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Fixed
+
+- Sass parameter changed from `compiler` to `sass` in rollup-plugin-scss
+
 ## [v10.8.0] - 16.04.2020
 
 ### Changed
