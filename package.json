@@ -64,7 +64,7 @@
         "rollup-plugin-scss": "2.4.0",
         "rollup-plugin-svelte": "5.1.1",
         "rollup-plugin-terser": "5.2.0",
-        "rollup": "1.29.0",
+        "rollup": "1.32.1",
         "sass": "1.26.2",
         "sass-lint": "1.13.1",
         "sasslint-webpack-plugin": "1.0.4",
