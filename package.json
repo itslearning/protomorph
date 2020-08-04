@@ -1,7 +1,7 @@
 {
     "name": "@itslearning/protomorph",
     "description": "Shared build config for frontend applications",
-    "version": "10.8.1",
+    "version": "10.9.0",
     "author": "Itslearning AS",
     "license": "MIT",
     "scripts": {
@@ -72,7 +72,7 @@
         "svelte-loader": "2.11.0",
         "ts-loader": "4.2.0",
         "typescript": "2.8.3",
-        "webpack": "4.42.1",
+        "webpack": "4.44.1",
         "webpack-clean": "1.2.3",
         "webpack-cli": "3.3.10",
         "whatwg-fetch": "^3.0.0"
@@ -80,6 +80,7 @@
     "resolutions": {
         "acorn": "7.1.1",
         "fsevents": "v1.2.11",
+        "elliptic": "^6.5.3",
         "eslint-utils": "1.4.2",
         "js-yaml": "^3.13.1",
         "lodash": "4.17.15",
