@@ -1,7 +1,7 @@
 {
     "name": "@itslearning/protomorph",
     "description": "Shared build config for frontend applications",
-    "version": "10.8.1",
+    "version": "10.9.0",
     "author": "Itslearning AS",
     "license": "MIT",
     "scripts": {
