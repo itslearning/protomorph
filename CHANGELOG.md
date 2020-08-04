@@ -1,4 +1,4 @@
-"karma-mocha": "2.0.1# Changelog
+# Changelog
 
 All notable changes to this project will be documented in this file.
 
