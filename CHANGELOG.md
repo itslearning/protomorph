@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v10.9.0] - 04.08.2020
+
 ### Changed
 
 - Internal changes: Update to elliptic v6.5.3
