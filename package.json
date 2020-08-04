@@ -1,7 +1,7 @@
 {
     "name": "@itslearning/protomorph",
     "description": "Shared build config for frontend applications",
-    "version": "10.9.0",
+    "version": "10.10.0",
     "author": "Itslearning AS",
     "license": "MIT",
     "scripts": {
@@ -47,15 +47,15 @@
         "karma-edge-launcher": "0.4.2",
         "karma-firefox-launcher": "1.1.0",
         "karma-ie-launcher": "1.0.0",
-        "karma-mocha": "1.3.0",
+        "karma-mocha": "2.0.1",
         "karma-mocha-reporter": "2.2.5",
         "mini-css-extract-plugin": "0.4.0",
         "mocha": "5.1.1",
-        "node-sass": "4.13.1",
+        "node-sass": "4.14.0",
         "node-sass-magic-importer": "5.3.2",
         "node-sass-tilde-importer": "^1.0.2",
         "on-build-webpack": "0.1.0",
-        "optimize-css-assets-webpack-plugin": "4.0.1",
+        "optimize-css-assets-webpack-plugin": "5.0.3",
         "postcss-loader": "3.0.0",
         "regenerator-runtime": "^0.13.3",
         "rollup": "1.32.1",
@@ -78,19 +78,19 @@
         "whatwg-fetch": "^3.0.0"
     },
     "resolutions": {
-        "acorn": "7.1.1",
+        "acorn": "^7.1.1",
         "fsevents": "v1.2.11",
         "elliptic": "^6.5.3",
-        "eslint-utils": "1.4.2",
+        "eslint-utils": "^1.4.2",
         "js-yaml": "^3.13.1",
-        "lodash": "4.17.15",
+        "lodash": "^4.17.19",
         "kind-of": "^6.0.3",
-        "lodash.mergewith": "4.6.2",
-        "lodash.template": "4.5.0",
-        "minimist": "0.2.1",
-        "mkdirp": "0.5.5",
-        "mixin-deep": "1.3.2",
+        "lodash.mergewith": "^4.6.2",
+        "lodash.template": "^4.5.0",
+        "minimist": "^0.2.1",
+        "mkdirp": "^0.5.5",
+        "mixin-deep": "^1.3.2",
         "serialize-javascript": "^2.1.2",
-        "set-value": "2.0.1"
+        "set-value": "^2.0.1"
     }
 }
