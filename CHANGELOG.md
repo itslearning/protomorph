@@ -8,9 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Changed
-
 ## [v10.10.0] - 04.08.2020
+
+### Changed
 
 - Internal changes: Update to karma-mocha v2.0.1
 - Internal changes: Update to node-sass v4.14.0
