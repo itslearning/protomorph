@@ -1,4 +1,4 @@
-# Changelog
+"karma-mocha": "2.0.1# Changelog
 
 All notable changes to this project will be documented in this file.
 
@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Internal changes: Update to elliptic v6.5.3
 - Internal changes: Update to webpack v4.44.1
+- Internal changes: Update to karma-mocha v2.0.1
+- Internal changes: Update to node-sass v4.14.0
+- Internal changes: Update to  optimize-css-assets-webpack-plugin to v5.0.3
 
 ## [v10.8.1] - 19.04.2020
 
