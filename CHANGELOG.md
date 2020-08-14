@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v10.11.0] - 14.08.2020
+
+### Changed
+
+- Internal changes: Update to serialize-javascript v3.1.0
+
 ## [v10.10.0] - 04.08.2020
 
 ### Changed
