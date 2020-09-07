@@ -1,4 +1,4 @@
-import ItslRollup from '@itslearning/protomorph/itsl.rollup';
+import { Svelte, Sass } from '@itslearning/protomorph/itsl.rollup';
 
 const destination = './build/';
 

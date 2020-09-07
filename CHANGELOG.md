@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Removed
+
+- Removed Webpack support
+
+### Changed
+
+- Upgraded Svelte to Svelte 3
+
+### Added
+
+- Added @rollup/plugin-json for json support in rollup builds
+
 ## [v10.10.0] - 04.08.2020
 
 ### Changed
