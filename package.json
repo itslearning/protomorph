@@ -9,7 +9,7 @@
         "build": "rollup -c"
     },
     "dependencies": {
-        "rollup": "^2.3.4",
+        "rollup": "^2.26.10",
         "@rollup/plugin-node-resolve": "^8.0.0",
         "@rollup/plugin-babel": "^5.0.0",
         "@rollup/plugin-commonjs": "^14.0.0",
