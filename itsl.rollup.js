@@ -5,9 +5,9 @@ const babel = require('rollup-plugin-babel');
 const { eslint } = require('rollup-plugin-eslint');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const scss = require('rollup-plugin-scss');
-const commonjs = require('@rollup/plugin-commonjs');
 const svelte = require('rollup-plugin-svelte');
 const { terser } = require('rollup-plugin-terser');
+const json = require('rollup-plugin-json');
 
 const defaultOptions = {
     legacy: false,
@@ -43,9 +43,9 @@ const Svelte = (src, dest, options = defaultOptions) => ({
         // @ts-ignore
         svelte(),
         nodeResolve({ dedupe: ['svelte'] }),
+        json(),
         options.legacy ? babelPresetIE11 : babelPresetEdge,
         // @ts-ignore
-        commonjs({ namedExports: { 'chai': ['assert', 'expect'] } }),
         terser(),
         ...options.plugins || defaultOptions.plugins
     ],
