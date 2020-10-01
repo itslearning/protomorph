@@ -75,7 +75,7 @@
         "webpack": "4.44.1",
         "webpack-clean": "1.2.3",
         "webpack-cli": "3.3.10",
-        "whatwg-fetch": "^3.0.0"
+        "whatwg-fetch": "3.4.1"
     },
     "resolutions": {
         "acorn": "^7.1.1",
