@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v10.11.1] - 01.10.2020
+
+### Changed
+
+- Internal changes: Update to whatwg-fetch v3.4.1. Fixes warning due to calling `this` on global level which is undefined.
+
 ## [v10.11.0] - 14.08.2020
 
 ### Changed
@@ -20,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Internal changes: Update to karma-mocha v2.0.1
 - Internal changes: Update to node-sass v4.14.0
-- Internal changes: Update to  optimize-css-assets-webpack-plugin to v5.0.3
+- Internal changes: Update to optimize-css-assets-webpack-plugin to v5.0.3
 
 ## [v10.9.0] - 04.08.2020
 
