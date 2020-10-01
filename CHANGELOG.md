@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v10.11.1] - 01.10.2020
+
 ### Changed
 
 - Internal changes: Update to whatwg-fetch v3.4.1. Fixes warning due to calling `this` on global level which is undefined.
