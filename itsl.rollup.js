@@ -8,6 +8,7 @@ const scss = require('rollup-plugin-scss');
 const svelte = require('rollup-plugin-svelte');
 const { terser } = require('rollup-plugin-terser');
 const json = require('@rollup/plugin-json');
+const stylelint = require('rollup-plugin-stylelint');
 
 const defaultOptions = {
     legacy: false,
@@ -150,6 +151,9 @@ const Sass = (src, dest, options = sassOptions) => ({
              */
             writeBundle: () => fs.renameSync(`${dest}.temp`, dest)
         },
+        stylelint({
+
+        }),
         ...options.plugins || []
     ]
 });
