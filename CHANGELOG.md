@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added @rollup/plugin-json for json support in rollup builds
+- Added Stylelint as a replacement for Sass-lint
 
 ## [v10.10.0] - 04.08.2020
 
