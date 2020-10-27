@@ -7,10 +7,13 @@
         "browser": true,
         "es6": true
     },
-    "overrides": [
-        {
-          "files": ["*.svelte"],
-          "processor": "svelte3/svelte3"
+    "extends": [
+        "eslint:recommended"
+    ],
+    "overrides": [ {
+            "excludedFiles": "*.js",
+            "files": ["**/*.svelte"],
+            "processor": "svelte3/svelte3"
         }
     ],
     "plugins": [
