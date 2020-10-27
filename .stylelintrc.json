@@ -4,6 +4,13 @@
         "indentation": [
             4
         ],
-        "string-quotes": "double"
+        "string-quotes": "double",
+        "selector-class-pattern": [
+            "([a-z0-9]+(-{1})?[a-z0-9]+)|(--|__)",
+            {
+              "message":
+                "Selectors should be written in a bem-like pattern (selector-class-pattern)"
+            }
+          ]
     }
   }
