@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Internal changes: Update to karma v5.2.3
 - Internal changes: Update to sass-graph v3.0.5
-- Internal changes: Update to webpack-cli v3.3.12
+- Internal changes: Update to webpack-cli v4.5.0
 
 ## [v10.11.1] - 01.10.2020
 
