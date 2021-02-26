@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v10.12.0] - 26.02.2021
+
+### Changed
+
+- Internal changes: Update to karma v5.2.3
+
 ## [v10.11.1] - 01.10.2020
 
 ### Changed
