@@ -74,7 +74,7 @@
         "typescript": "2.8.3",
         "webpack": "4.44.1",
         "webpack-clean": "1.2.3",
-        "webpack-cli": "3.3.12",
+        "webpack-cli": "4.5.0",
         "whatwg-fetch": "3.4.1"
     },
     "resolutions": {
