@@ -82,6 +82,7 @@
         "fsevents": "v1.2.11",
         "elliptic": "^6.5.3",
         "eslint-utils": "^1.4.2",
+        "ini": "^1.3.8",
         "js-yaml": "^3.13.1",
         "lodash": "^4.17.19",
         "kind-of": "^6.0.3",
