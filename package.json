@@ -1,7 +1,7 @@
 {
     "name": "@itslearning/protomorph",
     "description": "Shared build config for frontend applications",
-    "version": "10.11.1",
+    "version": "10.12.0",
     "author": "Itslearning AS",
     "license": "MIT",
     "scripts": {
@@ -74,7 +74,7 @@
         "typescript": "2.8.3",
         "webpack": "4.44.1",
         "webpack-clean": "1.2.3",
-        "webpack-cli": "3.3.10",
+        "webpack-cli": "3.3.12",
         "whatwg-fetch": "3.4.1"
     },
     "resolutions": {
