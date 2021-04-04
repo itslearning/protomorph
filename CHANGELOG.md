@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Internal changes: Update to copy-webpack-plugin v5.1.1
 - Internal changes: Update to elliptic v6.5.4
 - Internal changes: Update to is-svg v4.3.1
 - Internal changes: Update to optimize-css-assets-webpack-plugin v5.0.4
