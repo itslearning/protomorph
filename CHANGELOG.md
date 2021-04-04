@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v10.13.0] - 04.04.2021
+
 ### Changed
 
 - Internal changes: Update to copy-webpack-plugin v5.1.1
