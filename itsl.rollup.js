@@ -1,7 +1,8 @@
+import { babel } from '@rollup/plugin-babel';
+
 const fs = require('fs');
 const path = require('path');
 
-const babel = require('@rollup/plugin-babel');
 const { eslint } = require('rollup-plugin-eslint');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const scss = require('rollup-plugin-scss');
