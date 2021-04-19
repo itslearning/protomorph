@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Upgraded Svelte to Svelte 3
+- Internal changes: Update to rollup-plugin-scss v3.0.0-rc1
 
 ### Added
 
