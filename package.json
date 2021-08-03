@@ -50,6 +50,7 @@
 
     "resolutions": {
         "browserslist": "^4.16.5",
+        "hosted-git-info": "^2.8.9",
         "trim-newlines": "^3.0.1"
     }
 }
