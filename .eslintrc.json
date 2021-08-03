@@ -1,71 +1,26 @@
 {
-    "extends": "standard",
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": false
-        }
+        "ecmaVersion": 2019,
+        "sourceType": "module"
     },
     "env": {
         "browser": true,
-        "mocha": true
+        "es6": true
     },
-    "globals": {
-        "expect": false
-    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "overrides": [ {
+            "excludedFiles": "*.js",
+            "files": ["**/*.svelte"],
+            "processor": "svelte3/svelte3"
+        }
+    ],
     "plugins": [
-        "html",
-        "json"
+        "svelte3"
     ],
     "settings": {
-        "html/indent": "+4",
-        "html/report-bad-indent": "error",
-        "html/html-extensions": [".html", ".svelte"]
     },
     "rules": {
-        "no-var": "error",
-        "indent": ["error", 4, { "SwitchCase": 1 }],
-        "semi": ["error", "always"],
-        "object-curly-spacing": ["error", "always"],
-        "comma-dangle": ["error", "only-multiline"],
-        "space-before-function-paren": [
-            "error",
-            {
-                "anonymous": "always",
-                "named": "never",
-                "asyncArrow": "always"
-            }
-        ],
-        "padding-line-between-statements": [
-            "error",
-            {
-                "blankLine": "always",
-                "prev": ["directive", "import", "const", "let", "block-like"],
-                "next": "*"
-            },
-            {
-                "blankLine": "always",
-                "prev": "*",
-                "next": ["export", "return", "throw", "block-like"]
-            },
-            {
-                "blankLine": "any",
-                "prev": "import",
-                "next": "import"
-            },
-            {
-                "blankLine": "any",
-                "prev": "const",
-                "next": "const"
-            },
-            {
-                "blankLine": "any",
-                "prev": "let",
-                "next": "let"
-            }
-        ],
-        "padded-blocks": ["error", "never"],
-        "prefer-rest-params": "error",
-        "prefer-spread": "error",
-        "prefer-const": "error"
     }
 }

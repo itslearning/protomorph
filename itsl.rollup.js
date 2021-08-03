@@ -1,13 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
-const babel = require('rollup-plugin-babel');
+const { babel  }= require('@rollup/plugin-babel');
 const { eslint } = require('rollup-plugin-eslint');
-const resolve = require('@rollup/plugin-node-resolve');
+const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const scss = require('rollup-plugin-scss');
-const commonjs = require('@rollup/plugin-commonjs');
 const svelte = require('rollup-plugin-svelte');
 const { terser } = require('rollup-plugin-terser');
+const json = require('@rollup/plugin-json');
 
 const defaultOptions = {
     legacy: false,
@@ -41,14 +41,11 @@ const Svelte = (src, dest, options = defaultOptions) => ({
         options.legacy && prepareES5(src, options),
         !options.legacy && eslint(options.eslint || defaultOptions.eslint),
         // @ts-ignore
-        resolve({ extensions: [ '.js', '.mjs', '.html', '.svelte', '.json' ] }),
-        svelte({ extensions: ['.html', '.svelte'] }),
+        svelte(),
+        nodeResolve({ dedupe: ['svelte'] }),
+        json(),
         options.legacy ? babelPresetIE11 : babelPresetEdge,
         // @ts-ignore
-        commonjs({
-            extensions: ['.js', '.mjs', '.html', '.svelte'],
-            namedExports: { 'chai': ['assert', 'expect'] },
-        }),
         terser(),
         ...options.plugins || defaultOptions.plugins
     ],

@@ -2,29 +2,22 @@
     <h1>I am a header</h1>
 
     {#if message}
-    <p ref:message>{message}</p>
+    <p bind:this=messageElement>{message}</p>
     {/if}
 </section>
 
 <script>
     const something = "nothing";
     let somethingElse;
+    let messageElement;
 
-    export default {
-        data() {
-            return {
-                message: 'Hear me roar!'
-            };
-        },
+    export let message = 'Hear me roar!'
 
-        methods: {
-            doSomething() {
-                const peeps = ['Jeff', 'Fred', 'Sarah'];
+    function doSomething() {
+        const peeps = ['Jeff', 'Fred', 'Sarah'];
 
-                const morePeeps = ['Knut', ...peeps];
+        const morePeeps = ['Knut', ...peeps];
 
-                console.log(morePeeps);
-            }
-        }
-    };
+        console.log({morePeeps});
+    }
 </script>

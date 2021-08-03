@@ -8,6 +8,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Removed
+
+- Removed Webpack support
+
+### Changed
+
+- Upgraded Svelte to Svelte 3
+- Internal changes: Update to rollup-plugin-scss v3.0.0-rc1
+
+### Added
+
+- Added @rollup/plugin-json for json support in rollup builds
+- Added Stylelint as a replacement for Sass-lint
+- Added Jest as a Testing Framework
+- Added Testing Library
+
 ## [v10.13.0] - 04.04.2021
 
 ### Changed
