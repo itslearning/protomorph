@@ -1,8 +1,8 @@
 Protomorph: shared build
 ========================
 
-Contains a standard build for working on frontend applications based on webpack
-using ts, js and scss. Also contains configuration for js, scss and html linters.
+Contains a standard build for working on svelte frontend applications based on rollup
+using js and scss. Also contains configuration for js and scss linters.
 
 ```shell
 mkdir my-frontend-app
@@ -14,7 +14,7 @@ Add this repo into the devDependencies in your package.json.
 
 ```json
 ...
-"@itslearning/protomorph": "git://github.com/itslearning/protomorph.git#TAG_NAME"
+"@itslearning/protomorph": "https://github.com/itslearning/protomorph.git#TAG_NAME"
 ...
 ```
 
@@ -22,7 +22,7 @@ Add this repo into the devDependencies in your package.json.
 yarn install
 ```
 
-You need to create a `webpack.config.js` and require the protomorph webpack configuration. It shouldn't require much.
+You need to create a `rollup.config.js` and require the protomorph rollup configuration. It shouldn't require much.
 
 ```javascript
 const baseConfig = require('@itslearning/protomorph/webpack.config');

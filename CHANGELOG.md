@@ -24,6 +24,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Jest as a Testing Framework
 - Added Testing Library
 
+## [v10.13.0] - 04.04.2021
+
+### Changed
+
+- Internal changes: Update to copy-webpack-plugin v5.1.1
+- Internal changes: Update to elliptic v6.5.4
+- Internal changes: Update to is-svg v4.3.1
+- Internal changes: Update to optimize-css-assets-webpack-plugin v5.0.4
+- Internal changes: Update to y18n v4.0.1
+
+## [v10.12.0] - 26.02.2021
+
+### Changed
+
+- Internal changes: Update to ini v1.3.8
+- Internal changes: Update to karma v5.2.3
+- Internal changes: Update to sass-graph v3.0.5
+- Internal changes: Update to webpack-cli v4.5.0
+
+## [v10.11.1] - 01.10.2020
+
+### Changed
+
+- Internal changes: Update to whatwg-fetch v3.4.1. Fixes warning due to calling `this` on global level which is undefined.
+
+## [v10.11.0] - 14.08.2020
+
+### Changed
+
+- Internal changes: Update to serialize-javascript v3.1.0
+
 ## [v10.10.0] - 04.08.2020
 
 ### Changed
