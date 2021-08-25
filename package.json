@@ -33,7 +33,7 @@
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-promise": "^4.3.1",
         "eslint-plugin-svelte3": "^3.1.2",
-        "jest": "^27.0.6",
+        "jest": "^26.6.3",
         "regenerator-runtime": "^0.13.7",
         "rollup": "^2.56.3",
         "rollup-plugin-eslint": "^7.0.0",
@@ -44,7 +44,7 @@
         "stylelint": "^13.13.1",
         "stylelint-config-sass-guidelines": "^8.0.0",
         "svelte": "^3.42.3",
-        "svelte-jester": "^2.0.1",
+        "svelte-jester": "^1.8.2",
         "whatwg-fetch": "^3.6.2"
     },
     "resolutions": {
