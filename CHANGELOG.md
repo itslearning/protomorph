@@ -8,11 +8,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v11.0.0-beta.3] - 25.08.2021
+
+### Changed
+
+- Updated dependencies
+
 ## [v11.0.0-beta.2] - 03.08.2021
+
+### Changed
 
 - Updated dependencies
 
 ## [v11.0.0-beta.1] - 19.04.2021
+
+### Changed
 
 - Updated babel configuration
 - Updated dependencies
