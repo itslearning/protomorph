@@ -44,7 +44,6 @@
         "stylelint": "^13.13.1",
         "stylelint-config-sass-guidelines": "^8.0.0",
         "svelte": "^3.42.3",
-        "svelte-jester": "^1.5.0",
         "whatwg-fetch": "^3.6.2"
     },
     "resolutions": {
