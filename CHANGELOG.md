@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Internal changes: Update to sass-loader v7.3.1
 - Internal changes: Update to svelte-loader v2.13.6
 - Internal changes: Update to fsevents v1.2.13
+- Internal changes: Removed sasslint-webpack-plugin
 
 ## [v10.13.0] - 04.04.2021
 
