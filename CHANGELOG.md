@@ -23,7 +23,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Internal changes: Update to clean-webpack-plugin v2.0.2
 - Internal changes: Update to core-js v3.21.1
 - Internal changes: Update to css-loader v3.6.0
-- Internal changes: Update to node-sass v5.0.0
 - Internal changes: Update to sass v1.49.7
 - Internal changes: Update to sass-loader v7.3.1
 - Internal changes: Update to svelte-loader v2.13.6
