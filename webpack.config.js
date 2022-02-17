@@ -3,26 +3,10 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const magicSassImporter = require('node-sass-magic-importer');
-const SassLintPlugin = require('sasslint-webpack-plugin');
 const babelOptions = require('./.babelrc.json');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WebpackOnBuildPlugin = require('on-build-webpack');
 
 const outputDir = path.join(process.cwd(), '/dist');
-
-// We set the root to be the current running webpack directory, so
-// if you are including this in your project, be aware, this will
-// delete your dist folder before building another.
-const cleanDistBeforeBuild = new CleanWebpackPlugin('dist', {
-    root: process.cwd()
-});
-
-const sassLinter = new SassLintPlugin({
-    configFile: path.join(__dirname, '.sass-lint.yml'),
-    glob: '!(node_modules/)**/*.scss',
-    failOnError: true,
-    ignorePlugins: ['extract-text-webpack-plugin']
-});
 
 // This will extract the styles from the bundle.js file.
 const extractCss = new MiniCssExtractPlugin({ filename: '[name].bundle.css' });
@@ -63,8 +47,7 @@ module.exports = {
     },
 
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.(js|svelte)$/,
                 use: {
                     loader: 'babel-loader',
@@ -79,26 +62,27 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [{
-                    loader: MiniCssExtractPlugin.loader
-                }, {
-                    loader: 'css-loader', // translates CSS into CommonJS
-                    options: {
-                        url: false
-                    }
-                },
-                {
-                    loader: 'postcss-loader', // run post css functions, like autoprefixer
-                    options: {
-                        config: {
-                            path: path.join(__dirname, '/postcss.config.js')
+                        loader: MiniCssExtractPlugin.loader
+                    }, {
+                        loader: 'css-loader', // translates CSS into CommonJS
+                        options: {
+                            url: false
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader', // run post css functions, like autoprefixer
+                        options: {
+                            config: {
+                                path: path.join(__dirname, '/postcss.config.js')
+                            }
+                        }
+                    }, {
+                        loader: 'sass-loader', // compiles Sass to CSS
+                        options: {
+                            importer: magicSassImporter()
                         }
                     }
-                }, {
-                    loader: 'sass-loader', // compiles Sass to CSS
-                    options: {
-                        importer: magicSassImporter()
-                    }
-                }]
+                ]
             },
 
             {
@@ -124,8 +108,6 @@ module.exports = {
     },
 
     plugins: [
-        cleanDistBeforeBuild,
-        sassLinter,
         extractCss,
         // new OptimizeCSSAssetsPlugin(), // if you optimise, you lose the css source map
         cleanUpThemeJsFiles
