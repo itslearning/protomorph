@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v10.14.0] - 17.02.2022
+
 ### Changed
 
 - Internal changes: Update to @babel/core v7.17.4
