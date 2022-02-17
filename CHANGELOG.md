@@ -20,13 +20,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Internal changes: Update to axe-core v4.4.1
 - Internal changes: Update to babel-loader v8.2.3
 - Internal changes: Update to chai v4.3.6
-- Internal changes: Update to clean-webpack-plugin v2.0.2
 - Internal changes: Update to core-js v3.21.1
 - Internal changes: Update to css-loader v3.6.0
 - Internal changes: Update to sass v1.49.7
 - Internal changes: Update to sass-loader v7.3.1
 - Internal changes: Update to svelte-loader v2.13.6
 - Internal changes: Update to Karma v6.3.16
+- Internal changes: Removed clean-webpack-plugin
 - Internal changes: Removed sasslint-webpack-plugin
 
 ## [v10.13.0] - 04.04.2021
