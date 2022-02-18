@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Updated itsl.rollup.js Sass parameter with `nodepath`.
+
 ## [v11.0.0-beta.3] - 25.08.2021
 
 ### Changed

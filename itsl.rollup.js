@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const { babel  }= require('@rollup/plugin-babel');
+const { babel } = require('@rollup/plugin-babel');
 const { eslint } = require('rollup-plugin-eslint');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const scss = require('rollup-plugin-scss');
@@ -38,8 +38,7 @@ const Svelte = (src, dest, options = defaultOptions) => ({
     },
     treeshake: true,
     plugins: [
-        options.legacy && prepareES5(src, options),
-        !options.legacy && eslint(options.eslint || defaultOptions.eslint),
+        options.legacy && prepareES5(src, options), !options.legacy && eslint(options.eslint || defaultOptions.eslint),
         // @ts-ignore
         svelte(),
         nodeResolve({ dedupe: ['svelte'] }),
@@ -85,12 +84,12 @@ const babelPresetIE11 = babel({
             {
                 useBuiltIns: 'entry',
                 corejs: 3,
-                targets: [ 'last 2 versions', 'not dead', 'ie 11' ],
+                targets: ['last 2 versions', 'not dead', 'ie 11'],
                 modules: false,
             }
         ],
     ],
-    extensions: [ '.js', '.mjs', '.html', '.svelte' ]
+    extensions: ['.js', '.mjs', '.html', '.svelte']
 });
 
 const babelPresetEdge = babel({
@@ -107,7 +106,7 @@ const babelPresetEdge = babel({
             }
         ],
     ],
-    extensions: [ '.js', '.mjs', '.html', '.svelte' ]
+    extensions: ['.js', '.mjs', '.html', '.svelte']
 });
 
 const sassOptions = {
@@ -122,7 +121,7 @@ const sassOptions = {
  * @param {any[]} options.plugins Array of plugins to run in addition to the defaults
  * @returns {object} A Rollup Configuration Object
  */
-const Sass = (src, dest, options = sassOptions) => ({
+const Sass = (src, dest, nodepath = 'node_modules/', options = sassOptions) => ({
     input: src,
     // Required for Rollup, just ignore
     output: {
@@ -136,8 +135,8 @@ const Sass = (src, dest, options = sassOptions) => ({
             sass: require('sass'),
             importer(path) {
                 return {
-                    file: path.replace(/^~/, 'node_modules/')
-                        .replace(/^@itslearning\//, 'node_modules/@itslearning/')
+                    file: path.replace(/^~/, nodepath)
+                        .replace(/^@itslearning\//, nodepath + '@itslearning/')
                 };
             },
             output: `${dest}.temp`,
