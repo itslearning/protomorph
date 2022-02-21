@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const { eslint } = require('@rollup/plugin-eslint');
+const eslint = require('@rollup/plugin-eslint');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const scss = require('rollup-plugin-scss');
 const svelte = require('rollup-plugin-svelte');
