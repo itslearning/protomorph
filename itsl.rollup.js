@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const eslint = require('@rollup/plugin-eslint');
+const { eslint } = require('@rollup/plugin-eslint');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const scss = require('rollup-plugin-scss');
 const svelte = require('rollup-plugin-svelte');
@@ -37,7 +37,8 @@ const Svelte = (src, dest, options = defaultOptions) => ({
         sourcemap: true,
     },
     treeshake: true,
-    plugins: [eslint(options.eslint || defaultOptions.eslint),
+    plugins: [
+        eslint(options.eslint || defaultOptions.eslint),
         // @ts-ignore
         svelte(),
         nodeResolve({ dedupe: ['svelte'] }),
