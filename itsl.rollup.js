@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const { babel  }= require('@rollup/plugin-babel');
-const { eslint } = require('rollup-plugin-eslint');
+const { babel } = require('@rollup/plugin-babel');
+const { eslint } = require('@rollup/plugin-eslint');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const scss = require('rollup-plugin-scss');
 const svelte = require('rollup-plugin-svelte');
@@ -38,8 +38,7 @@ const Svelte = (src, dest, options = defaultOptions) => ({
     },
     treeshake: true,
     plugins: [
-        options.legacy && prepareES5(src, options),
-        !options.legacy && eslint(options.eslint || defaultOptions.eslint),
+        options.legacy && prepareES5(src, options), !options.legacy && eslint(options.eslint || defaultOptions.eslint),
         // @ts-ignore
         svelte(),
         nodeResolve({ dedupe: ['svelte'] }),
@@ -65,9 +64,9 @@ import '@itslearning/protomorph/node_modules/core-js/stable';
 import 'regenerator-runtime/runtime';
 import 'whatwg-fetch';
 ${options.webComponents
-        ? "import '@webcomponents/webcomponentsjs/webcomponents-bundle.js';"
-        : ''
-}
+                        ? "import '@webcomponents/webcomponentsjs/webcomponents-bundle.js';"
+                        : ''
+                    }
 
 Promise.resolve(); // dummy call to trigger polyfill of Promise
 ${code}`;
@@ -85,12 +84,12 @@ const babelPresetIE11 = babel({
             {
                 useBuiltIns: 'entry',
                 corejs: 3,
-                targets: [ 'last 2 versions', 'not dead', 'ie 11' ],
+                targets: ['last 2 versions', 'not dead', 'ie 11'],
                 modules: false,
             }
         ],
     ],
-    extensions: [ '.js', '.mjs', '.html', '.svelte' ]
+    extensions: ['.js', '.mjs', '.html', '.svelte']
 });
 
 const babelPresetEdge = babel({
@@ -107,7 +106,7 @@ const babelPresetEdge = babel({
             }
         ],
     ],
-    extensions: [ '.js', '.mjs', '.html', '.svelte' ]
+    extensions: ['.js', '.mjs', '.html', '.svelte']
 });
 
 const sassOptions = {
