@@ -9,13 +9,6 @@
         "build": "rollup -c"
     },
     "dependencies": {
-        "@babel/core": "^7.13.10",
-        "@babel/plugin-proposal-object-rest-spread": "^7.13.8",
-        "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-        "@babel/plugin-transform-runtime": "^7.13.10",
-        "@babel/preset-env": "^7.13.12",
-        "@babel/runtime": "^7.13.10",
-        "@rollup/plugin-babel": "^5.3.0",
         "@rollup/plugin-commonjs": "^17.1.0",
         "@rollup/plugin-eslint": "^8.0.1",
         "@rollup/plugin-json": "^4.1.0",
@@ -23,8 +16,6 @@
         "@rollup/plugin-replace": "^2.4.1",
         "@testing-library/jest-dom": "^5.16.2",
         "@testing-library/svelte": "^3.0.3",
-        "babel-jest": "^27.5.1",
-        "babel-polyfill": "^6.26.0",
         "core-js": "^3.6.5",
         "eslint": "^7.23.0",
         "eslint-config-standard": "^16.0.2",
