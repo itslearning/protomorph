@@ -1,8 +1,9 @@
+/* global require module */
+
 const fs = require('fs');
 const path = require('path');
 
-const { babel } = require('@rollup/plugin-babel');
-const { eslint } = require('rollup-plugin-eslint');
+const eslint = require('@rollup/plugin-eslint');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const scss = require('rollup-plugin-scss');
 const svelte = require('rollup-plugin-svelte');
@@ -23,7 +24,6 @@ const defaultOptions = {
  * @param {string} src The source file
  * @param {string} dest The destination file
  * @param {object} options
- * @param {boolean} [options.legacy] Include polyfills and support for older browsers
  * @param {boolean} [options.webComponents] Include polyfills for webComponents
  * @param {any[]} [options.plugins] Array of plugins to run in addition to the defaults
  * @param {object} [options.eslint] Eslint options, defaults to using protomorph eslintrc file
@@ -33,80 +33,20 @@ const Svelte = (src, dest, options = defaultOptions) => ({
     input: src,
     output: {
         file: dest,
-        format: options.legacy ? 'iife' : 'esm',
-        sourcemap: !options.legacy,
+        format: 'esm',
+        sourcemap: true,
     },
     treeshake: true,
     plugins: [
-        options.legacy && prepareES5(src, options), !options.legacy && eslint(options.eslint || defaultOptions.eslint),
+        eslint(options.eslint || defaultOptions.eslint),
         // @ts-ignore
         svelte(),
         nodeResolve({ dedupe: ['svelte'] }),
         json(),
-        options.legacy ? babelPresetIE11 : babelPresetEdge,
         // @ts-ignore
         terser(),
         ...options.plugins || defaultOptions.plugins
     ],
-});
-
-function prepareES5(src, options) {
-    const srcFile = path.resolve(src);
-
-    return {
-        name: 'Prepare bundle for ES5',
-        transform: (code, id) => {
-            if (srcFile !== id) {
-                return code;
-            } else {
-                return `
-import '@itslearning/protomorph/node_modules/core-js/stable';
-import 'regenerator-runtime/runtime';
-import 'whatwg-fetch';
-${options.webComponents
-        ? "import '@webcomponents/webcomponentsjs/webcomponents-bundle.js';"
-        : ''
-}
-
-Promise.resolve(); // dummy call to trigger polyfill of Promise
-${code}`;
-            }
-        }
-    };
-}
-
-const babelPresetIE11 = babel({
-    exclude: [/\/core-js\//, '**/node_modules/@babel/runtime/**'],
-    babelrc: false,
-    presets: [
-        [
-            '@babel/preset-env',
-            {
-                useBuiltIns: 'entry',
-                corejs: 3,
-                targets: ['last 2 versions', 'not dead', 'ie 11'],
-                modules: false,
-            }
-        ],
-    ],
-    extensions: ['.js', '.mjs', '.html', '.svelte']
-});
-
-const babelPresetEdge = babel({
-    exclude: [/\/core-js\//, '**/node_modules/@babel/runtime/**'],
-    babelrc: false,
-    presets: [
-        [
-            '@babel/preset-env',
-            {
-                useBuiltIns: 'entry',
-                corejs: 3,
-                targets: { esmodules: true },
-                modules: false,
-            }
-        ],
-    ],
-    extensions: ['.js', '.mjs', '.html', '.svelte']
 });
 
 const sassOptions = {
