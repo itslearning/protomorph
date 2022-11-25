@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- `Sass` and `Svelte` configuration objects now support plugins (`beforePlugins`) that are being applied BEFORE standard plugins.  
+
 ## [v11.0.0-beta.7] - 23.08.2022
 
 ### Changed
