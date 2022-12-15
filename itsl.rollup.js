@@ -15,7 +15,7 @@ const defaultOptions = {
     webComponents: false,
     plugins: [],
     eslint: {
-        configFile: 'node_modules/@itslearning/protomorph/.eslintrc.json',
+        configFile: './.eslintrc.json',
     },
 };
 
