@@ -9,7 +9,7 @@
         "build": "rollup -c"
     },
     "dependencies": {
-        "@babel/core": "7.21.0",
+        "@babel/core": "7.21.3",
         "@babel/preset-env": "7.20.2",
         "@rollup/plugin-commonjs": "17.1.0",
         "@rollup/plugin-eslint": "8.0.1",
@@ -35,10 +35,10 @@
         "rollup-plugin-scss": "3.0.0",
         "rollup-plugin-svelte": "7.1.4",
         "rollup-plugin-terser": "6.1.0",
-        "sass": "1.59.2",
+        "sass": "1.59.3",
         "stylelint": "14.11.0",
         "stylelint-config-sass-guidelines": "9.0.1",
-        "svelte": "3.56.0",
+        "svelte": "3.57.0",
         "svelte-jester": "2.3.2",
         "whatwg-fetch": "3.6.2"
     },
