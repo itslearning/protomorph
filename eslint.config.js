@@ -1,7 +1,7 @@
 module.exports = {
     env: {
             "browser": true,
-            "es2020": true
+            "es2021": true
         }
     ,
     extends: [
@@ -10,11 +10,11 @@ module.exports = {
       "plugin:svelte/recommended",
     ],
     parserOptions: {
-        "ecmaVersion": "latest",
         "sourceType": "module"
     },
     rules: {
       // override/add rules settings here, such as:
       // 'svelte/rule-name': 'error'
+      "svelte/no-at-html-tags": "warn"
     },
-  }
+}
