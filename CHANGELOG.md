@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Internal changes: Updated Svelte to v4.0.0-next.0
+- Internal changes: Updated dependencies.
 
 ## [v11.0.0-beta.12] - 12.04.2023
 
