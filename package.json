@@ -38,8 +38,8 @@
         "rollup-plugin-svelte": "7.1.5",
         "rollup-plugin-terser": "6.1.0",
         "sass": "1.62.1",
-        "stylelint": "15.6.2",
-        "stylelint-config-sass-guidelines": "10.0.0",
+        "stylelint": "14.16.1",
+        "stylelint-config-sass-guidelines": "9.0.1",
         "svelte": "3.59.1",
         "svelte-jester": "2.3.2",
         "whatwg-fetch": "3.6.2"
