@@ -9,6 +9,10 @@ module.exports = {
       // 'eslint:recommended',
       "plugin:svelte/recommended",
     ],
+    parserOptions: {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
     rules: {
       // override/add rules settings here, such as:
       // 'svelte/rule-name': 'error'
