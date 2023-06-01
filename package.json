@@ -38,7 +38,7 @@
         "sass": "1.59.3",
         "stylelint": "14.11.0",
         "stylelint-config-sass-guidelines": "9.0.1",
-        "svelte": "3.58.0",
+        "svelte": "4.0.0-next.0",
         "svelte-jester": "2.3.2",
         "whatwg-fetch": "3.6.2"
     },
