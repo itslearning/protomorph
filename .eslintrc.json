@@ -8,16 +8,12 @@
         "es6": true
     },
     "extends": [
-        "eslint:recommended"
+        "eslint:recommended",
+        "plugin:svelte/recommended"
     ],
     "overrides": [ {
-            "excludedFiles": "*.js",
-            "files": ["*.svelte"],
-            "processor": "svelte3/svelte3"
+            "excludedFiles": "*.js"
         }
-    ],
-    "plugins": [
-        "svelte3"
     ],
     "settings": {
     },
