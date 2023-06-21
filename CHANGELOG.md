@@ -8,6 +8,43 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v11.0.0-beta.13] - 01.06.2023
+
+### Changed
+
+- Internal changes: Updated dependencies.
+
+## [v11.0.0-beta.12] - 12.04.2023
+
+### Changed
+
+- Updated dependencies
+
+## [v11.0.0-beta.11] - 18.03.2023
+
+### Changed
+
+- Updated dependencies
+
+## [v11.0.0-beta.10] - 13.03.2023
+
+### Changed
+
+- Updated dependencies
+
+## [v11.0.0-beta.9] - 13.03.2023
+
+### Changed
+
+- Updated dependencies
+
+## [v11.0.0-beta.8] - 30.01.2023
+
+### Changed
+
+- `Sass` and `Svelte` configuration objects now support plugins (`beforePlugins`)
+ that are being applied BEFORE standard plugins.
+
 ## [v11.0.0-beta.7] - 23.08.2022
 
 ### Changed

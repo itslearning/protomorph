@@ -13,6 +13,7 @@ const json = require('@rollup/plugin-json');
 const defaultOptions = {
     legacy: false,
     webComponents: false,
+    beforePlugins: [],
     plugins: [],
     eslint: {
         configFile: './.eslintrc.json',
@@ -38,6 +39,7 @@ const Svelte = (src, dest, options = defaultOptions) => ({
     },
     treeshake: true,
     plugins: [
+        ...options.beforePlugins || defaultOptions.beforePlugins,
         eslint(options.eslint || defaultOptions.eslint),
         // @ts-ignore
         svelte(),
@@ -50,6 +52,7 @@ const Svelte = (src, dest, options = defaultOptions) => ({
 });
 
 const sassOptions = {
+    beforePlugins: [],
     plugins: [],
 };
 
@@ -71,6 +74,7 @@ const Sass = (src, dest, options = sassOptions) => ({
     // Script will ALWAYS render an empty file at first, ignore EMPTY_BUNDLE
     onwarn: (warning, onwarn) => warning.code === 'EMPTY_BUNDLE' || onwarn(warning),
     plugins: [
+        ...options.beforePlugins || sassOptions.beforePlugins,
         scss({
             sass: require('sass'),
             importer(path) {
@@ -89,7 +93,7 @@ const Sass = (src, dest, options = sassOptions) => ({
              */
             writeBundle: () => fs.renameSync(`${dest}.temp`, dest)
         },
-        ...options.plugins || []
+        ...options.plugins || sassOptions.plugins
     ]
 });
 
