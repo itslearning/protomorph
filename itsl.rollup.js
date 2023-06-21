@@ -16,7 +16,7 @@ const defaultOptions = {
     beforePlugins: [],
     plugins: [],
     eslint: {
-        configFile: './.eslintrc.json',
+        configFile: './eslint.config.js',
     },
 };
 
