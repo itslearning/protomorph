@@ -2038,7 +2038,7 @@ __metadata:
     eslint-plugin-svelte: "npm:2.29.0"
     jest: "npm:29.5.0"
     jest-environment-jsdom: "npm:29.5.0"
-    postcss: "npm:8.4.24"
+    postcss: "npm:8.4.31"
     prettier: "npm:2.8.8"
     prettier-plugin-svelte: "npm:2.10.1"
     regenerator-runtime: "npm:0.13.11"
@@ -7165,7 +7165,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.24, postcss@npm:^8.3.11, postcss@npm:^8.4.19, postcss@npm:^8.4.5":
+"postcss@npm:8.4.31":
+  version: 8.4.31
+  resolution: "postcss@npm:8.4.31"
+  dependencies:
+    nanoid: "npm:^3.3.6"
+    picocolors: "npm:^1.0.0"
+    source-map-js: "npm:^1.0.2"
+  checksum: 1a6653e72105907377f9d4f2cd341d8d90e3fde823a5ddea1e2237aaa56933ea07853f0f2758c28892a1d70c53bbaca200eb8b80f8ed55f13093003dbec5afa0
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.3.11, postcss@npm:^8.4.19, postcss@npm:^8.4.5":
   version: 8.4.24
   resolution: "postcss@npm:8.4.24"
   dependencies:
