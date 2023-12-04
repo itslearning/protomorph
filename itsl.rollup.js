@@ -37,14 +37,17 @@ const Svelte = (src, dest, options = defaultOptions) => ({
         format: 'esm',
         sourcemap: true,
     },
-    exportCondition: ['browser'],
     treeshake: true,
     plugins: [
         ...options.beforePlugins || defaultOptions.beforePlugins,
         eslint(options.eslint || defaultOptions.eslint),
         // @ts-ignore
         svelte(),
-        nodeResolve({ dedupe: ['svelte'] }),
+        nodeResolve(
+            {
+                dedupe: ['svelte'],
+                exportCondition: ['browser'],
+            }),
         json(),
         // @ts-ignore
         terser(),
