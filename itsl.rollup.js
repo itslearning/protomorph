@@ -16,7 +16,7 @@ const defaultOptions = {
     beforePlugins: [],
     plugins: [],
     eslint: {
-        configFile: 'node_modules/@itslearning/protomorph/.eslintrc.json',
+        configFile: 'node_modules/@itslearning/protomorph/eslint.config.js',
     },
 };
 
@@ -37,6 +37,7 @@ const Svelte = (src, dest, options = defaultOptions) => ({
         format: 'esm',
         sourcemap: true,
     },
+    exportCondition: ['browser'],
     treeshake: true,
     plugins: [
         ...options.beforePlugins || defaultOptions.beforePlugins,
