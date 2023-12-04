@@ -1985,7 +1985,7 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:^17.1.0"
     "@rollup/plugin-eslint": "npm:^8.0.1"
     "@rollup/plugin-json": "npm:^4.1.0"
-    "@rollup/plugin-node-resolve": "npm:^11.2.0"
+    "@rollup/plugin-node-resolve": "npm:^14.1.0"
     "@rollup/plugin-replace": "npm:^2.4.1"
     "@testing-library/jest-dom": "npm:^5.16.5"
     "@testing-library/svelte": "npm:^3.2.2"
@@ -2497,19 +2497,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-node-resolve@npm:^11.2.0":
-  version: 11.2.1
-  resolution: "@rollup/plugin-node-resolve@npm:11.2.1"
+"@rollup/plugin-node-resolve@npm:^14.1.0":
+  version: 14.1.0
+  resolution: "@rollup/plugin-node-resolve@npm:14.1.0"
   dependencies:
     "@rollup/pluginutils": "npm:^3.1.0"
     "@types/resolve": "npm:1.17.1"
-    builtin-modules: "npm:^3.1.0"
     deepmerge: "npm:^4.2.2"
+    is-builtin-module: "npm:^3.1.0"
     is-module: "npm:^1.0.0"
     resolve: "npm:^1.19.0"
   peerDependencies:
-    rollup: ^1.20.0||^2.0.0
-  checksum: a8226b01352ee1f7133b1b59b3906267e11c99020a55e3b7a313e03889f790d1cd94e7f7769d3963261e897c3265082533ba595976f8e3f08cf70aa88bf1ddd7
+    rollup: ^2.78.0
+  checksum: dcb5b3108d8c5edb76b358740d3916866e099d8340efceebe0884b48109c0e56426949f52d7a13701a24a146abc4acb25f91e00a2822e2f096ba7acb36dbe9bd
   languageName: node
   linkType: hard
 
@@ -3425,7 +3425,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"builtin-modules@npm:^3.1.0":
+"builtin-modules@npm:^3.3.0":
   version: 3.3.0
   resolution: "builtin-modules@npm:3.3.0"
   checksum: 2cb3448b4f7306dc853632a4fcddc95e8d4e4b9868c139400027b71938fc6806d4ff44007deffb362ac85724bd40c2c6452fb6a0aa4531650eeddb98d8e5ee8a
@@ -5574,6 +5574,15 @@ __metadata:
     call-bind: "npm:^1.0.2"
     has-tostringtag: "npm:^1.0.0"
   checksum: 6090587f8a8a8534c0f816da868bc94f32810f08807aa72fa7e79f7e11c466d281486ffe7a788178809c2aa71fe3e700b167fe80dd96dad68026bfff8ebf39f7
+  languageName: node
+  linkType: hard
+
+"is-builtin-module@npm:^3.1.0":
+  version: 3.2.1
+  resolution: "is-builtin-module@npm:3.2.1"
+  dependencies:
+    builtin-modules: "npm:^3.3.0"
+  checksum: 5a66937a03f3b18803381518f0ef679752ac18cdb7dd53b5e23ee8df8d440558737bd8dcc04d2aae555909d2ecb4a81b5c0d334d119402584b61e6a003e31af1
   languageName: node
   linkType: hard
 
