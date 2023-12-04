@@ -46,7 +46,7 @@ const Svelte = (src, dest, options = defaultOptions) => ({
         nodeResolve(
             {
                 dedupe: ['svelte'],
-                exportCondition: ['browser'],
+                browser: true
             }),
         json(),
         // @ts-ignore
