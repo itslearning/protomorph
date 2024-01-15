@@ -16,7 +16,7 @@ const defaultOptions = {
     beforePlugins: [],
     plugins: [],
     eslint: {
-        configFile: 'node_modules/@itslearning/protomorph/.eslintrc.json',
+        configFile: 'node_modules/@itslearning/protomorph/eslint.config.js',
     },
 };
 
@@ -43,7 +43,11 @@ const Svelte = (src, dest, options = defaultOptions) => ({
         eslint(options.eslint || defaultOptions.eslint),
         // @ts-ignore
         svelte(),
-        nodeResolve({ dedupe: ['svelte'] }),
+        nodeResolve(
+            {
+                dedupe: ['svelte'],
+                browser: true
+            }),
         json(),
         // @ts-ignore
         terser(),
