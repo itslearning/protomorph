@@ -39,8 +39,8 @@
         "rollup-plugin-scss": "^3.0.0",
         "rollup-plugin-svelte": "^7.1.5",
         "sass": "^1.62.1",
-        "stylelint": "^14.16.1",
-        "stylelint-config-sass-guidelines": "^9.0.1",
+        "stylelint": "^15.11.0",
+        "stylelint-config-sass-guidelines": "^10.0.0",
         "svelte": "^4.2.3",
         "svelte-jester": "^3.0.0",
         "whatwg-fetch": "^3.6.2"
