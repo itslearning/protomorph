@@ -7,7 +7,7 @@ const eslint = require('@rollup/plugin-eslint');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const scss = require('rollup-plugin-scss');
 const svelte = require('rollup-plugin-svelte');
-const { terser } = require('rollup-plugin-terser');
+const { terser } = require('@rollup/plugin-terser');
 const json = require('@rollup/plugin-json');
 
 const defaultOptions = {

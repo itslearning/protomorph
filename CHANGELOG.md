@@ -8,6 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v11.0.1] - 16.01.2024
+
+- Internal changes: Updated dependencies to fix security issues.
+
+## [v11.0.0] - 15.01.2024
+
+### Changed
+
+- Yarn v4 is now used.
+- Svelte is now updated to v4.x.
+- Rollup is now updated to v4.x.
+- Internal changes: Updated dependencies.
+
 ## [v11.0.0-beta.13] - 01.06.2023
 
 ### Changed
