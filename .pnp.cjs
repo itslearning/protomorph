@@ -48,7 +48,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-svelte", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:2.35.1"],\
           ["jest", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:29.7.0"],\
           ["jest-environment-jsdom", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:29.7.0"],\
-          ["postcss", "npm:8.4.32"],\
+          ["postcss", "npm:8.4.33"],\
           ["prettier", "npm:3.2.2"],\
           ["prettier-plugin-svelte", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:3.1.2"],\
           ["regenerator-runtime", "npm:0.13.11"],\
@@ -3586,7 +3586,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-svelte", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:2.35.1"],\
           ["jest", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:29.7.0"],\
           ["jest-environment-jsdom", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:29.7.0"],\
-          ["postcss", "npm:8.4.32"],\
+          ["postcss", "npm:8.4.33"],\
           ["prettier", "npm:3.2.2"],\
           ["prettier-plugin-svelte", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:3.1.2"],\
           ["regenerator-runtime", "npm:0.13.11"],\
@@ -10112,6 +10112,16 @@ const RAW_RUNTIME_STATE =
           ["source-map-js", "npm:1.0.2"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:8.4.33", {\
+        "packageLocation": "./.yarn/cache/postcss-npm-8.4.33-6ba8157009-16eda83458.zip/node_modules/postcss/",\
+        "packageDependencies": [\
+          ["postcss", "npm:8.4.33"],\
+          ["nanoid", "npm:3.3.7"],\
+          ["picocolors", "npm:1.0.0"],\
+          ["source-map-js", "npm:1.0.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["postcss-load-config", [\
@@ -10202,6 +10212,19 @@ const RAW_RUNTIME_STATE =
           ["postcss-scss", "npm:4.0.9"]\
         ],\
         "linkType": "SOFT"\
+      }],\
+      ["virtual:1c5f428516d4b566db427dc4ce9cb151d62605a296b2099689f8712d06cea8889dff81fbcee9cd2bb1ec399ebde16dd60bbeb869dea02926c93839fe651eb3a2#npm:4.0.9", {\
+        "packageLocation": "./.yarn/__virtual__/postcss-scss-virtual-970e914acb/0/cache/postcss-scss-npm-4.0.9-b492c55307-f917ecfd4b.zip/node_modules/postcss-scss/",\
+        "packageDependencies": [\
+          ["postcss-scss", "virtual:1c5f428516d4b566db427dc4ce9cb151d62605a296b2099689f8712d06cea8889dff81fbcee9cd2bb1ec399ebde16dd60bbeb869dea02926c93839fe651eb3a2#npm:4.0.9"],\
+          ["@types/postcss", null],\
+          ["postcss", "npm:8.4.33"]\
+        ],\
+        "packagePeers": [\
+          "@types/postcss",\
+          "postcss"\
+        ],\
+        "linkType": "HARD"\
       }],\
       ["virtual:1e77a53e6ad35fd826bb4b92bbb1658c3d425d8b33a7b93386897e1302ace17bdfe17f771a54b76112e1d586b118079cb722a0538df4496d661e14c37265e00b#npm:4.0.9", {\
         "packageLocation": "./.yarn/__virtual__/postcss-scss-virtual-646b180dc2/0/cache/postcss-scss-npm-4.0.9-b492c55307-f917ecfd4b.zip/node_modules/postcss-scss/",\
@@ -11385,8 +11408,8 @@ const RAW_RUNTIME_STATE =
           ["stylelint-config-sass-guidelines", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:10.0.0"],\
           ["@types/postcss", null],\
           ["@types/stylelint", null],\
-          ["postcss", "npm:8.4.32"],\
-          ["postcss-scss", "virtual:1e77a53e6ad35fd826bb4b92bbb1658c3d425d8b33a7b93386897e1302ace17bdfe17f771a54b76112e1d586b118079cb722a0538df4496d661e14c37265e00b#npm:4.0.9"],\
+          ["postcss", "npm:8.4.33"],\
+          ["postcss-scss", "virtual:1c5f428516d4b566db427dc4ce9cb151d62605a296b2099689f8712d06cea8889dff81fbcee9cd2bb1ec399ebde16dd60bbeb869dea02926c93839fe651eb3a2#npm:4.0.9"],\
           ["stylelint", "npm:15.11.0"],\
           ["stylelint-scss", "virtual:1c5f428516d4b566db427dc4ce9cb151d62605a296b2099689f8712d06cea8889dff81fbcee9cd2bb1ec399ebde16dd60bbeb869dea02926c93839fe651eb3a2#npm:4.7.0"]\
         ],\
