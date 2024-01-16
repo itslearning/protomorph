@@ -3,11 +3,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const eslint = require('@rollup/plugin-eslint');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const scss = require('rollup-plugin-scss');
 const svelte = require('rollup-plugin-svelte');
-const { terser } = require('@rollup/plugin-terser');
+const terser = require('@rollup/plugin-terser');
 const json = require('@rollup/plugin-json');
 
 const defaultOptions = {
@@ -15,9 +14,6 @@ const defaultOptions = {
     webComponents: false,
     beforePlugins: [],
     plugins: [],
-    eslint: {
-        configFile: 'node_modules/@itslearning/protomorph/eslint.config.js',
-    },
 };
 
 /**
@@ -27,7 +23,6 @@ const defaultOptions = {
  * @param {object} options
  * @param {boolean} [options.webComponents] Include polyfills for webComponents
  * @param {any[]} [options.plugins] Array of plugins to run in addition to the defaults
- * @param {object} [options.eslint] Eslint options, defaults to using protomorph eslintrc file
  * @returns {object} A Rollup Configuration Object
  */
 const Svelte = (src, dest, options = defaultOptions) => ({
@@ -40,7 +35,6 @@ const Svelte = (src, dest, options = defaultOptions) => ({
     treeshake: true,
     plugins: [
         ...options.beforePlugins || defaultOptions.beforePlugins,
-        eslint(options.eslint || defaultOptions.eslint),
         // @ts-ignore
         svelte(),
         nodeResolve(

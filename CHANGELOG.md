@@ -8,7 +8,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v11.0.2] - 16.01.2024
+
+### Changed
+
+- Removed eslint from common config.
+
 ## [v11.0.1] - 16.01.2024
+
+### Changed
 
 - Internal changes: Updated dependencies to fix security issues.
 
