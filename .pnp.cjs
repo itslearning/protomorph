@@ -158,7 +158,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/helpers", "npm:7.18.9"],\
           ["@babel/parser", "npm:7.18.13"],\
           ["@babel/template", "npm:7.18.10"],\
-          ["@babel/traverse", "npm:7.18.13"],\
+          ["@babel/traverse", "npm:7.23.7"],\
           ["@babel/types", "npm:7.18.13"],\
           ["convert-source-map", "npm:1.9.0"],\
           ["debug", "virtual:6251d782ea0db30c21f0f319066656716c470667e40e117968e3ee896b0149dbd84beab1c1d4067d27f9cefc387fad785c8016e1253c05537454f9884ad265e8#npm:4.3.4"],\
@@ -180,7 +180,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/helpers", "npm:7.21.0"],\
           ["@babel/parser", "npm:7.21.3"],\
           ["@babel/template", "npm:7.20.7"],\
-          ["@babel/traverse", "npm:7.21.3"],\
+          ["@babel/traverse", "npm:7.23.7"],\
           ["@babel/types", "npm:7.21.3"],\
           ["convert-source-map", "npm:1.9.0"],\
           ["debug", "virtual:6251d782ea0db30c21f0f319066656716c470667e40e117968e3ee896b0149dbd84beab1c1d4067d27f9cefc387fad785c8016e1253c05537454f9884ad265e8#npm:4.3.4"],\
@@ -472,24 +472,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@babel/helper-function-name", [\
-      ["npm:7.18.9", {\
-        "packageLocation": "./.yarn/cache/@babel-helper-function-name-npm-7.18.9-89df62ccc8-8ca19a36b2.zip/node_modules/@babel/helper-function-name/",\
-        "packageDependencies": [\
-          ["@babel/helper-function-name", "npm:7.18.9"],\
-          ["@babel/template", "npm:7.18.10"],\
-          ["@babel/types", "npm:7.18.13"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:7.21.0", {\
-        "packageLocation": "./.yarn/cache/@babel-helper-function-name-npm-7.21.0-a17ce5a05a-5b4387afd3.zip/node_modules/@babel/helper-function-name/",\
-        "packageDependencies": [\
-          ["@babel/helper-function-name", "npm:7.21.0"],\
-          ["@babel/template", "npm:7.20.7"],\
-          ["@babel/types", "npm:7.21.3"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:7.23.0", {\
         "packageLocation": "./.yarn/cache/@babel-helper-function-name-npm-7.23.0-ce38271242-d771dd1f32.zip/node_modules/@babel/helper-function-name/",\
         "packageDependencies": [\
@@ -501,14 +483,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@babel/helper-hoist-variables", [\
-      ["npm:7.18.6", {\
-        "packageLocation": "./.yarn/cache/@babel-helper-hoist-variables-npm-7.18.6-6eb061f405-830aa7ca66.zip/node_modules/@babel/helper-hoist-variables/",\
-        "packageDependencies": [\
-          ["@babel/helper-hoist-variables", "npm:7.18.6"],\
-          ["@babel/types", "npm:7.21.3"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:7.22.5", {\
         "packageLocation": "./.yarn/cache/@babel-helper-hoist-variables-npm-7.22.5-6db3192347-60a3077f75.zip/node_modules/@babel/helper-hoist-variables/",\
         "packageDependencies": [\
@@ -557,7 +531,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-split-export-declaration", "npm:7.18.6"],\
           ["@babel/helper-validator-identifier", "npm:7.19.1"],\
           ["@babel/template", "npm:7.18.10"],\
-          ["@babel/traverse", "npm:7.18.13"],\
+          ["@babel/traverse", "npm:7.23.7"],\
           ["@babel/types", "npm:7.18.13"]\
         ],\
         "linkType": "HARD"\
@@ -572,7 +546,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-split-export-declaration", "npm:7.18.6"],\
           ["@babel/helper-validator-identifier", "npm:7.19.1"],\
           ["@babel/template", "npm:7.20.7"],\
-          ["@babel/traverse", "npm:7.21.3"],\
+          ["@babel/traverse", "npm:7.23.7"],\
           ["@babel/types", "npm:7.21.3"]\
         ],\
         "linkType": "HARD"\
@@ -806,7 +780,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@babel/helpers", "npm:7.18.9"],\
           ["@babel/template", "npm:7.18.10"],\
-          ["@babel/traverse", "npm:7.18.13"],\
+          ["@babel/traverse", "npm:7.23.7"],\
           ["@babel/types", "npm:7.18.13"]\
         ],\
         "linkType": "HARD"\
@@ -816,7 +790,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@babel/helpers", "npm:7.21.0"],\
           ["@babel/template", "npm:7.20.7"],\
-          ["@babel/traverse", "npm:7.21.3"],\
+          ["@babel/traverse", "npm:7.23.7"],\
           ["@babel/types", "npm:7.21.3"]\
         ],\
         "linkType": "HARD"\
@@ -3291,40 +3265,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@babel/traverse", [\
-      ["npm:7.18.13", {\
-        "packageLocation": "./.yarn/cache/@babel-traverse-npm-7.18.13-e5b752c4d2-dd17b1c610.zip/node_modules/@babel/traverse/",\
-        "packageDependencies": [\
-          ["@babel/traverse", "npm:7.18.13"],\
-          ["@babel/code-frame", "npm:7.18.6"],\
-          ["@babel/generator", "npm:7.18.13"],\
-          ["@babel/helper-environment-visitor", "npm:7.18.9"],\
-          ["@babel/helper-function-name", "npm:7.18.9"],\
-          ["@babel/helper-hoist-variables", "npm:7.18.6"],\
-          ["@babel/helper-split-export-declaration", "npm:7.18.6"],\
-          ["@babel/parser", "npm:7.18.13"],\
-          ["@babel/types", "npm:7.18.13"],\
-          ["debug", "virtual:6251d782ea0db30c21f0f319066656716c470667e40e117968e3ee896b0149dbd84beab1c1d4067d27f9cefc387fad785c8016e1253c05537454f9884ad265e8#npm:4.3.4"],\
-          ["globals", "npm:11.12.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:7.21.3", {\
-        "packageLocation": "./.yarn/cache/@babel-traverse-npm-7.21.3-b3b3d9c94e-b7c721f6cf.zip/node_modules/@babel/traverse/",\
-        "packageDependencies": [\
-          ["@babel/traverse", "npm:7.21.3"],\
-          ["@babel/code-frame", "npm:7.18.6"],\
-          ["@babel/generator", "npm:7.21.3"],\
-          ["@babel/helper-environment-visitor", "npm:7.18.9"],\
-          ["@babel/helper-function-name", "npm:7.21.0"],\
-          ["@babel/helper-hoist-variables", "npm:7.18.6"],\
-          ["@babel/helper-split-export-declaration", "npm:7.18.6"],\
-          ["@babel/parser", "npm:7.21.3"],\
-          ["@babel/types", "npm:7.21.3"],\
-          ["debug", "virtual:6251d782ea0db30c21f0f319066656716c470667e40e117968e3ee896b0149dbd84beab1c1d4067d27f9cefc387fad785c8016e1253c05537454f9884ad265e8#npm:4.3.4"],\
-          ["globals", "npm:11.12.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:7.23.7", {\
         "packageLocation": "./.yarn/cache/@babel-traverse-npm-7.23.7-6251d782ea-e32fceb424.zip/node_modules/@babel/traverse/",\
         "packageDependencies": [\
