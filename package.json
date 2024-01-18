@@ -46,10 +46,10 @@
         "whatwg-fetch": "^3.6.2"
     },
     "resolutions": {
-        "ansi-regex": "5.0.1",
-        "path-parse": "1.0.7",
-        "tmpl": "1.0.5",
-        "trim-newlines": "3.0.1"
+        "ansi-regex": "^5.0.1",
+        "path-parse": "^1.0.7",
+        "tmpl": "^1.0.5",
+        "trim-newlines": "^3.0.1"
     },
     "packageManager": "yarn@4.0.2"
 }
