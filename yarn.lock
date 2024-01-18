@@ -2984,7 +2984,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-regex@npm:5.0.1":
+"ansi-regex@npm:^5.0.1":
   version: 5.0.1
   resolution: "ansi-regex@npm:5.0.1"
   checksum: 9a64bb8627b434ba9327b60c027742e5d17ac69277960d041898596271d992d4d52ba7267a63ca10232e29f6107fc8a835f6ce8d719b88c5f8493f8254813737
@@ -7365,7 +7365,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"path-parse@npm:1.0.7":
+"path-parse@npm:^1.0.7":
   version: 1.0.7
   resolution: "path-parse@npm:1.0.7"
   checksum: 11ce261f9d294cc7a58d6a574b7f1b935842355ec66fba3c3fd79e0f036462eaf07d0aa95bb74ff432f9afef97ce1926c720988c6a7451d8a584930ae7de86e1
@@ -8816,7 +8816,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tmpl@npm:1.0.5":
+"tmpl@npm:^1.0.5":
   version: 1.0.5
   resolution: "tmpl@npm:1.0.5"
   checksum: f935537799c2d1922cb5d6d3805f594388f75338fe7a4a9dac41504dd539704ca4db45b883b52e7b0aa5b2fd5ddadb1452bf95cd23a69da2f793a843f9451cc9
@@ -8860,7 +8860,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"trim-newlines@npm:3.0.1":
+"trim-newlines@npm:^3.0.1":
   version: 3.0.1
   resolution: "trim-newlines@npm:3.0.1"
   checksum: 03cfefde6c59ff57138412b8c6be922ecc5aec30694d784f2a65ef8dcbd47faef580b7de0c949345abdc56ec4b4abf64dd1e5aea619b200316e471a3dd5bf1f6
