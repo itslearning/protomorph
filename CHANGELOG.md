@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v11.1.0] - 23.01.2024
+
+### Changed
+
+- Bump @babel/traverse from 7.21.3 to 7.23.7
+- Bump tough-cookie from 4.1.2 to 4.1.3
+- Bump word-wrap from 1.2.3 to 1.2.5
+
 ## [v11.0.3] - 18.01.2024
 
 ### Changed
