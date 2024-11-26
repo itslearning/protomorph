@@ -58,7 +58,7 @@ const RAW_RUNTIME_STATE =
           ["sass", "npm:1.70.0"],\
           ["stylelint", "npm:15.11.0"],\
           ["stylelint-config-sass-guidelines", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:10.0.0"],\
-          ["svelte", "npm:4.2.9"],\
+          ["svelte", "npm:4.2.19"],\
           ["svelte-jester", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:3.0.0"],\
           ["whatwg-fetch", "npm:3.6.20"]\
         ],\
@@ -3642,7 +3642,7 @@ const RAW_RUNTIME_STATE =
           ["sass", "npm:1.70.0"],\
           ["stylelint", "npm:15.11.0"],\
           ["stylelint-config-sass-guidelines", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:10.0.0"],\
-          ["svelte", "npm:4.2.9"],\
+          ["svelte", "npm:4.2.19"],\
           ["svelte-jester", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:3.0.0"],\
           ["whatwg-fetch", "npm:3.6.20"]\
         ],\
@@ -4479,7 +4479,7 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/svelte", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:4.0.6"],\
           ["@testing-library/dom", "npm:9.3.3"],\
           ["@types/svelte", null],\
-          ["svelte", "npm:4.2.9"]\
+          ["svelte", "npm:4.2.19"]\
         ],\
         "packagePeers": [\
           "@types/svelte",\
@@ -6917,7 +6917,7 @@ const RAW_RUNTIME_STATE =
           ["postcss-safe-parser", "virtual:6dc193bb48ad7dd5bded69ae8f2a54692a9e2da8edb6443a6cae8c92ea313ba917c85267e13dbc9c5c66d283013a5745d757001687aaa0fc0f1e171a285f15e7#npm:6.0.0"],\
           ["postcss-selector-parser", "npm:6.0.13"],\
           ["semver", "npm:7.5.4"],\
-          ["svelte", "npm:4.2.9"],\
+          ["svelte", "npm:4.2.19"],\
           ["svelte-eslint-parser", "virtual:9d247bbc9c2e2b727b77e432b292f308b1955d81831881bb45b9e8c2e52d818eac4e61a049958d0158d19a16fe1fcf31394aa75e1383e514c49c2bb61144b3a8#npm:0.33.1"]\
         ],\
         "packagePeers": [\
@@ -10342,7 +10342,7 @@ const RAW_RUNTIME_STATE =
           ["@types/prettier", null],\
           ["@types/svelte", null],\
           ["prettier", "npm:3.2.4"],\
-          ["svelte", "npm:4.2.9"]\
+          ["svelte", "npm:4.2.19"]\
         ],\
         "packagePeers": [\
           "@types/prettier",\
@@ -10849,7 +10849,7 @@ const RAW_RUNTIME_STATE =
           ["@types/svelte", null],\
           ["resolve.exports", "npm:2.0.1"],\
           ["rollup", "npm:4.9.6"],\
-          ["svelte", "npm:4.2.9"]\
+          ["svelte", "npm:4.2.19"]\
         ],\
         "packagePeers": [\
           "@types/rollup",\
@@ -11537,10 +11537,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["svelte", [\
-      ["npm:4.2.9", {\
-        "packageLocation": "./.yarn/cache/svelte-npm-4.2.9-426bd299e1-534d3cdd3e.zip/node_modules/svelte/",\
+      ["npm:4.2.19", {\
+        "packageLocation": "./.yarn/cache/svelte-npm-4.2.19-76d73d0a72-77700133e9.zip/node_modules/svelte/",\
         "packageDependencies": [\
-          ["svelte", "npm:4.2.9"],\
+          ["svelte", "npm:4.2.19"],\
           ["@ampproject/remapping", "npm:2.2.1"],\
           ["@jridgewell/sourcemap-codec", "npm:1.4.15"],\
           ["@jridgewell/trace-mapping", "npm:0.3.20"],\
@@ -11577,7 +11577,7 @@ const RAW_RUNTIME_STATE =
           ["espree", "npm:9.5.2"],\
           ["postcss", "npm:8.4.33"],\
           ["postcss-scss", "virtual:1e77a53e6ad35fd826bb4b92bbb1658c3d425d8b33a7b93386897e1302ace17bdfe17f771a54b76112e1d586b118079cb722a0538df4496d661e14c37265e00b#npm:4.0.9"],\
-          ["svelte", "npm:4.2.9"]\
+          ["svelte", "npm:4.2.19"]\
         ],\
         "packagePeers": [\
           "@types/svelte",\
@@ -11601,7 +11601,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", null],\
           ["@types/svelte", null],\
           ["jest", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:29.7.0"],\
-          ["svelte", "npm:4.2.9"]\
+          ["svelte", "npm:4.2.19"]\
         ],\
         "packagePeers": [\
           "@types/jest",\
