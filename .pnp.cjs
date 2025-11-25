@@ -3248,11 +3248,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@babel/runtime", [\
-      ["npm:7.18.9", {\
-        "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.18.9-28ca6b5f61-f996fca79e.zip/node_modules/@babel/runtime/",\
+      ["npm:7.28.4", {\
+        "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.28.4-31bc1b0001-792ce7af97.zip/node_modules/@babel/runtime/",\
         "packageDependencies": [\
-          ["@babel/runtime", "npm:7.18.9"],\
-          ["regenerator-runtime", "npm:0.13.9"]\
+          ["@babel/runtime", "npm:7.28.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4459,7 +4458,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@testing-library/dom", "npm:9.3.3"],\
           ["@babel/code-frame", "npm:7.18.6"],\
-          ["@babel/runtime", "npm:7.18.9"],\
+          ["@babel/runtime", "npm:7.28.4"],\
           ["@types/aria-query", "npm:5.0.1"],\
           ["aria-query", "npm:5.1.3"],\
           ["chalk", "npm:4.1.2"],\
@@ -4483,7 +4482,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@testing-library/jest-dom", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:6.3.0"],\
           ["@adobe/css-tools", "npm:4.3.3"],\
-          ["@babel/runtime", "npm:7.18.9"],\
+          ["@babel/runtime", "npm:7.28.4"],\
           ["@jest/globals", null],\
           ["@types/bun", null],\
           ["@types/jest", null],\
@@ -10650,13 +10649,6 @@ const RAW_RUNTIME_STATE =
           ["regenerator-runtime", "npm:0.13.11"]\
         ],\
         "linkType": "HARD"\
-      }],\
-      ["npm:0.13.9", {\
-        "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.13.9-6d02340eec-b0f2661220.zip/node_modules/regenerator-runtime/",\
-        "packageDependencies": [\
-          ["regenerator-runtime", "npm:0.13.9"]\
-        ],\
-        "linkType": "HARD"\
       }]\
     ]],\
     ["regenerator-transform", [\
@@ -10664,7 +10656,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/regenerator-transform-npm-0.15.2-109e57a69f-7cfe6931ec.zip/node_modules/regenerator-transform/",\
         "packageDependencies": [\
           ["regenerator-transform", "npm:0.15.2"],\
-          ["@babel/runtime", "npm:7.18.9"]\
+          ["@babel/runtime", "npm:7.28.4"]\
         ],\
         "linkType": "HARD"\
       }]\
