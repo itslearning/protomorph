@@ -1968,7 +1968,7 @@ __metadata:
     sass: "npm:^1.70.0"
     stylelint: "npm:^15.11.0"
     stylelint-config-sass-guidelines: "npm:^10.0.0"
-    svelte: "npm:^4.2.9"
+    svelte: "npm:^4.2.19"
     svelte-jester: "npm:^3.0.0"
     whatwg-fetch: "npm:^3.6.20"
   languageName: unknown
@@ -8784,9 +8784,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte@npm:^4.2.9":
-  version: 4.2.9
-  resolution: "svelte@npm:4.2.9"
+"svelte@npm:^4.2.19":
+  version: 4.2.19
+  resolution: "svelte@npm:4.2.19"
   dependencies:
     "@ampproject/remapping": "npm:^2.2.1"
     "@jridgewell/sourcemap-codec": "npm:^1.4.15"
@@ -8802,7 +8802,7 @@ __metadata:
     locate-character: "npm:^3.0.0"
     magic-string: "npm:^0.30.4"
     periscopic: "npm:^3.1.0"
-  checksum: 534d3cdd3ee0c7c5139e17493c45f15426676b5d32da2c9430268ef94504ac908ea541283b3025aaf56a17382badc2464e95927d3dd094588d894ea350302bfa
+  checksum: 77700133e90f86da3072ebfd5e8546b4ebe7296424bd65f89a7247fbcbae5dc56f56d15154e2a929ee3aa7da018cb5d5db24b99b7cb72f0ba2db2ad966d603dc
   languageName: node
   linkType: hard
 
