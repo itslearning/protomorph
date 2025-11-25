@@ -4246,7 +4246,7 @@ const RAW_RUNTIME_STATE =
           ["@rollup/plugin-terser", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:0.4.4"],\
           ["@types/rollup", null],\
           ["rollup", "npm:4.27.4"],\
-          ["serialize-javascript", "npm:6.0.1"],\
+          ["serialize-javascript", "npm:6.0.2"],\
           ["smob", "npm:1.4.1"],\
           ["terser", "npm:5.25.0"]\
         ],\
@@ -11217,10 +11217,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["serialize-javascript", [\
-      ["npm:6.0.1", {\
-        "packageLocation": "./.yarn/cache/serialize-javascript-npm-6.0.1-fac87289ed-1af427f4fe.zip/node_modules/serialize-javascript/",\
+      ["npm:6.0.2", {\
+        "packageLocation": "./.yarn/cache/serialize-javascript-npm-6.0.2-cc09461d45-2dd09ef4b6.zip/node_modules/serialize-javascript/",\
         "packageDependencies": [\
-          ["serialize-javascript", "npm:6.0.1"],\
+          ["serialize-javascript", "npm:6.0.2"],\
           ["randombytes", "npm:2.1.0"]\
         ],\
         "linkType": "HARD"\
