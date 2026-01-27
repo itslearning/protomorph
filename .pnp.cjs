@@ -4523,7 +4523,7 @@ const RAW_RUNTIME_STATE =
           ["css.escape", "npm:1.5.1"],\
           ["dom-accessibility-api", "npm:0.6.3"],\
           ["jest", "virtual:4007975f89dcc9d7ebe20921ce96c2b170920528fc49f62d7a140f8ed9e40a64d387ab28bee445627421e9933f774db5e4a760b8314e2a56a070c26522baabe5#npm:29.7.0"],\
-          ["lodash", "npm:4.17.21"],\
+          ["lodash", "npm:4.17.23"],\
           ["redent", "npm:3.0.0"],\
           ["vitest", null]\
         ],\
@@ -6963,7 +6963,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/eslint-plugin-json-npm-3.1.0-2165d5ec5d-7b253b3984.zip/node_modules/eslint-plugin-json/",\
         "packageDependencies": [\
           ["eslint-plugin-json", "npm:3.1.0"],\
-          ["lodash", "npm:4.17.21"],\
+          ["lodash", "npm:4.17.23"],\
           ["vscode-json-languageservice", "npm:4.2.1"]\
         ],\
         "linkType": "HARD"\
@@ -9548,10 +9548,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lodash", [\
-      ["npm:4.17.21", {\
-        "packageLocation": "./.yarn/cache/lodash-npm-4.17.21-6382451519-d8cbea072b.zip/node_modules/lodash/",\
+      ["npm:4.17.23", {\
+        "packageLocation": "./.yarn/cache/lodash-npm-4.17.23-50bdb1c01a-1264a90469.zip/node_modules/lodash/",\
         "packageDependencies": [\
-          ["lodash", "npm:4.17.21"]\
+          ["lodash", "npm:4.17.23"]\
         ],\
         "linkType": "HARD"\
       }]\
