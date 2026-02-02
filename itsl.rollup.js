@@ -89,7 +89,13 @@ const Sass = (src, dest, options = sassOptions) => ({
             /**
              * Renames the .temp file to .css overwriting the default javascript output
              */
-            writeBundle: () => fs.renameSync(`${dest}.temp`, dest)
+            writeBundle: () => {
+                if (!fs.existsSync(`${dest}.temp`)) {
+                    return;
+                }
+
+                fs.renameSync(`${dest}.temp`, dest)
+            }
         },
         ...options.plugins || sassOptions.plugins
     ]
