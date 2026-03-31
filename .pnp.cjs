@@ -10512,7 +10512,7 @@ const RAW_RUNTIME_STATE =
           ["lilconfig", "npm:2.1.0"],\
           ["postcss", "npm:8.4.33"],\
           ["ts-node", null],\
-          ["yaml", "npm:1.10.2"]\
+          ["yaml", "npm:1.10.3"]\
         ],\
         "packagePeers": [\
           "@types/postcss",\
@@ -12700,10 +12700,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["yaml", [\
-      ["npm:1.10.2", {\
-        "packageLocation": "./.yarn/cache/yaml-npm-1.10.2-0e780aebdf-5c28b9eb7a.zip/node_modules/yaml/",\
+      ["npm:1.10.3", {\
+        "packageLocation": "./.yarn/cache/yaml-npm-1.10.3-df9008b926-c309ff85a0.zip/node_modules/yaml/",\
         "packageDependencies": [\
-          ["yaml", "npm:1.10.2"]\
+          ["yaml", "npm:1.10.3"]\
         ],\
         "linkType": "HARD"\
       }]\
