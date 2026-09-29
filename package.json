@@ -9,7 +9,7 @@
         "build": "rollup -c"
     },
     "dependencies": {
-        "@babel/core": "^7.23.7",
+        "@babel/core": "^7.29.6",
         "@babel/preset-env": "^7.23.8",
         "@rollup/plugin-commonjs": "^25.0.7",
         "@rollup/plugin-eslint": "^9.0.5",
