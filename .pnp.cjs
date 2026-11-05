@@ -3579,7 +3579,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@csstools/selector-specificity", "virtual:6dc193bb48ad7dd5bded69ae8f2a54692a9e2da8edb6443a6cae8c92ea313ba917c85267e13dbc9c5c66d283013a5745d757001687aaa0fc0f1e171a285f15e7#npm:3.0.1"],\
           ["@types/postcss-selector-parser", null],\
-          ["postcss-selector-parser", "npm:6.0.15"]\
+          ["postcss-selector-parser", "npm:6.1.5"]\
         ],\
         "packagePeers": [\
           "@types/postcss-selector-parser",\
@@ -7242,7 +7242,7 @@ const RAW_RUNTIME_STATE =
           ["postcss", "npm:8.5.28"],\
           ["postcss-load-config", "virtual:9d247bbc9c2e2b727b77e432b292f308b1955d81831881bb45b9e8c2e52d818eac4e61a049958d0158d19a16fe1fcf31394aa75e1383e514c49c2bb61144b3a8#npm:3.1.4"],\
           ["postcss-safe-parser", "virtual:6dc193bb48ad7dd5bded69ae8f2a54692a9e2da8edb6443a6cae8c92ea313ba917c85267e13dbc9c5c66d283013a5745d757001687aaa0fc0f1e171a285f15e7#npm:6.0.0"],\
-          ["postcss-selector-parser", "npm:6.0.13"],\
+          ["postcss-selector-parser", "npm:6.1.5"],\
           ["semver", "npm:7.5.4"],\
           ["svelte", "npm:4.2.19"],\
           ["svelte-eslint-parser", "virtual:9d247bbc9c2e2b727b77e432b292f308b1955d81831881bb45b9e8c2e52d818eac4e61a049958d0158d19a16fe1fcf31394aa75e1383e514c49c2bb61144b3a8#npm:0.33.1"]\
@@ -10690,19 +10690,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["postcss-selector-parser", [\
-      ["npm:6.0.13", {\
-        "packageLocation": "./.yarn/cache/postcss-selector-parser-npm-6.0.13-f732d92326-51f099b27f.zip/node_modules/postcss-selector-parser/",\
+      ["npm:6.1.5", {\
+        "packageLocation": "./.yarn/cache/postcss-selector-parser-npm-6.1.5-7a81aa8b56-1b328959d6.zip/node_modules/postcss-selector-parser/",\
         "packageDependencies": [\
-          ["postcss-selector-parser", "npm:6.0.13"],\
-          ["cssesc", "npm:3.0.0"],\
-          ["util-deprecate", "npm:1.0.2"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:6.0.15", {\
-        "packageLocation": "./.yarn/cache/postcss-selector-parser-npm-6.0.15-0ec4819b4e-48b425d6ce.zip/node_modules/postcss-selector-parser/",\
-        "packageDependencies": [\
-          ["postcss-selector-parser", "npm:6.0.15"],\
+          ["postcss-selector-parser", "npm:6.1.5"],\
           ["cssesc", "npm:3.0.0"],\
           ["util-deprecate", "npm:1.0.2"]\
         ],\
@@ -11850,7 +11841,7 @@ const RAW_RUNTIME_STATE =
           ["postcss", "npm:8.5.28"],\
           ["postcss-resolve-nested-selector", "npm:0.1.1"],\
           ["postcss-safe-parser", "virtual:6dc193bb48ad7dd5bded69ae8f2a54692a9e2da8edb6443a6cae8c92ea313ba917c85267e13dbc9c5c66d283013a5745d757001687aaa0fc0f1e171a285f15e7#npm:6.0.0"],\
-          ["postcss-selector-parser", "npm:6.0.15"],\
+          ["postcss-selector-parser", "npm:6.1.5"],\
           ["postcss-value-parser", "npm:4.2.0"],\
           ["resolve-from", "npm:5.0.0"],\
           ["string-width", "npm:4.2.3"],\
@@ -11907,7 +11898,7 @@ const RAW_RUNTIME_STATE =
           ["@types/stylelint", null],\
           ["postcss-media-query-parser", "npm:0.2.3"],\
           ["postcss-resolve-nested-selector", "npm:0.1.1"],\
-          ["postcss-selector-parser", "npm:6.0.13"],\
+          ["postcss-selector-parser", "npm:6.1.5"],\
           ["postcss-value-parser", "npm:4.2.0"],\
           ["stylelint", "npm:15.11.0"]\
         ],\
